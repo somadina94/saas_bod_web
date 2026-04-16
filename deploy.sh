@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Docker Deployment Script for BOD Web
+# Docker Deployment Script for SAASBOD Web
 # Run this script on your EC2 instance
 
-echo "🐳 Starting Docker deployment of BOD Web..."
+echo "🐳 Starting Docker deployment of SAASBOD Web..."
 
 # Check Docker installation
 echo "✅ Checking Docker installation..."

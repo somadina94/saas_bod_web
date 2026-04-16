@@ -1,0 +1,19 @@
+{
+  "name": "BOD — Business operations dashboard",
+  "short_name": "BOD",
+  "description": "CRM, inventory, quotations, invoicing, and payments in one workspace.",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafb",
+  "theme_color": "#1098ad",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

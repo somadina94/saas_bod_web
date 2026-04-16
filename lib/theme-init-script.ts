@@ -1,0 +1,2 @@
+/** Inline (no React) — runs before paint; must stay in sync with `ThemeProvider` logic. */
+export const themeInitScript = `!function(){try{var t=localStorage.getItem('theme');var d=document.documentElement;var p=window.matchMedia('(prefers-color-scheme: dark)').matches;var r='light';if(t==='dark')r='dark';else if(t==='light')r='light';else r=p?'dark':'light';if(r==='dark'){d.classList.add('dark');d.style.colorScheme='dark';}else{d.classList.remove('dark');d.style.colorScheme='light';}}catch(e){}}();`;

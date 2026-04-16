@@ -82,7 +82,8 @@ export default function SetupPage() {
             <div>
               <CardTitle className="text-xl">Create workspace</CardTitle>
               <CardDescription>
-                Bootstrap your company, owner account, and secure session.
+                Create a new workspace: your company profile, owner account, and
+                a trial subscription to BOD.
               </CardDescription>
             </div>
           </div>

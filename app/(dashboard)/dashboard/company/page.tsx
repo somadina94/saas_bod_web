@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { BuildingsIcon } from "@phosphor-icons/react";
 import { apiFetch } from "@/lib/api/client";
 import { CompanyEditForm } from "@/components/molecules/company-edit-form";
+import { PaystackSettingsCard } from "@/components/molecules/paystack-settings-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -76,6 +77,7 @@ export default function CompanyPage() {
         </Card>
       </motion.div>
       <CompanyEditForm initial={c} />
+      <PaystackSettingsCard initial={c} />
     </div>
   );
 }

@@ -10,6 +10,8 @@ export function normalizeUser(raw: Record<string, unknown>): User {
 
   return {
     id: String(id),
+    companyId:
+      raw.companyId !== undefined ? String(raw.companyId) : undefined,
     email: String(raw.email ?? ""),
     firstName: String(raw.firstName ?? ""),
     lastName: String(raw.lastName ?? ""),

@@ -28,6 +28,7 @@ export type UserPermissions = {
 
 export type User = {
   id: string;
+  companyId?: string;
   email: string;
   firstName: string;
   lastName: string;

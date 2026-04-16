@@ -208,6 +208,28 @@ export const companyApi = {
       method: "PATCH",
       body: JSON.stringify(body),
     }),
+  testPaystack: () =>
+    apiFetch<{ ok: boolean }>("/company/payments/test-paystack", {
+      method: "POST",
+      body: JSON.stringify({}),
+    }),
+};
+
+export const billingApi = {
+  getSubscription: () =>
+    apiFetch<{
+      subscription: Record<string, unknown> | null;
+      pricing: { monthlyNgn: number; yearlyNgn: number; currency: string };
+    }>("/billing/subscription"),
+  checkout: (body: { interval: "monthly" | "yearly" }) =>
+    apiFetch<{
+      authorizationUrl: string;
+      accessCode: string;
+      reference: string;
+    }>("/billing/checkout", {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
 };
 
 export const notificationsApi = {

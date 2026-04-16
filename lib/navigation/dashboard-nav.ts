@@ -134,6 +134,11 @@ export const dashboardNavSecondary: DashboardNavItem[] = [
     permission: "canManageUsers",
   },
   {
+    title: "Billing",
+    href: "/dashboard/billing",
+    icon: CreditCardIcon,
+  },
+  {
     title: "Company",
     href: "/dashboard/company",
     icon: BuildingsIcon,

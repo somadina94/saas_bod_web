@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -76,6 +77,7 @@ export function SaleFormDialog({
 }) {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
+  const tc = useTranslations("common");
   const [lines, setLines] = useState<LineItemFormRow[]>(defaultLineItems());
 
   const form = useForm<FormValues>({
@@ -117,13 +119,13 @@ export function SaleFormDialog({
         {trigger ?? (
           <Button type="button" className="rounded-none gap-2">
             <PlusIcon className="size-4" weight="bold" />
-            New sale
+            {tc("actionCreate")}
           </Button>
         )}
       </DialogTrigger>
       <DialogContent className="max-h-[92vh] overflow-y-auto sm:max-w-2xl rounded-none">
         <DialogHeader>
-          <DialogTitle>New sale</DialogTitle>
+          <DialogTitle>{tc("actionCreate")}</DialogTitle>
           <DialogDescription>
             Creates a draft sale — complete it from the list to deduct stock.
           </DialogDescription>
@@ -209,14 +211,14 @@ export function SaleFormDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Create draft"}
+                {form.formState.isSubmitting ? tc("actionSaving") : "Create draft"}
               </Button>
             </div>
           </form>

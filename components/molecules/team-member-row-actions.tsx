@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { DotsThreeOutlineVerticalIcon } from "@phosphor-icons/react";
@@ -58,6 +59,8 @@ export function TeamMemberRowActions({
   currentUserId: string;
 }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.users");
   const [confirmRemove, setConfirmRemove] = useState(false);
   const [busy, setBusy] = useState(false);
 
@@ -72,10 +75,10 @@ export function TeamMemberRowActions({
     setBusy(true);
     try {
       await patchUserRole(id, { role });
-      toast.success("Role updated");
+      toast.success(t("roleUpdated"));
       await qc.invalidateQueries({ queryKey: ["users"] });
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Could not update role");
+      toast.error(e instanceof ApiError ? e.message : t("roleUpdateFailed"));
     } finally {
       setBusy(false);
     }
@@ -88,10 +91,10 @@ export function TeamMemberRowActions({
     setBusy(true);
     try {
       await patchUserStatus(id, { status });
-      toast.success("Status updated");
+      toast.success(t("statusUpdated"));
       await qc.invalidateQueries({ queryKey: ["users"] });
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Could not update status");
+      toast.error(e instanceof ApiError ? e.message : t("statusUpdateFailed"));
     } finally {
       setBusy(false);
     }
@@ -101,10 +104,10 @@ export function TeamMemberRowActions({
     setBusy(true);
     try {
       await removeTeamMember(id);
-      toast.success("Teammate removed");
+      toast.success(t("teammateRemoved"));
       await qc.invalidateQueries({ queryKey: ["users"] });
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Could not remove user");
+      toast.error(e instanceof ApiError ? e.message : t("removeFailed"));
     } finally {
       setBusy(false);
       setConfirmRemove(false);
@@ -113,8 +116,8 @@ export function TeamMemberRowActions({
 
   if (isOwner) {
     return (
-      <span className="text-muted-foreground pr-2 text-xs" title="Workspace owner">
-        Owner
+      <span className="text-muted-foreground pr-2 text-xs" title={t("owner")}>
+        {t("owner")}
       </span>
     );
   }
@@ -129,7 +132,7 @@ export function TeamMemberRowActions({
             size="icon-sm"
             className="rounded-none"
             disabled={busy}
-            aria-label="Member actions"
+            aria-label={t("memberActions")}
           >
             <DotsThreeOutlineVerticalIcon className="size-4" />
           </Button>
@@ -137,7 +140,7 @@ export function TeamMemberRowActions({
         <DropdownMenuContent align="end" className="w-52">
           <DropdownMenuSub>
             <DropdownMenuSubTrigger className="rounded-none">
-              Set role
+              {t("setRole")}
             </DropdownMenuSubTrigger>
             <DropdownMenuSubContent className="rounded-none">
               {ROLES.map((r) => (
@@ -148,7 +151,7 @@ export function TeamMemberRowActions({
                   onSelect={() => void setRole(r.value)}
                 >
                   {r.label}
-                  {r.value === currentRole ? " · current" : ""}
+                  {r.value === currentRole ? ` · ${tc("current")}` : ""}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuSubContent>
@@ -156,7 +159,7 @@ export function TeamMemberRowActions({
 
           <DropdownMenuSub>
             <DropdownMenuSubTrigger className="rounded-none">
-              Set status
+              {t("setStatus")}
             </DropdownMenuSubTrigger>
             <DropdownMenuSubContent className="rounded-none">
               {STATUS_OPTIONS.map((s) => (
@@ -167,7 +170,7 @@ export function TeamMemberRowActions({
                   onSelect={() => void setStatus(s.value)}
                 >
                   {s.label}
-                  {s.value === currentStatus ? " · current" : ""}
+                  {s.value === currentStatus ? ` · ${tc("current")}` : ""}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuSubContent>
@@ -178,10 +181,10 @@ export function TeamMemberRowActions({
           <DropdownMenuItem
             className="text-destructive focus:text-destructive rounded-none"
             disabled={isSelf}
-            title={isSelf ? "Ask another admin to remove your account" : undefined}
+            title={isSelf ? t("selfRemoveHint") : undefined}
             onSelect={() => setConfirmRemove(true)}
           >
-            Remove from team
+            {t("removeFromTeam")}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -189,22 +192,21 @@ export function TeamMemberRowActions({
       <AlertDialog open={confirmRemove} onOpenChange={setConfirmRemove}>
         <AlertDialogContent className="rounded-none">
           <AlertDialogHeader>
-            <AlertDialogTitle>Remove from team?</AlertDialogTitle>
+            <AlertDialogTitle>{t("confirmRemoveTitle")}</AlertDialogTitle>
             <AlertDialogDescription>
-              They will lose access to this workspace. This does not delete historical
-              audit data tied to their actions.
+              {t("confirmRemoveDescription")}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel className="rounded-none" disabled={busy}>
-              Cancel
+              {tc("actionCancel")}
             </AlertDialogCancel>
             <AlertDialogAction
               className="rounded-none bg-destructive text-destructive-foreground hover:bg-destructive/90"
               disabled={busy}
               onClick={() => void remove()}
             >
-              Remove
+              {tc("actionRemove")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

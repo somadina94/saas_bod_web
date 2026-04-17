@@ -11,7 +11,18 @@
     "language": "Langue",
     "yes": "Oui",
     "no": "Non",
-    "copied": "Copié"
+    "copied": "Copié",
+    "actionCreate": "Créer",
+    "actionEdit": "Modifier",
+    "actionArchive": "Archiver",
+    "actionCancel": "Annuler",
+    "actionSave": "Enregistrer",
+    "actionSaving": "Enregistrement…",
+    "rowActions": "Actions de ligne",
+    "actionRemove": "Supprimer",
+    "actionSend": "Envoyer",
+    "actionSending": "Envoi…",
+    "current": "actuel"
   },
   "list": {
     "actions": "Actions",
@@ -107,7 +118,9 @@
     "ctaHowItWorks": "Fonctionnement"
   },
   "auth": {
-    "layout": { "backHome": "Retour à l’accueil" },
+    "layout": {
+      "backHome": "Retour à l’accueil"
+    },
     "login": {
       "title": "Connexion",
       "description": "Utilisez vos identifiants d’espace. Les sessions utilisent des cookies sécurisés.",

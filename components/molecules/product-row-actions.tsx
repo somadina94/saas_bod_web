@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { DotsThreeOutlineVerticalIcon } from "@phosphor-icons/react";
@@ -27,6 +28,7 @@ import { ProductFormDialog } from "./product-form-dialog";
 
 export function ProductRowActions({ row }: { row: Record<string, unknown> }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
   const [editOpen, setEditOpen] = useState(false);
   const [confirmArchive, setConfirmArchive] = useState(false);
 
@@ -53,18 +55,18 @@ export function ProductRowActions({ row }: { row: Record<string, unknown> }) {
             variant="ghost"
             size="icon-sm"
             className="rounded-none"
-            aria-label="Row actions"
+            aria-label={tc("rowActions")}
           >
             <DotsThreeOutlineVerticalIcon className="size-4" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-44">
-          <DropdownMenuItem onSelect={() => setEditOpen(true)}>Edit</DropdownMenuItem>
+          <DropdownMenuItem onSelect={() => setEditOpen(true)}>{tc("actionEdit")}</DropdownMenuItem>
           <DropdownMenuItem
             className="text-destructive focus:text-destructive"
             onSelect={() => setConfirmArchive(true)}
           >
-            Archive
+            {tc("actionArchive")}
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -85,12 +87,12 @@ export function ProductRowActions({ row }: { row: Record<string, unknown> }) {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="rounded-none">Cancel</AlertDialogCancel>
+            <AlertDialogCancel className="rounded-none">{tc("actionCancel")}</AlertDialogCancel>
             <AlertDialogAction
               className="rounded-none"
               onClick={() => void archive()}
             >
-              Archive
+              {tc("actionArchive")}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

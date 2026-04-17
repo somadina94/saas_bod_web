@@ -179,7 +179,22 @@
         "email": "E-mail",
         "role": "Ruolo",
         "status": "Stato"
-      }
+      },
+      "owner": "Proprietario",
+      "memberActions": "Azioni membro",
+      "setRole": "Imposta ruolo",
+      "setStatus": "Imposta stato",
+      "selfRemoveHint": "Chiedi a un altro amministratore di rimuovere il tuo account",
+      "removeFromTeam": "Rimuovi dal team",
+      "confirmRemoveTitle": "Rimuovere dal team?",
+      "confirmRemoveDescription": "Perderà l'accesso a questo spazio di lavoro. I dati di audit storici legati alle sue azioni non verranno eliminati.",
+      "roleUpdated": "Ruolo aggiornato",
+      "roleUpdateFailed": "Impossibile aggiornare il ruolo",
+      "statusUpdated": "Stato aggiornato",
+      "statusUpdateFailed": "Impossibile aggiornare lo stato",
+      "teammateRemoved": "Membro rimosso",
+      "removeFailed": "Impossibile rimuovere l'utente",
+      "invitationSent": "Invito inviato via email."
     },
     "auditLogs": {
       "title": "Registro di controllo",

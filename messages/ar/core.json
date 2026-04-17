@@ -11,7 +11,18 @@
     "language": "لغة",
     "yes": "نعم",
     "no": "لا",
-    "copied": "منقول"
+    "copied": "منقول",
+    "actionCreate": "إنشاء",
+    "actionEdit": "تحرير",
+    "actionArchive": "أرشفة",
+    "actionCancel": "إلغاء",
+    "actionSave": "حفظ",
+    "actionSaving": "جارٍ الحفظ…",
+    "rowActions": "إجراءات الصف",
+    "actionRemove": "إزالة",
+    "actionSend": "إرسال",
+    "actionSending": "جارٍ الإرسال…",
+    "current": "الحالي"
   },
   "list": {
     "actions": "الإجراءات",

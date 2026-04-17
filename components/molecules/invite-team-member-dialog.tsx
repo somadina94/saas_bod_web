@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -80,6 +81,8 @@ const emptyForm: FormValues = {
 export function InviteTeamMemberDialog() {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.users");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -104,7 +107,7 @@ export function InviteTeamMemberDialog() {
         jobTitle: values.jobTitle || undefined,
       });
       await qc.invalidateQueries({ queryKey: ["users"] });
-      toast.success("Invitation sent by email.");
+      toast.success(t("invitationSent"));
       setOpen(false);
       form.reset(emptyForm);
     } catch (e: unknown) {
@@ -123,12 +126,12 @@ export function InviteTeamMemberDialog() {
       <DialogTrigger asChild>
         <Button type="button" className="rounded-none gap-2">
           <UserPlusIcon className="size-4" weight="bold" aria-hidden />
-          Invite team member
+          {tc("actionCreate")}
         </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Invite team member</DialogTitle>
+          <DialogTitle>{tc("actionCreate")}</DialogTitle>
           <DialogDescription>
             They&apos;ll get status <span className="font-semibold">invited</span> until they open the
             link in email and set a password.
@@ -253,14 +256,14 @@ export function InviteTeamMemberDialog() {
                   className="rounded-none"
                   onClick={() => setOpen(false)}
                 >
-                  Cancel
+                  {tc("actionCancel")}
                 </Button>
                 <Button
                   type="submit"
                   className="rounded-none"
                   disabled={form.formState.isSubmitting}
                 >
-                  {form.formState.isSubmitting ? "Sending…" : "Send invite"}
+                  {form.formState.isSubmitting ? tc("actionSending") : tc("actionSend")}
                 </Button>
               </div>
           </motion.form>

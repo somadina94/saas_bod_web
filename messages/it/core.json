@@ -11,7 +11,18 @@
     "language": "Lingua",
     "yes": "SÌ",
     "no": "NO",
-    "copied": "Copiato"
+    "copied": "Copiato",
+    "actionCreate": "Crea",
+    "actionEdit": "Modifica",
+    "actionArchive": "Archivia",
+    "actionCancel": "Annulla",
+    "actionSave": "Salva",
+    "actionSaving": "Salvataggio…",
+    "rowActions": "Azioni riga",
+    "actionRemove": "Rimuovi",
+    "actionSend": "Invia",
+    "actionSending": "Invio…",
+    "current": "corrente"
   },
   "list": {
     "actions": "Azioni",

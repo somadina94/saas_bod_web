@@ -11,7 +11,18 @@
     "language": "Taal",
     "yes": "Ja",
     "no": "Nee",
-    "copied": "Gekopieerd"
+    "copied": "Gekopieerd",
+    "actionCreate": "Aanmaken",
+    "actionEdit": "Bewerken",
+    "actionArchive": "Archiveren",
+    "actionCancel": "Annuleren",
+    "actionSave": "Opslaan",
+    "actionSaving": "Opslaan…",
+    "rowActions": "Rijacties",
+    "actionRemove": "Verwijderen",
+    "actionSend": "Verzenden",
+    "actionSending": "Verzenden…",
+    "current": "huidig"
   },
   "list": {
     "actions": "Acties",

@@ -179,7 +179,22 @@
         "email": "E-mail",
         "role": "Rola",
         "status": "Status"
-      }
+      },
+      "owner": "Właściciel",
+      "memberActions": "Akcje członka",
+      "setRole": "Ustaw rolę",
+      "setStatus": "Ustaw status",
+      "selfRemoveHint": "Poproś innego administratora o usunięcie Twojego konta",
+      "removeFromTeam": "Usuń z zespołu",
+      "confirmRemoveTitle": "Usunąć z zespołu?",
+      "confirmRemoveDescription": "Ta osoba utraci dostęp do tego obszaru roboczego. Nie usuwa to historycznych danych audytu powiązanych z jej działaniami.",
+      "roleUpdated": "Rola zaktualizowana",
+      "roleUpdateFailed": "Nie udało się zaktualizować roli",
+      "statusUpdated": "Status zaktualizowany",
+      "statusUpdateFailed": "Nie udało się zaktualizować statusu",
+      "teammateRemoved": "Członek zespołu usunięty",
+      "removeFailed": "Nie udało się usunąć użytkownika",
+      "invitationSent": "Zaproszenie wysłane e-mailem."
     },
     "auditLogs": {
       "title": "Dziennik audytu",

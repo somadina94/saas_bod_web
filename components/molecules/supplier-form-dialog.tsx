@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -69,6 +70,8 @@ export function SupplierFormDialog({
   onOpenChange?: (o: boolean) => void;
 }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.suppliers");
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false);
   const open = controlledOpen ?? uncontrolledOpen;
   const setOpen = onOpenChange ?? setUncontrolledOpen;
@@ -112,9 +115,9 @@ export function SupplierFormDialog({
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md rounded-none">
         <DialogHeader>
           <DialogTitle>
-            {mode === "create" ? "New supplier" : "Edit supplier"}
+            {`${mode === "create" ? tc("actionCreate") : tc("actionEdit")} ${t("title")}`}
           </DialogTitle>
-          <DialogDescription>Purchase and vendor records.</DialogDescription>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -123,7 +126,7 @@ export function SupplierFormDialog({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{t("columns.name")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" {...field} />
                   </FormControl>
@@ -149,7 +152,7 @@ export function SupplierFormDialog({
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("columns.email")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" type="email" {...field} />
                   </FormControl>
@@ -162,7 +165,7 @@ export function SupplierFormDialog({
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone</FormLabel>
+                  <FormLabel>{t("columns.phone")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" {...field} />
                   </FormControl>
@@ -175,7 +178,7 @@ export function SupplierFormDialog({
               name="status"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Status</FormLabel>
+                  <FormLabel>{t("columns.status")}</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger className="rounded-none w-full">
@@ -198,14 +201,14 @@ export function SupplierFormDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Save"}
+                {form.formState.isSubmitting ? tc("actionSaving") : tc("actionSave")}
               </Button>
             </div>
           </form>
@@ -216,13 +219,15 @@ export function SupplierFormDialog({
 }
 
 export function AddSupplierButton() {
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.suppliers");
   return (
     <SupplierFormDialog
       mode="create"
       trigger={
         <Button type="button" className="rounded-none gap-2">
           <PlusIcon className="size-4" weight="bold" />
-          Add supplier
+          {tc("actionCreate")}
         </Button>
       }
     />

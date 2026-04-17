@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -56,6 +57,7 @@ export function ExpenseFormDialog({
 }) {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
+  const tc = useTranslations("common");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -95,13 +97,13 @@ export function ExpenseFormDialog({
         {trigger ?? (
           <Button type="button" className="rounded-none gap-2">
             <PlusIcon className="size-4" weight="bold" />
-            New expense
+            {tc("actionCreate")}
           </Button>
         )}
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md rounded-none">
         <DialogHeader>
-          <DialogTitle>New expense</DialogTitle>
+          <DialogTitle>{tc("actionCreate")}</DialogTitle>
           <DialogDescription>
             Draft expenses can be submitted for approval from the row menu.
           </DialogDescription>
@@ -211,14 +213,14 @@ export function ExpenseFormDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Save draft"}
+                {form.formState.isSubmitting ? tc("actionSaving") : "Save draft"}
               </Button>
             </div>
           </form>

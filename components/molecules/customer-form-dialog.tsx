@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -69,6 +70,8 @@ export function CustomerFormDialog({
   onOpenChange?: (o: boolean) => void;
 }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.customers");
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false);
   const open = controlledOpen ?? uncontrolledOpen;
   const setOpen = onOpenChange ?? setUncontrolledOpen;
@@ -120,10 +123,10 @@ export function CustomerFormDialog({
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md rounded-none">
         <DialogHeader>
           <DialogTitle>
-            {mode === "create" ? "New customer" : "Edit customer"}
+            {`${mode === "create" ? tc("actionCreate") : tc("actionEdit")} ${t("title")}`}
           </DialogTitle>
           <DialogDescription>
-            CRM record used for quotes, invoices, and payments.
+            {t("description")}
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -133,7 +136,7 @@ export function CustomerFormDialog({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{t("columns.name")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" {...field} />
                   </FormControl>
@@ -159,7 +162,7 @@ export function CustomerFormDialog({
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("columns.email")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" type="email" {...field} />
                   </FormControl>
@@ -172,7 +175,7 @@ export function CustomerFormDialog({
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone</FormLabel>
+                  <FormLabel>{t("columns.phone")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" {...field} />
                   </FormControl>
@@ -185,7 +188,7 @@ export function CustomerFormDialog({
               name="status"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Status</FormLabel>
+                  <FormLabel>{t("columns.status")}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     value={field.value}
@@ -211,14 +214,14 @@ export function CustomerFormDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Save"}
+                {form.formState.isSubmitting ? tc("actionSaving") : tc("actionSave")}
               </Button>
             </div>
           </form>
@@ -229,13 +232,15 @@ export function CustomerFormDialog({
 }
 
 export function AddCustomerButton() {
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.customers");
   return (
     <CustomerFormDialog
       mode="create"
       trigger={
         <Button type="button" className="rounded-none gap-2">
           <PlusIcon className="size-4" weight="bold" />
-          Add customer
+          {tc("actionCreate")}
         </Button>
       }
     />

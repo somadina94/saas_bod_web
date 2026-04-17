@@ -11,7 +11,18 @@
     "language": "Language",
     "yes": "Yes",
     "no": "No",
-    "copied": "Copied"
+    "copied": "Copied",
+    "actionCreate": "Create",
+    "actionEdit": "Edit",
+    "actionArchive": "Archive",
+    "actionCancel": "Cancel",
+    "actionSave": "Save",
+    "actionSaving": "Saving…",
+    "rowActions": "Row actions",
+    "actionRemove": "Remove",
+    "actionSend": "Send",
+    "actionSending": "Sending…",
+    "current": "current"
   },
   "list": {
     "actions": "Actions",

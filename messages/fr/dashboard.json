@@ -179,7 +179,22 @@
         "email": "E-mail",
         "role": "Rôle",
         "status": "Statut"
-      }
+      },
+      "owner": "Propriétaire",
+      "memberActions": "Actions du membre",
+      "setRole": "Définir le rôle",
+      "setStatus": "Définir le statut",
+      "selfRemoveHint": "Demandez à un autre admin de supprimer votre compte",
+      "removeFromTeam": "Retirer de l'équipe",
+      "confirmRemoveTitle": "Retirer de l'équipe ?",
+      "confirmRemoveDescription": "Cette personne perdra l'accès à cet espace de travail. Les données d'audit historiques liées à ses actions seront conservées.",
+      "roleUpdated": "Rôle mis à jour",
+      "roleUpdateFailed": "Impossible de mettre à jour le rôle",
+      "statusUpdated": "Statut mis à jour",
+      "statusUpdateFailed": "Impossible de mettre à jour le statut",
+      "teammateRemoved": "Membre supprimé",
+      "removeFailed": "Impossible de supprimer l'utilisateur",
+      "invitationSent": "Invitation envoyée par e-mail."
     },
     "auditLogs": {
       "title": "Journal d'audit",

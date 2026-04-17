@@ -179,7 +179,22 @@
         "email": "Correo electrónico",
         "role": "Role",
         "status": "Estado"
-      }
+      },
+      "owner": "Propietario",
+      "memberActions": "Acciones del miembro",
+      "setRole": "Establecer rol",
+      "setStatus": "Establecer estado",
+      "selfRemoveHint": "Pide a otro administrador que elimine tu cuenta",
+      "removeFromTeam": "Quitar del equipo",
+      "confirmRemoveTitle": "¿Quitar del equipo?",
+      "confirmRemoveDescription": "Perderá el acceso a este espacio de trabajo. Esto no elimina los datos históricos de auditoría de sus acciones.",
+      "roleUpdated": "Rol actualizado",
+      "roleUpdateFailed": "No se pudo actualizar el rol",
+      "statusUpdated": "Estado actualizado",
+      "statusUpdateFailed": "No se pudo actualizar el estado",
+      "teammateRemoved": "Miembro eliminado",
+      "removeFailed": "No se pudo eliminar el usuario",
+      "invitationSent": "Invitación enviada por correo electrónico."
     },
     "auditLogs": {
       "title": "Registro de auditoría",

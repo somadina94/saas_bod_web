@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -64,6 +65,7 @@ export function StockAdjustmentDialog({
 }) {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
+  const tc = useTranslations("common");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -119,7 +121,7 @@ export function StockAdjustmentDialog({
         {trigger ?? (
           <Button type="button" className="rounded-none gap-2">
             <PlusIcon className="size-4" weight="bold" />
-            Stock movement
+            {tc("actionCreate")}
           </Button>
         )}
       </DialogTrigger>
@@ -271,14 +273,14 @@ export function StockAdjustmentDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Apply"}
+                {form.formState.isSubmitting ? tc("actionSaving") : "Apply"}
               </Button>
             </div>
           </form>

@@ -179,7 +179,22 @@
         "email": "E-mail",
         "role": "Rol",
         "status": "Status"
-      }
+      },
+      "owner": "Eigenaar",
+      "memberActions": "Lidacties",
+      "setRole": "Rol instellen",
+      "setStatus": "Status instellen",
+      "selfRemoveHint": "Vraag een andere beheerder om je account te verwijderen",
+      "removeFromTeam": "Uit team verwijderen",
+      "confirmRemoveTitle": "Uit team verwijderen?",
+      "confirmRemoveDescription": "Deze persoon verliest toegang tot deze werkruimte. Historische auditgegevens van acties blijven behouden.",
+      "roleUpdated": "Rol bijgewerkt",
+      "roleUpdateFailed": "Rol kon niet worden bijgewerkt",
+      "statusUpdated": "Status bijgewerkt",
+      "statusUpdateFailed": "Status kon niet worden bijgewerkt",
+      "teammateRemoved": "Teamlid verwijderd",
+      "removeFailed": "Gebruiker kon niet worden verwijderd",
+      "invitationSent": "Uitnodiging per e-mail verzonden."
     },
     "auditLogs": {
       "title": "Auditlogboek",

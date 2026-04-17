@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -75,6 +76,8 @@ export function ProductFormDialog({
   onOpenChange?: (o: boolean) => void;
 }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.products");
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false);
   const open = controlledOpen ?? uncontrolledOpen;
   const setOpen = onOpenChange ?? setUncontrolledOpen;
@@ -122,9 +125,9 @@ export function ProductFormDialog({
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg rounded-none">
         <DialogHeader>
           <DialogTitle>
-            {mode === "create" ? "New product" : "Edit product"}
+            {`${mode === "create" ? tc("actionCreate") : tc("actionEdit")} ${t("title")}`}
           </DialogTitle>
-          <DialogDescription>Stock-tracked catalog item.</DialogDescription>
+          <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -134,7 +137,7 @@ export function ProductFormDialog({
                 name="sku"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>SKU</FormLabel>
+                    <FormLabel>{t("columns.sku")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -147,7 +150,7 @@ export function ProductFormDialog({
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{t("columns.name")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -162,7 +165,7 @@ export function ProductFormDialog({
                 name="unitPrice"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Unit price</FormLabel>
+                    <FormLabel>{t("columns.onHand")}</FormLabel>
                     <FormControl>
                       <Input
                         type="number"
@@ -290,7 +293,7 @@ export function ProductFormDialog({
               name="status"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Status</FormLabel>
+                  <FormLabel>{t("columns.status")}</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger className="rounded-none w-full">
@@ -313,14 +316,14 @@ export function ProductFormDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Save"}
+                {form.formState.isSubmitting ? tc("actionSaving") : tc("actionSave")}
               </Button>
             </div>
           </form>
@@ -331,13 +334,15 @@ export function ProductFormDialog({
 }
 
 export function AddProductButton() {
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.products");
   return (
     <ProductFormDialog
       mode="create"
       trigger={
         <Button type="button" className="rounded-none gap-2">
           <PlusIcon className="size-4" weight="bold" />
-          Add product
+          {tc("actionCreate")}
         </Button>
       }
     />

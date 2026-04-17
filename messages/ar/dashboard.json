@@ -179,7 +179,22 @@
         "email": "بريد إلكتروني",
         "role": "دور",
         "status": "حالة"
-      }
+      },
+      "owner": "المالك",
+      "memberActions": "إجراءات العضو",
+      "setRole": "تعيين الدور",
+      "setStatus": "تعيين الحالة",
+      "selfRemoveHint": "اطلب من مسؤول آخر إزالة حسابك",
+      "removeFromTeam": "إزالة من الفريق",
+      "confirmRemoveTitle": "إزالة من الفريق؟",
+      "confirmRemoveDescription": "سيفقد هذا العضو الوصول إلى مساحة العمل. لا يحذف ذلك بيانات التدقيق التاريخية المرتبطة بإجراءاته.",
+      "roleUpdated": "تم تحديث الدور",
+      "roleUpdateFailed": "تعذر تحديث الدور",
+      "statusUpdated": "تم تحديث الحالة",
+      "statusUpdateFailed": "تعذر تحديث الحالة",
+      "teammateRemoved": "تمت إزالة عضو الفريق",
+      "removeFailed": "تعذر إزالة المستخدم",
+      "invitationSent": "تم إرسال الدعوة عبر البريد الإلكتروني."
     },
     "auditLogs": {
       "title": "سجل التدقيق",

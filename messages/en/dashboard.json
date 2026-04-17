@@ -179,7 +179,22 @@
         "email": "Email",
         "role": "Role",
         "status": "Status"
-      }
+      },
+      "owner": "Owner",
+      "memberActions": "Member actions",
+      "setRole": "Set role",
+      "setStatus": "Set status",
+      "selfRemoveHint": "Ask another admin to remove your account",
+      "removeFromTeam": "Remove from team",
+      "confirmRemoveTitle": "Remove from team?",
+      "confirmRemoveDescription": "They will lose access to this workspace. This does not delete historical audit data tied to their actions.",
+      "roleUpdated": "Role updated",
+      "roleUpdateFailed": "Could not update role",
+      "statusUpdated": "Status updated",
+      "statusUpdateFailed": "Could not update status",
+      "teammateRemoved": "Teammate removed",
+      "removeFailed": "Could not remove user",
+      "invitationSent": "Invitation sent by email."
     },
     "auditLogs": {
       "title": "Audit log",

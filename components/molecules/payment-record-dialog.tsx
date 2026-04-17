@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -58,6 +59,7 @@ export function PaymentRecordDialog({
 }) {
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
+  const tc = useTranslations("common");
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -103,13 +105,13 @@ export function PaymentRecordDialog({
         {trigger ?? (
           <Button type="button" className="rounded-none gap-2">
             <PlusIcon className="size-4" weight="bold" />
-            Record payment
+            {tc("actionCreate")}
           </Button>
         )}
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-md rounded-none">
         <DialogHeader>
-          <DialogTitle>Record payment</DialogTitle>
+          <DialogTitle>{tc("actionCreate")}</DialogTitle>
           <DialogDescription>
             Allocates to one invoice when selected; otherwise posts to customer
             balance handling per server rules.
@@ -229,14 +231,14 @@ export function PaymentRecordDialog({
                 className="rounded-none"
                 onClick={() => setOpen(false)}
               >
-                Cancel
+                {tc("actionCancel")}
               </Button>
               <Button
                 type="submit"
                 className="rounded-none"
                 disabled={form.formState.isSubmitting}
               >
-                {form.formState.isSubmitting ? "Saving…" : "Record"}
+                {form.formState.isSubmitting ? tc("actionSaving") : "Record"}
               </Button>
             </div>
           </form>

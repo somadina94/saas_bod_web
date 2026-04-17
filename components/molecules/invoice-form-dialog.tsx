@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -69,6 +70,8 @@ export function InvoiceFormDialog({
   onOpenChange?: (o: boolean) => void;
 }) {
   const qc = useQueryClient();
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.invoices");
   const [uncontrolledOpen, setUncontrolledOpen] = useState(false);
   const open = controlledOpen ?? uncontrolledOpen;
   const setOpen = onOpenChange ?? setUncontrolledOpen;
@@ -147,7 +150,7 @@ export function InvoiceFormDialog({
       <DialogContent className="max-h-[92vh] overflow-y-auto sm:max-w-2xl rounded-none">
         <DialogHeader>
           <DialogTitle>
-            {mode === "create" ? "New invoice" : "Edit draft invoice"}
+            {`${mode === "create" ? tc("actionCreate") : tc("actionEdit")} ${t("title")}`}
           </DialogTitle>
           <DialogDescription>
             Draft invoices can be edited until you send them.
@@ -163,7 +166,7 @@ export function InvoiceFormDialog({
                 name="customerId"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Customer</FormLabel>
+                    <FormLabel>{useTranslations("dashboard.customers")("title")}</FormLabel>
                     <FormControl>
                       <CustomerSelect
                         value={field.value}
@@ -207,7 +210,7 @@ export function InvoiceFormDialog({
                 name="notes"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Notes</FormLabel>
+                    <FormLabel>{tc("menuTitle")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -223,14 +226,14 @@ export function InvoiceFormDialog({
                   className="rounded-none"
                   onClick={() => setOpen(false)}
                 >
-                  Cancel
+                  {tc("actionCancel")}
                 </Button>
                 <Button
                   type="submit"
                   className="rounded-none"
                   disabled={form.formState.isSubmitting}
                 >
-                  {form.formState.isSubmitting ? "Saving…" : "Save"}
+                  {form.formState.isSubmitting ? tc("actionSaving") : tc("actionSave")}
                 </Button>
               </div>
             </form>
@@ -242,13 +245,15 @@ export function InvoiceFormDialog({
 }
 
 export function AddInvoiceButton() {
+  const tc = useTranslations("common");
+  const t = useTranslations("dashboard.invoices");
   return (
     <InvoiceFormDialog
       mode="create"
       trigger={
         <Button type="button" className="rounded-none gap-2">
           <PlusIcon className="size-4" weight="bold" />
-          New invoice
+          {tc("actionCreate")}
         </Button>
       }
     />

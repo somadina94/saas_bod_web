@@ -55,11 +55,11 @@ export default function MarketingHome() {
           />
         </div>
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/68 via-background/48 to-background/84 dark:from-background/72 dark:via-background/52 dark:to-background/90"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/90 via-background/76 to-background/96 dark:from-background/93 dark:via-background/82 dark:to-background/98"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.09] dark:opacity-[0.065]"
+          className="pointer-events-none absolute inset-0 opacity-[0.18] dark:opacity-[0.14]"
           style={{
             backgroundImage:
               "radial-gradient(circle at 18% 22%, #1098ad 0, transparent 42%), radial-gradient(circle at 82% 8%, #c45c26 0, transparent 38%), radial-gradient(circle at 50% 100%, hsl(var(--primary)) 0, transparent 45%)",

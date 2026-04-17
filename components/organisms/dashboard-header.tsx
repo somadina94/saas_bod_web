@@ -67,7 +67,11 @@ export function DashboardHeader() {
             className="text-muted-foreground hover:text-foreground hidden rounded-none gap-1.5 px-2 sm:inline-flex"
             asChild
           >
-            <Link href="/" title={t("marketingHomeTitle")}>
+            <Link
+              href="/"
+              title={t("marketingHomeTitle")}
+              className="inline-flex items-center gap-1.5"
+            >
               <HouseIcon className="size-4 shrink-0" aria-hidden />
               <span className="max-w-[6rem] truncate text-xs font-medium max-sm:sr-only">
                 {t("home")}
@@ -107,16 +111,16 @@ export function DashboardHeader() {
                 className="gap-2 rounded-none px-2"
                 aria-label={t("accountMenu")}
               >
-                <Avatar className="size-7 rounded-none">
+                <Avatar className="size-7 rounded-full">
                   {user?.profileImageUrl ? (
                     <AvatarImage
                       key={user.profileImageUrl}
                       src={user.profileImageUrl}
                       alt=""
-                      className="rounded-none object-cover"
+                      className="rounded-full object-cover"
                     />
                   ) : null}
-                  <AvatarFallback className="rounded-none bg-primary/15 text-primary text-xs font-medium">
+                  <AvatarFallback className="rounded-full bg-primary/15 text-primary text-xs font-medium">
                     {initials(user?.firstName, user?.lastName)}
                   </AvatarFallback>
                 </Avatar>

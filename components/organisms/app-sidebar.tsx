@@ -36,10 +36,10 @@ export function AppSidebar() {
     <Sidebar collapsible="icon" variant="inset">
       <SidebarHeader className="border-b border-sidebar-border/60">
         <Link
-          href="/dashboard"
+          href="/"
           className="flex items-center gap-2 px-2 py-1.5 outline-none transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-sidebar-ring"
         >
-          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-none shadow-sm">
+          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-full shadow-sm">
             <SparkleIcon className="size-4" weight="fill" aria-hidden />
           </span>
           <span

@@ -1,6 +1,6 @@
 "use client";
 
-import { ListIcon, SparkleIcon, XIcon } from "@phosphor-icons/react";
+import { ListIcon, MoonIcon, SparkleIcon, SunIcon, XIcon } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -16,13 +16,17 @@ import { cn } from "@/lib/utils";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
 import { useAppSelector } from "@/lib/store/hooks";
+import { useTheme } from "@/components/providers/theme-provider";
 
 export function SiteHeader({ className }: { className?: string }) {
   const t = useTranslations("marketing.header");
   const tc = useTranslations("common");
+  const td = useTranslations("dashboardHeader");
+  const tf = useTranslations("marketing.footer");
   const user = useAppSelector((s) => s.auth.user);
+  const { setTheme, resolvedTheme } = useTheme();
   const authCtaHref = user ? "/dashboard" : "/login";
-  const authCtaLabel = user ? tc("dashboard") : t("signIn");
+  const authCtaLabel = user ? tf("dashboard") : t("signIn");
   const nav = [
     { href: "/features", label: t("features") },
     { href: "/how-it-works", label: t("howItWorks") },
@@ -40,7 +44,7 @@ export function SiteHeader({ className }: { className?: string }) {
           href="/"
           className="flex shrink-0 items-center gap-2.5 font-semibold tracking-tight"
         >
-          <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-none shadow-sm ring-1 ring-primary/20">
+          <span className="bg-primary text-primary-foreground flex size-9 items-center justify-center rounded-full shadow-sm ring-1 ring-primary/20">
             <SparkleIcon className="size-5" weight="fill" aria-hidden />
           </span>
           <span className="max-w-[11rem] truncate text-base tracking-tight sm:max-w-none">
@@ -63,6 +67,17 @@ export function SiteHeader({ className }: { className?: string }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-sm"
+            className="rounded-none"
+            aria-label={resolvedTheme === "dark" ? td("themeLight") : td("themeDark")}
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+          >
+            <SunIcon className="dark:hidden size-4" aria-hidden />
+            <MoonIcon className="hidden dark:block size-4" aria-hidden />
+          </Button>
           <LocaleSwitcher
             className="h-8 w-[min(100%,9.5rem)] rounded-none text-xs hidden sm:inline-flex"
             id="site-locale"
@@ -75,9 +90,11 @@ export function SiteHeader({ className }: { className?: string }) {
           >
             <Link href={authCtaHref}>{authCtaLabel}</Link>
           </Button>
-          <Button size="sm" className="rounded-none text-[13px]" asChild>
-            <Link href="/setup">{t("createWorkspace")}</Link>
-          </Button>
+          {!user ? (
+            <Button size="sm" className="rounded-none text-[13px]" asChild>
+              <Link href="/setup">{t("createWorkspace")}</Link>
+            </Button>
+          ) : null}
 
           <Sheet>
             <SheetTrigger asChild>
@@ -128,14 +145,16 @@ export function SiteHeader({ className }: { className?: string }) {
                     {authCtaLabel}
                   </Link>
                 </SheetClose>
-                <SheetClose asChild>
-                  <Link
-                    href="/setup"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 mx-2 mt-2 rounded-none px-3 py-3 text-center text-sm font-medium"
-                  >
-                    {t("createWorkspace")}
-                  </Link>
-                </SheetClose>
+                {!user ? (
+                  <SheetClose asChild>
+                    <Link
+                      href="/setup"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 mx-2 mt-2 rounded-none px-3 py-3 text-center text-sm font-medium"
+                    >
+                      {t("createWorkspace")}
+                    </Link>
+                  </SheetClose>
+                ) : null}
                 <div className="px-3 py-3">
                   <LocaleSwitcher className="w-full rounded-none text-xs" />
                 </div>

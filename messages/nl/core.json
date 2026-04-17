@@ -115,7 +115,13 @@
     "card3Body": "Uitnodigingen, rollen, machtigingen op rijniveau en een dashboard dat leiders vertrouwen.",
     "ctaSectionKicker": "Bekijk het volledige plaatje",
     "ctaSectionBody": "Bekijk de modules, machtigingen en hoe uw werkruimte verloopt vanaf de aanmelding tot de eerste factuur.",
-    "ctaHowItWorks": "Hoe het werkt"
+    "ctaHowItWorks": "Hoe het werkt",
+    "appStoreOverline": "Download in de",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Download in de App Store (binnenkort)",
+    "playOverline": "Nu op",
+    "playLabel": "Google Play",
+    "playAria": "Nu op Google Play (binnenkort)"
   },
   "auth": {
     "layout": {

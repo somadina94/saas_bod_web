@@ -115,7 +115,13 @@
     "card3Body": "الدعوات والأدوار والأذونات على مستوى الصف ولوحة المعلومات التي يثق بها القادة.",
     "ctaSectionKicker": "انظر الصورة كاملة",
     "ctaSectionBody": "تعرف على الوحدات والأذونات وكيفية انتقال مساحة العمل الخاصة بك من التسجيل إلى الفاتورة الأولى.",
-    "ctaHowItWorks": "كيف يعمل"
+    "ctaHowItWorks": "كيف يعمل",
+    "appStoreOverline": "حمّل من",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "حمّل من App Store (قريبًا)",
+    "playOverline": "احصل عليه على",
+    "playLabel": "Google Play",
+    "playAria": "احصل عليه على Google Play (قريبًا)"
   },
   "auth": {
     "layout": {

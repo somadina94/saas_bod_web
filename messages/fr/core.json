@@ -115,7 +115,13 @@
     "card3Body": "Invitations, rôles, permissions fines et tableau de bord pour les dirigeants.",
     "ctaSectionKicker": "Voir l’ensemble",
     "ctaSectionBody": "Parcourez les modules, les permissions et le parcours jusqu’à la première facture.",
-    "ctaHowItWorks": "Fonctionnement"
+    "ctaHowItWorks": "Fonctionnement",
+    "appStoreOverline": "Télécharger sur",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Télécharger sur l’App Store (bientôt)",
+    "playOverline": "Disponible sur",
+    "playLabel": "Google Play",
+    "playAria": "Disponible sur Google Play (bientôt)"
   },
   "auth": {
     "layout": {

@@ -115,7 +115,13 @@
     "card3Body": "Zaproszenia, role, uprawnienia na poziomie wiersza i pulpit nawigacyjny, któremu ufają liderzy.",
     "ctaSectionKicker": "Zobacz pełny obraz",
     "ctaSectionBody": "Zapoznaj się z modułami, uprawnieniami i tym, jak Twój obszar roboczy przechodzi od rejestracji do pierwszej faktury.",
-    "ctaHowItWorks": "Jak to działa"
+    "ctaHowItWorks": "Jak to działa",
+    "appStoreOverline": "Pobierz z",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Pobierz z App Store (wkrótce)",
+    "playOverline": "Pobierz z",
+    "playLabel": "Google Play",
+    "playAria": "Pobierz z Google Play (wkrótce)"
   },
   "auth": {
     "layout": {

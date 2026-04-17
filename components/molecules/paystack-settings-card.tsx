@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { CopyIcon } from "@phosphor-icons/react";
 import { companyApi } from "@/lib/api/entities";
@@ -17,7 +18,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-function CopyRow({ label, value }: { label: string; value: string }) {
+function CopyRow({
+  label,
+  value,
+  copiedLabel,
+}: {
+  label: string;
+  value: string;
+  copiedLabel: string;
+}) {
   return (
     <div className="space-y-1">
       <Label className="text-muted-foreground text-xs">{label}</Label>
@@ -29,7 +38,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
           className="shrink-0 rounded-none"
           onClick={() => {
             void navigator.clipboard.writeText(value);
-            toast.success("Copied");
+            toast.success(copiedLabel);
           }}
         >
           <CopyIcon className="size-4" aria-hidden />
@@ -44,6 +53,8 @@ export function PaystackSettingsCard({
 }: {
   initial: Record<string, unknown>;
 }) {
+  const t = useTranslations("dashboard.paystack");
+  const tc = useTranslations("common");
   const qc = useQueryClient();
   const [publicKey, setPublicKey] = useState(
     String(initial.paystackPublicKey ?? ""),
@@ -62,9 +73,9 @@ export function PaystackSettingsCard({
       });
       setSecretKey("");
       await qc.invalidateQueries({ queryKey: ["company"] });
-      toast.success("Payment settings saved");
+      toast.success(t("saved"));
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Save failed");
+      toast.error(e instanceof ApiError ? e.message : t("saveFailed"));
     }
   }
 
@@ -72,56 +83,64 @@ export function PaystackSettingsCard({
     try {
       const result = await companyApi.testPaystack();
       if (result.ok) {
-        toast.success("Paystack credentials are valid");
+        toast.success(t("validOk"));
       } else {
-        toast.error(
-          "Paystack rejected the saved secret key. Check the key in Paystack Dashboard, save it here, then test again.",
-        );
+        toast.error(t("validBad"));
       }
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Test failed");
+      toast.error(e instanceof ApiError ? e.message : t("testFailed"));
     }
   }
 
   return (
     <Card className="max-w-xl rounded-none border">
       <CardHeader>
-        <CardTitle className="text-base">Payments / Paystack</CardTitle>
-        <CardDescription>
-          Customer invoice payments use your Paystack merchant account. Paste the
-          callback and webhook URLs in Paystack Dashboard → Settings → API /
-          Webhooks.
-        </CardDescription>
+        <CardTitle className="text-base">{t("title")}</CardTitle>
+        <CardDescription>{t("description")}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
-        {callbackUrl ? <CopyRow label="Callback URL" value={callbackUrl} /> : null}
-        {webhookUrl ? <CopyRow label="Webhook URL" value={webhookUrl} /> : null}
+        {callbackUrl ? (
+          <CopyRow
+            label={t("callbackUrl")}
+            value={callbackUrl}
+            copiedLabel={tc("copied")}
+          />
+        ) : null}
+        {webhookUrl ? (
+          <CopyRow
+            label={t("webhookUrl")}
+            value={webhookUrl}
+            copiedLabel={tc("copied")}
+          />
+        ) : null}
         <div className="space-y-2">
-          <Label htmlFor="pk">Public key</Label>
+          <Label htmlFor="pk">{t("publicKey")}</Label>
           <Input
             id="pk"
             className="font-mono text-xs"
             value={publicKey}
             onChange={(e) => setPublicKey(e.target.value)}
-            placeholder="pk_live_… or pk_test_…"
+            placeholder={t("pkPlaceholder")}
             autoComplete="off"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="sk">Secret key</Label>
+          <Label htmlFor="sk">{t("secretKey")}</Label>
           <Input
             id="sk"
             type="password"
             className="font-mono text-xs"
             value={secretKey}
             onChange={(e) => setSecretKey(e.target.value)}
-            placeholder={configured ? "•••• configured — enter to rotate" : "sk_live_…"}
+            placeholder={
+              configured ? t("skPlaceholderConfigured") : t("skPlaceholderNew")
+            }
             autoComplete="new-password"
           />
         </div>
         <div className="flex flex-wrap gap-2">
           <Button type="button" className="rounded-none" onClick={() => void saveKeys()}>
-            Save keys
+            {t("saveKeys")}
           </Button>
           <Button
             type="button"
@@ -129,13 +148,10 @@ export function PaystackSettingsCard({
             className="rounded-none"
             onClick={() => void testConnection()}
           >
-            Test connection
+            {t("testConnection")}
           </Button>
         </div>
-        <p className="text-muted-foreground text-xs">
-          The connection test uses the secret key already saved on the server—not what
-          is only typed in the field. Save a new key before testing it.
-        </p>
+        <p className="text-muted-foreground text-xs">{t("footNote")}</p>
       </CardContent>
     </Card>
   );

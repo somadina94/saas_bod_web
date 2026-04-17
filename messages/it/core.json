@@ -1,0 +1,254 @@
+{
+  "common": {
+    "loading": "Caricamento…",
+    "copy": "Copia",
+    "view": "Visualizza ({count})",
+    "dash": null,
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi menù",
+    "menuTitle": "Menu",
+    "navigate": "Navigare",
+    "language": "Lingua",
+    "yes": "SÌ",
+    "no": "NO",
+    "copied": "Copiato"
+  },
+  "list": {
+    "actions": "Azioni",
+    "noRecords": "Nessun record trovato.",
+    "pageOf": "Pagina {page} di {totalPages} · {total} totale",
+    "previous": "Precedente",
+    "next": "Prossimo"
+  },
+  "errors": {
+    "accessRestricted": "Accesso limitato",
+    "permissionDeniedDefault": "Non hai il permesso per visualizzare quest'area. Chiedi a un amministratore di aggiornare il tuo ruolo.",
+    "dashboardMetricsDenied": "Non hai accesso alle metriche del dashboard aziendale.",
+    "systemSettingsDenied": "Le impostazioni di sistema richiedono l'accesso all'amministrazione aziendale."
+  },
+  "nav": {
+    "overview": "Panoramica",
+    "customers": "Clienti",
+    "suppliers": "Fornitori",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "inventory": "Inventario",
+    "quotations": "Citazioni",
+    "invoices": "Fatture",
+    "payments": "Pagamenti",
+    "sales": "Saldi",
+    "purchaseOrders": "Ordini di acquisto",
+    "expenses": "Spese",
+    "notifications": "Notifiche",
+    "team": "Squadra",
+    "billing": "Fatturazione",
+    "company": "Azienda",
+    "system": "Sistema",
+    "auditLog": "Registro di controllo",
+    "uploads": "Caricamenti",
+    "settings": "Impostazioni",
+    "workspace": "Spazio di lavoro",
+    "accountAdmin": "Conto e amministrazione",
+    "sidebarFootnote": "Accedi in modo sicuro. I token rimangono nei cookie httpOnly."
+  },
+  "subscription": {
+    "banner": "Il tuo abbonamento all'area di lavoro {platform} non è attivo. Apri la fatturazione per pagare e ripristinare l'accesso a CRM, inventario e strumenti di fatturazione.",
+    "cta": "Vai alla fatturazione"
+  },
+  "dashboardHeader": {
+    "home": "Casa",
+    "marketingHomeTitle": "Home del sito di marketing",
+    "tagline": "Operazioni · CRM · Inventario · Fatturazione",
+    "themeLight": "Passa al tema chiaro",
+    "themeDark": "Passa al tema scuro",
+    "accountMenu": "Menù conto",
+    "profilePrefs": "Profilo e preferenze",
+    "signOut": "disconnessione",
+    "signedOut": "Disconnesso"
+  },
+  "marketing": {
+    "header": {
+      "features": "Caratteristiche",
+      "howItWorks": "Come funziona",
+      "signIn": "Registrazione",
+      "createWorkspace": "Crea spazio di lavoro"
+    },
+    "footer": {
+      "product": "Prodotto",
+      "legal": "Legale",
+      "account": "Account",
+      "dashboard": "Pannello di controllo",
+      "privacy": "Politica sulla riservatezza",
+      "terms": "Termini di servizio",
+      "blurb": "Software operativo per le aziende moderne: CRM, inventario, fatturazione e team in un unico spazio di lavoro.",
+      "rights": "© {year} {platform}. Tutti i diritti riservati.",
+      "tagline": "Creato per i team che non hanno più i fogli di calcolo."
+    }
+  },
+  "home": {
+    "badge1": "Aree di lavoro multi-tenant",
+    "badge2": "Accesso basato sui ruoli",
+    "badge3": "Predisposto per la busta paga",
+    "headline": "Esegui le operazioni con chiarezza: ogni azienda, un'unica piattaforma ottimizzata.",
+    "subhead": "CRM, inventario, preventivi, fatture, pagamenti ai clienti, abbonamenti e amministrazione del team in un unico spazio di lavoro di livello produttivo, creato per le aziende che non hanno più i fogli di calcolo.",
+    "ctaStart": "Inizia gratis",
+    "ctaSignIn": "Registrazione",
+    "ctaFeatures": "Esplora le funzionalità",
+    "mobileTitle": "App mobili",
+    "mobileHint": "Gli elenchi dei negozi arriveranno presto. I pulsanti sono segnaposto per App Store e Google Play: iscriviti agli aggiornamenti dal tuo spazio di lavoro dopo esserti registrato.",
+    "card1Title": "Gasdotto unificato",
+    "card1Body": "Clienti, fornitori, stock e percorsi di controllo analizzati per azienda.",
+    "card2Title": "Finanza e fatturazione",
+    "card2Body": "Preventivi, fatture, Paystack (tenant o piattaforma) e abbonamenti.",
+    "card3Title": "Costruito per i team",
+    "card3Body": "Inviti, ruoli, autorizzazioni a livello di riga e una dashboard di cui i leader si fidano.",
+    "ctaSectionKicker": "Guarda l'immagine completa",
+    "ctaSectionBody": "Esplora i moduli, le autorizzazioni e il modo in cui il tuo spazio di lavoro passa dalla registrazione alla prima fattura.",
+    "ctaHowItWorks": "Come funziona"
+  },
+  "auth": {
+    "layout": {
+      "backHome": "Ritorno a casa"
+    },
+    "login": {
+      "title": "Registrazione",
+      "description": "Utilizza le credenziali dell'area di lavoro. Le sessioni utilizzano cookie sicuri.",
+      "email": "E-mail",
+      "password": "Password",
+      "forgot": "Ha dimenticato la password?",
+      "submit": "Registrazione",
+      "submitting": "Accesso…",
+      "welcome": "Bentornato",
+      "failed": "Accesso non riuscito",
+      "newWorkspace": "Nuovo spazio di lavoro?",
+      "createCompany": "Crea la tua azienda",
+      "loading": "Caricamento…",
+      "validation": {
+        "emailRequired": "L'e-mail è obbligatoria",
+        "emailInvalid": "Inserisci un'e-mail valida",
+        "passwordRequired": "È richiesta la password"
+      }
+    },
+    "setup": {
+      "title": "Crea spazio di lavoro",
+      "description": "Crea un nuovo spazio di lavoro: il tuo profilo aziendale, l'account proprietario e un abbonamento di prova a {platform}.",
+      "company": "Azienda",
+      "firstName": "Nome di battesimo",
+      "lastName": "Cognome",
+      "email": "E-mail",
+      "password": "Password",
+      "submit": "Crea spazio di lavoro",
+      "submitting": "Creazione...",
+      "success": "Area di lavoro creata",
+      "error": "Impossibile creare l'area di lavoro",
+      "hasAccount": "Hai già un account?",
+      "signIn": "Registrazione",
+      "validation": {
+        "companyName": "Il nome dell'azienda è obbligatorio",
+        "firstName": "Il nome è obbligatorio",
+        "lastName": "Il cognome è obbligatorio",
+        "passwordLen": "Utilizza almeno 8 caratteri"
+      }
+    },
+    "forgot": {
+      "title": "Reimposta la password",
+      "description": "Ti invieremo via email un collegamento per scegliere una nuova password.",
+      "email": "E-mail",
+      "submit": "Invia collegamento di reimpostazione",
+      "submitting": "Invio…",
+      "backLogin": "Torna per accedere",
+      "toastInbox": "Controlla la tua casella di posta",
+      "requestTitle": "Richiesta ricevuta",
+      "devHint": "Sviluppo: l'e-mail potrebbe non essere disponibile: utilizza questo collegamento una volta:",
+      "validation": {
+        "emailRequired": "L'e-mail è obbligatoria",
+        "emailInvalid": "Inserisci un'e-mail valida"
+      },
+      "genericError": "Qualcosa è andato storto"
+    },
+    "reset": {
+      "title": "Imposta una nuova password",
+      "description": "Scegli una password complessa per il tuo account.",
+      "email": "E-mail",
+      "password": "Nuova password",
+      "confirm": "Conferma password",
+      "submit": "Aggiorna password",
+      "submitting": "Risparmio…",
+      "success": "Password aggiornata: puoi accedere ora",
+      "failed": "Reimpostazione non riuscita",
+      "backLogin": "Torna per accedere",
+      "missingLink": "Collegamento di reimpostazione non valido",
+      "missingDesc": "Utilizza il collegamento presente nella tua email o richiedi un nuovo ripristino dall'accesso.",
+      "validation": {
+        "tokenMissing": "Manca il token di reimpostazione",
+        "passwordLen": "Utilizza almeno 8 caratteri",
+        "mismatch": "Le password non corrispondono"
+      }
+    },
+    "invite": {
+      "title": "Accetta l'invito",
+      "description": "Imposta una password per accedere allo spazio di lavoro del tuo team.",
+      "invalidTitle": "Link di invito non valido",
+      "invalidDesc": "Apri il collegamento completo dall'e-mail di invito. Se è scaduto, chiedi a un amministratore di inviare un nuovo invito.",
+      "password": "Password",
+      "confirm": "Conferma password",
+      "submit": "Partecipa all'area di lavoro",
+      "submitting": "Partecipazione…",
+      "welcome": "Benvenuto nella squadra",
+      "error": "Impossibile completare l'invito",
+      "validation": {
+        "tokenMissing": "Manca il token di reimpostazione",
+        "passwordLen": "Utilizza almeno 8 caratteri",
+        "mismatch": "Le password non corrispondono"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "SUCCESSO",
+      "failedBadge": "FALLITO",
+      "pendingBadge": "IN ATTESA",
+      "successTitle": "Pagamento riuscito",
+      "failedTitle": "Il pagamento non è stato completato",
+      "pendingTitle": "Il pagamento è in fase di elaborazione",
+      "successDesc": "Grazie. Il pagamento è stato ricevuto e verrà applicato alla tua fattura.",
+      "failedDesc": "Il tuo pagamento non è stato completato. Puoi riprovare utilizzando il link di pagamento presente nell'e-mail della fattura.",
+      "pendingDesc": "Stiamo confermando il tuo pagamento. Questo di solito si risolve in breve tempo.",
+      "referenceLine": "Riferimento: {reference}",
+      "home": "Vai a casa"
+    },
+    "billing": {
+      "successBadge": "SUCCESSO",
+      "pendingBadge": "IN ATTESA DI",
+      "successTitle": "Pagamento dell'abbonamento ricevuto",
+      "pendingTitle": "Abbonamento in elaborazione",
+      "successDesc": "Grazie. Il tuo abbonamento a Workspace verrà aggiornato poco dopo la conferma dell'addebito da parte di Paystack.",
+      "pendingDesc": "Se hai completato il pagamento, la conferma potrebbe richiedere qualche istante.",
+      "reference": "Riferimento:",
+      "backBilling": "Torniamo alla fatturazione"
+    }
+  },
+  "publicDoc": {
+    "loading": "Caricamento documento...",
+    "unavailableTitle": "Documento non disponibile",
+    "unavailableBody": "Questo collegamento non è valido, è scaduto oppure il documento non è più disponibile.",
+    "customerCopy": "Copia del cliente",
+    "quotation": "Preventivo",
+    "invoice": "Fattura",
+    "status": "Stato:",
+    "customer": "Cliente",
+    "dates": "Date",
+    "issued": "Rilasciato:",
+    "validUntil": "Valido fino al:",
+    "due": "Dovuto:",
+    "description": "Descrizione",
+    "qty": "Qtà",
+    "unit": "Unità",
+    "lineTotal": "Totale riga",
+    "noLines": "Nessun elemento pubblicitario.",
+    "total": "Totale:",
+    "paid": "Pagato:",
+    "balance": "Bilancia:",
+    "notes": "Note:"
+  }
+}

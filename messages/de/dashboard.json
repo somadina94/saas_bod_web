@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "Ihr Arbeitsbereich",
+      "subhead": "Diese Übersicht gilt für Ihr Unternehmen. Nutzen Sie die Seitenleiste für CRM, Lager, Abrechnung und mehr—alles mit rollenbasierter Steuerung.",
+      "loading": "Übersicht wird geladen…",
+      "greetingMorning": "Guten Morgen",
+      "greetingAfternoon": "Guten Tag",
+      "greetingEvening": "Guten Abend",
+      "there": "Sie",
+      "kpiSales": "Umsatz (Monat)",
+      "kpiSalesHint": "Abgeschlossene Verkäufe diesen Monat",
+      "kpiOutstanding": "Offene Rechnungen",
+      "kpiOutstandingHint": "Noch offener Betrag",
+      "kpiCustomers": "Kunden",
+      "kpiCustomersHint": "Aktive Datensätze",
+      "kpiLowStock": "Niedrigbestand-SKUs",
+      "kpiLowStockHint": "Am oder unter Meldebestand",
+      "chartTitle": "Liquidität & Verbindlichkeiten",
+      "chartSubtitle": "Monatsumsatz, offene Forderungen und bezahlte Ausgaben im Vergleich.",
+      "chartAmount": "Betrag",
+      "networkTitle": "Netzwerk",
+      "networkSubtitle": "Schnelle Beziehungszahlen.",
+      "suppliers": "Lieferanten",
+      "expensesMonth": "Ausgaben (Monat)",
+      "networkTip": "Tipp: heften Sie täglich genutzte Module an—die Seitenleiste klappt auf kleinen Bildschirmen zu Symbolen zusammen.",
+      "chartSales": "Umsatz (MTD)",
+      "chartOutstanding": "Offen",
+      "chartExpenses": "Ausgaben"
+    },
+    "customers": {
+      "title": "Kunden",
+      "description": "Aktive CRM-Datensätze mit Salden und Kontaktdaten.",
+      "toastCopied": "Kunden-ID kopiert",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "status": "Status",
+        "balance": "Saldo",
+        "docs": "Dok."
+      }
+    },
+    "suppliers": {
+      "title": "Lieferanten",
+      "description": "Anbieter und Erfüllungspartner für den Einkauf.",
+      "toastCopied": "Lieferanten-ID kopiert",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "status": "Status",
+        "docs": "Dok."
+      }
+    },
+    "products": {
+      "title": "Produkte",
+      "description": "Katalog mit Bestand und SKU-Sichtbarkeit.",
+      "toastCopied": "Produkt-ID kopiert",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "sku": "SKU",
+        "onHand": "Auf Lager",
+        "status": "Status",
+        "image": "Bild",
+        "preview": "Ansehen"
+      }
+    },
+    "services": {
+      "title": "Leistungen",
+      "description": "Abrechenbare Leistungen und wiederkehrende Positionen.",
+      "columns": {
+        "name": "Name",
+        "code": "Code",
+        "price": "Preis",
+        "status": "Status"
+      }
+    },
+    "inventory": {
+      "title": "Lagerbewegungen",
+      "description": "Zugang, Abgang, Umlagerungen und Anpassungen.",
+      "lowStockTitle": "Niedriger Bestand",
+      "lowStockProduct": "Produkt",
+      "lowStockOnHand": "Auf Lager",
+      "lowStockReorder": "Nachbestellung",
+      "lowStockAllOk": "Alle erfassten SKUs liegen über den Nachbestellmengen.",
+      "columns": {
+        "type": "Typ",
+        "qty": "Menge",
+        "productId": "Produkt-ID",
+        "when": "Wann"
+      }
+    },
+    "quotations": {
+      "title": "Angebote",
+      "description": "Verkaufsangebote vor Umwandlung in Rechnungen.",
+      "columns": {
+        "number": "Nummer",
+        "status": "Status",
+        "total": "Gesamt",
+        "issued": "Ausgestellt"
+      }
+    },
+    "invoices": {
+      "title": "Rechnungen",
+      "description": "Forderungen mit Salden und Status.",
+      "columns": {
+        "number": "Nummer",
+        "status": "Status",
+        "total": "Gesamt",
+        "due": "Fällig"
+      }
+    },
+    "payments": {
+      "title": "Zahlungen",
+      "description": "Erfasste Zahlungen inkl. Paystack-Flows.",
+      "columns": {
+        "number": "Nummer",
+        "method": "Methode",
+        "amount": "Betrag",
+        "status": "Status",
+        "recorded": "Erfasst"
+      }
+    },
+    "sales": {
+      "title": "Verkauf",
+      "description": "Abgeschlossene und laufende Verkaufsaufträge.",
+      "columns": {
+        "saleNum": "Verkauf Nr.",
+        "status": "Status",
+        "total": "Gesamt",
+        "created": "Erstellt"
+      }
+    },
+    "purchaseOrders": {
+      "title": "Bestellungen",
+      "description": "Beschaffungszyklus mit Lieferanten.",
+      "columns": {
+        "poNum": "Best. Nr.",
+        "status": "Status",
+        "total": "Gesamt",
+        "created": "Erstellt"
+      }
+    },
+    "expenses": {
+      "title": "Ausgaben",
+      "description": "Ausgabenverfolgung mit Freigaben wo konfiguriert.",
+      "toastCopied": "Ausgaben-ID kopiert",
+      "columns": {
+        "id": "ID",
+        "title": "Titel",
+        "amount": "Betrag",
+        "status": "Status",
+        "date": "Datum",
+        "receipt": "Beleg",
+        "view": "Ansehen"
+      }
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "description": "Ihr persönlicher Posteingang im Arbeitsbereich.",
+      "markAllRead": "Alle als gelesen",
+      "markAllReadToast": "Alle Benachrichtigungen als gelesen markiert",
+      "updateFailed": "Aktualisierung fehlgeschlagen",
+      "columns": {
+        "title": "Titel",
+        "read": "Gelesen",
+        "received": "Empfangen"
+      }
+    },
+    "users": {
+      "title": "Team",
+      "description": "Kollegen einladen, Rollen vergeben und Zugriff verwalten. Inhaber und Nutzer mit Benutzerverwaltung können Teammitglieder einladen, Rollen und Status ändern oder Zugriff entfernen.",
+      "columns": {
+        "name": "Name",
+        "email": "E-Mail",
+        "role": "Rolle",
+        "status": "Status"
+      }
+    },
+    "auditLogs": {
+      "title": "Prüfprotokoll",
+      "description": "Unveränderlicher Nachweis sensibler Aktionen.",
+      "columns": {
+        "action": "Aktion",
+        "entity": "Objekt",
+        "actor": "Akteur",
+        "when": "Wann"
+      }
+    },
+    "billing": {
+      "title": "Abrechnung",
+      "description": "Plattform-Abonnement für {platform} wird über Paystack mit den Operator-Schlüsseln in den Server-Umgebungsvariablen abgerechnet—nicht mit Ihren Mandanten-Paystack-Schlüsseln.",
+      "currentPlan": "Aktueller Plan",
+      "noSub": "Noch kein Abonnement-Eintrag.",
+      "statusPrefix": "Status:",
+      "renews": "· Verlängert {date}",
+      "pricingLine": "Standard:",
+      "perMonth": "/ Monat",
+      "perYear": "/ Jahr",
+      "or": "oder",
+      "payMonthly": "Monatlich zahlen",
+      "payYearly": "Jährlich zahlen",
+      "redirecting": "Weiterleitung…",
+      "checkoutFailed": "Checkout fehlgeschlagen",
+      "callback": {
+        "badgeSuccess": "ERFOLG",
+        "badgePending": "AUSSTEHEND",
+        "titleSuccess": "Abonnementzahlung erhalten",
+        "titlePending": "Abonnement wird verarbeitet",
+        "bodySuccess": "Vielen Dank. Ihr Arbeitsbereich-Abonnement wird aktualisiert, sobald Paystack die Abbuchung bestätigt.",
+        "bodyPending": "Wenn Sie die Zahlung abgeschlossen haben, kann die Bestätigung einen Moment dauern.",
+        "referenceLine": "Referenz: {reference}",
+        "backToBilling": "Zurück zur Abrechnung"
+      }
+    },
+    "company": {
+      "title": "Unternehmen",
+      "description": "Rechtsträger und Betriebsstandards für Ihren Arbeitsbereich.",
+      "loading": "Unternehmen wird geladen…",
+      "notFound": "Unternehmensprofil nicht gefunden.",
+      "error": "Unternehmen konnte nicht geladen werden.",
+      "industry": "Branche",
+      "currency": "Währung",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "taxRate": "Standard-Steuersatz"
+    },
+    "system": {
+      "title": "System",
+      "description": "Rohkonfiguration für Administratoren.",
+      "rawSettings": "Rohdaten"
+    },
+    "settings": {
+      "pageTitle": "Profil & Einstellungen",
+      "pageDescription": "Änderungen werden sofort mit Ihrem Konto synchronisiert. Sensible Authentifizierung bleibt in httpOnly-Cookies.",
+      "cardTitle": "Persönliche Angaben",
+      "signedInAs": "Angemeldet als {email}",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefon",
+      "timezone": "Zeitzone",
+      "save": "Änderungen speichern",
+      "saving": "Speichern…",
+      "saved": "Profil aktualisiert",
+      "updateFailed": "Aktualisierung fehlgeschlagen",
+      "validation": {
+        "firstNameRequired": "Vorname ist erforderlich",
+        "lastNameRequired": "Nachname ist erforderlich"
+      }
+    },
+    "uploads": {
+      "title": "Uploads",
+      "description": "Dateien werden nach Art gespeichert und bei Bedarf mit Datensätzen verknüpft (z. B. Avatare, Logos).",
+      "cardTitle": "Datei hochladen",
+      "cardHint": "Max. ~10 MB pro Anfrage (Serverlimit).",
+      "kindLabel": "Art",
+      "fileLabel": "Datei",
+      "labelProduct": "Produkt",
+      "labelExpense": "Ausgabe",
+      "labelCustomer": "Kunde",
+      "labelSupplier": "Lieferant",
+      "upload": "Hochladen",
+      "uploading": "Hochladen…",
+      "chooseFile": "Datei wählen",
+      "selectRecord": "Zugehörigen Datensatz wählen",
+      "uploaded": "Hochgeladen",
+      "uploadedUrl": "URL: {url}",
+      "avatarHint": "Avatar aktualisiert—bei Bedarf aktualisieren.",
+      "uploadFailed": "Upload fehlgeschlagen",
+      "searchProduct": "Produkt suchen und wählen",
+      "searchExpense": "Ausgabe suchen und wählen",
+      "searchCustomer": "Kunden suchen und wählen",
+      "searchSupplier": "Lieferanten suchen und wählen",
+      "kinds": {
+        "company_logo": "Firmenlogo",
+        "user_avatar": "Benutzer-Avatar",
+        "customer_doc": "Kundendokument",
+        "supplier_doc": "Lieferantendokument",
+        "expense_receipt": "Ausgabenbeleg",
+        "product_image": "Produktbild"
+      }
+    },
+    "companyEdit": {
+      "title": "Unternehmen bearbeiten",
+      "description": "Nur für Rollen mit Berechtigung für Unternehmenseinstellungen sichtbar.",
+      "legalName": "Rechtlicher Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "currencyCode": "Währungscode",
+      "taxPercent": "Standard-Steuer %",
+      "save": "Unternehmen speichern",
+      "saving": "Speichern…",
+      "saved": "Unternehmen aktualisiert",
+      "updateFailed": "Aktualisierung fehlgeschlagen",
+      "validation": {
+        "nameRequired": "Rechtlicher Name ist erforderlich",
+        "currencyRequired": "Währungscode ist erforderlich"
+      }
+    },
+    "paystack": {
+      "title": "Zahlungen / Paystack",
+      "description": "Kundenrechnungen nutzen Ihr Paystack-Händlerkonto. Callback- und Webhook-URLs im Paystack-Dashboard unter Einstellungen → API / Webhooks eintragen.",
+      "callbackUrl": "Callback-URL",
+      "webhookUrl": "Webhook-URL",
+      "publicKey": "Öffentlicher Schlüssel",
+      "secretKey": "Geheimer Schlüssel",
+      "pkPlaceholder": "pk_live_… oder pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• konfiguriert — zur Rotation eingeben",
+      "saveKeys": "Schlüssel speichern",
+      "testConnection": "Verbindung testen",
+      "footNote": "Der Verbindungstest nutzt den auf dem Server gespeicherten geheimen Schlüssel—nicht nur den eingegebenen Text. Neuen Schlüssel vor dem Test speichern.",
+      "saved": "Zahlungseinstellungen gespeichert",
+      "saveFailed": "Speichern fehlgeschlagen",
+      "validOk": "Paystack-Zugangsdaten sind gültig",
+      "validBad": "Paystack hat den gespeicherten geheimen Schlüssel abgelehnt. Schlüssel im Paystack-Dashboard prüfen, hier speichern und erneut testen.",
+      "testFailed": "Test fehlgeschlagen"
+    }
+  }
+}

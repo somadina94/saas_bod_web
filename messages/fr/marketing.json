@@ -1,0 +1,138 @@
+{
+  "features": {
+    "title": "Caractéristiques",
+    "subtitle": "Un espace de travail unique pour la distribution, les services de vente au détail et les opérations sur le terrain, limité par entreprise, limité par rôle et prêt pour les flux d'argent réels.",
+    "intro": "{platform} est conçu comme un système <strong>multi-tenant</strong> : chaque espace de travail est une entreprise avec ses propres données. Les utilisateurs appartiennent à une entreprise par session ; les autorisations déterminent quels modules apparaissent et quelles actions de ligne sont disponibles.",
+    "footnote": "Les écrans exacts dépendent de votre rôle (propriétaire, administrateur, responsable, ventes, inventaire, comptable, support, spectateur). Les propriétaires et les administrateurs voient généralement la totalité de la surface ; d'autres rôles héritent des autorisations organisées.",
+    "modules": [
+      {
+        "title": "Présentation et analyses",
+        "desc": "Tableau de bord à l'échelle de l'entreprise avec les ventes, les RA, les dépenses et les signaux de stock."
+      },
+      {
+        "title": "Clients et CRM",
+        "desc": "Comptes, contacts et historique avec accès avec autorisation."
+      },
+      {
+        "title": "Fournisseurs",
+        "desc": "Dossiers des fournisseurs liés aux bons de commande et à la réception."
+      },
+      {
+        "title": "Produits et services",
+        "desc": "Catalogue, SKU, prix et services optionnels aux côtés des biens physiques."
+      },
+      {
+        "title": "Inventaire",
+        "desc": "Mouvements, niveaux et connaissance des stocks faibles."
+      },
+      {
+        "title": "Citations",
+        "desc": "Créez, envoyez et convertissez des devis en factures sans ressaisir les lignes."
+      },
+      {
+        "title": "Factures",
+        "desc": "Rédigez, envoyez et suivez les factures avec des flux de courrier électronique lorsque configurés."
+      },
+      {
+        "title": "Paiements",
+        "desc": "Enregistrer les paiements par rapport aux factures ; prend en charge les flux Paystack pour le paiement des clients."
+      },
+      {
+        "title": "Ventes",
+        "desc": "Ventes directes avec déduction facultative des stocks pour les gammes de produits."
+      },
+      {
+        "title": "Bons de commande",
+        "desc": "Approuvez et recevez des stocks de fournisseurs avec des pistes faciles à auditer."
+      },
+      {
+        "title": "Dépenses",
+        "desc": "Soumettez, approuvez et suivez les dépenses opérationnelles avec des catégories."
+      },
+      {
+        "title": "Notifications",
+        "desc": "Alertes dans l'application pour les événements opérationnels que votre rôle est autorisé à voir."
+      },
+      {
+        "title": "Équipe",
+        "desc": "Invitez du personnel, attribuez des rôles, modifiez le statut et supprimez l'accès en toute sécurité."
+      },
+      {
+        "title": "Facturation et abonnements",
+        "desc": "Abonnement Workspace à la plateforme (paiement Paystack si activé)."
+      },
+      {
+        "title": "Profil de l'entreprise",
+        "desc": "Paramètres d’identité juridique, de marque et au niveau de l’espace de travail."
+      },
+      {
+        "title": "Paye du locataire",
+        "desc": "Connectez vos clés marchandes pour les paiements des factures clients et les webhooks."
+      },
+      {
+        "title": "Préférences système",
+        "desc": "Options d'administration pour les opérateurs disposant d'une autorisation de paramètres d'entreprise."
+      },
+      {
+        "title": "Journal d'audit",
+        "desc": "Piste immuable d’actions sensibles pour les examens de conformité."
+      },
+      {
+        "title": "Téléchargements",
+        "desc": "Fichiers vers Backblaze B2 : logos, avatars, reçus et images de produits."
+      },
+      {
+        "title": "Profil et préférences",
+        "desc": "Détails personnels, fuseau horaire et préférences de notification par utilisateur."
+      },
+      {
+        "title": "Catalogue de services",
+        "desc": "Lignes facturables hors stock telles que les frais de livraison ou d'installation."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "De la première inscription à la gestion des factures et de l'inventaire, conçu pour les opérateurs qui ont besoin de flux de travail prévisibles, et non de démonstrations de jouets.",
+    "qaLead": "Besoin d'une passe d'assurance qualité scriptée ?",
+    "qaLink": "Afficher le script d'assurance qualité complet sur GitHub",
+    "qaTail": "—contrôles pas à pas et données d’exemple pour {platform}.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Créez votre espace de travail",
+        "body": "Inscrivez-vous avec le nom de votre entreprise. Vous devenez propriétaire d'un nouveau locataire : les données sont isolées de toutes les autres activités de la plateforme."
+      },
+      {
+        "n": "02",
+        "title": "Séance sécurisée",
+        "body": "L'authentification utilise des cookies httpOnly et des jetons d'accès de courte durée. Votre navigateur ne stocke jamais de secrets de longue durée dans localStorage pour les appels d'API principaux."
+      },
+      {
+        "n": "03",
+        "title": "Inviter l'équipe",
+        "body": "Envoyez des invitations par e-mail depuis l'équipe. Chaque membre obtient un rôle (administrateur, responsable, ventes, inventaire, comptable, support, spectateur) avec des autorisations par défaut que vous pouvez affiner au fil du temps."
+      },
+      {
+        "n": "04",
+        "title": "Configurer les Money Rails",
+        "body": "Pour la facturation de la plateforme, finalisez le paiement de l'abonnement lorsque cette option est activée. Pour les paiements de factures clients, ajoutez vos clés publiques/secrètes Paystack sous Entreprise → Paiements ; configurez les URL de rappel et de webhook dans Paystack. Les piles de production doivent définir ENCRYPTION_KEY (64 caractères hexadécimaux) pour les secrets des locataires. Tout cela s'exécute dans {platform}."
+      },
+      {
+        "n": "05",
+        "title": "Opérer quotidiennement",
+        "body": "Charger les clients, les fournisseurs et les produits ; exécuter des devis sur des factures ; enregistrer les paiements et les dépenses ; déplacer le stock avec les mouvements d'inventaire ; utiliser les bons de commande pour les marchandises entrantes."
+      },
+      {
+        "n": "06",
+        "title": "Restez informé",
+        "body": "Les notifications font apparaître des événements importants. Le journal d’audit capture les actions sensibles pour examen. Les téléchargements stockent les fichiers dans votre stockage d'objets configuré (par exemple, logos et reçus)."
+      },
+      {
+        "n": "07",
+        "title": "Gouverner l'accès",
+        "body": "Modifiez les rôles, suspendez des comptes ou supprimez des coéquipiers de l'écran Équipe. Les propriétaires ne peuvent pas être supprimés sans un autre propriétaire, protégeant ainsi le dernier détenteur de clé."
+      }
+    ]
+  }
+}

@@ -25,7 +25,8 @@ import type { User } from "@/lib/api/types";
 export type PermissionKey = keyof NonNullable<User["permissions"]>;
 
 export type DashboardNavItem = {
-  title: string;
+  /** Key under `nav.*` in messages */
+  titleKey: string;
   href: string;
   icon: React.ComponentType<IconProps>;
   /** If set, item is shown only when user has this permission (or is owner with implied access). */
@@ -48,73 +49,73 @@ export function filterNavForUser(
 
 export const dashboardNavMain: DashboardNavItem[] = [
   {
-    title: "Overview",
+    titleKey: "overview",
     href: "/dashboard",
     icon: HouseIcon,
     permission: "canViewDashboard",
   },
   {
-    title: "Customers",
+    titleKey: "customers",
     href: "/dashboard/customers",
     icon: UsersIcon,
     permission: "canManageCustomers",
   },
   {
-    title: "Suppliers",
+    titleKey: "suppliers",
     href: "/dashboard/suppliers",
     icon: TruckIcon,
     permission: "canManageSuppliers",
   },
   {
-    title: "Products",
+    titleKey: "products",
     href: "/dashboard/products",
     icon: PackageIcon,
     permission: "canManageProducts",
   },
   {
-    title: "Services",
+    titleKey: "services",
     href: "/dashboard/services",
     icon: WrenchIcon,
     permission: "canManageProducts",
   },
   {
-    title: "Inventory",
+    titleKey: "inventory",
     href: "/dashboard/inventory",
     icon: WarehouseIcon,
     permission: "canManageInventory",
   },
   {
-    title: "Quotations",
+    titleKey: "quotations",
     href: "/dashboard/quotations",
     icon: FileTextIcon,
     permission: "canManageInvoices",
   },
   {
-    title: "Invoices",
+    titleKey: "invoices",
     href: "/dashboard/invoices",
     icon: ReceiptIcon,
     permission: "canManageInvoices",
   },
   {
-    title: "Payments",
+    titleKey: "payments",
     href: "/dashboard/payments",
     icon: CreditCardIcon,
     permission: "canRecordPayments",
   },
   {
-    title: "Sales",
+    titleKey: "sales",
     href: "/dashboard/sales",
     icon: ShoppingCartIcon,
     permission: "canCreateSales",
   },
   {
-    title: "Purchase orders",
+    titleKey: "purchaseOrders",
     href: "/dashboard/purchase-orders",
     icon: ClipboardTextIcon,
     permission: "canManagePurchases",
   },
   {
-    title: "Expenses",
+    titleKey: "expenses",
     href: "/dashboard/expenses",
     icon: CurrencyDollarIcon,
     permission: "canManageExpenses",
@@ -123,45 +124,45 @@ export const dashboardNavMain: DashboardNavItem[] = [
 
 export const dashboardNavSecondary: DashboardNavItem[] = [
   {
-    title: "Notifications",
+    titleKey: "notifications",
     href: "/dashboard/notifications",
     icon: BellIcon,
   },
   {
-    title: "Team",
+    titleKey: "team",
     href: "/dashboard/users",
     icon: UserGearIcon,
     permission: "canManageUsers",
   },
   {
-    title: "Billing",
+    titleKey: "billing",
     href: "/dashboard/billing",
     icon: CreditCardIcon,
   },
   {
-    title: "Company",
+    titleKey: "company",
     href: "/dashboard/company",
     icon: BuildingsIcon,
   },
   {
-    title: "System",
+    titleKey: "system",
     href: "/dashboard/system",
     icon: GearSixIcon,
     permission: "canManageCompanySettings",
   },
   {
-    title: "Audit log",
+    titleKey: "auditLog",
     href: "/dashboard/audit-logs",
     icon: ScrollIcon,
     permission: "canViewAuditLogs",
   },
   {
-    title: "Uploads",
+    titleKey: "uploads",
     href: "/dashboard/uploads",
     icon: CloudArrowUpIcon,
   },
   {
-    title: "Settings",
+    titleKey: "settings",
     href: "/dashboard/settings",
     icon: SlidersIcon,
   },

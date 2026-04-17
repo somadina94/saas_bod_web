@@ -1,0 +1,254 @@
+{
+  "common": {
+    "loading": "Załadunek…",
+    "copy": "Kopia",
+    "view": "Wyświetl ({count})",
+    "dash": null,
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "menuTitle": "Menu",
+    "navigate": "Nawigować",
+    "language": "Język",
+    "yes": "Tak",
+    "no": "NIE",
+    "copied": "Skopiowano"
+  },
+  "list": {
+    "actions": "Działania",
+    "noRecords": "Nie znaleziono żadnych rekordów.",
+    "pageOf": "Strona {strona} z {totalPages} · Łącznie {total}",
+    "previous": "Poprzedni",
+    "next": "Następny"
+  },
+  "errors": {
+    "accessRestricted": "Dostęp ograniczony",
+    "permissionDeniedDefault": "Nie masz uprawnień do oglądania tego obszaru. Poproś administratora o aktualizację Twojej roli.",
+    "dashboardMetricsDenied": "Nie masz dostępu do wskaźników panelu firmowego.",
+    "systemSettingsDenied": "Ustawienia systemu wymagają dostępu administracyjnego firmy."
+  },
+  "nav": {
+    "overview": "Przegląd",
+    "customers": "Klienci",
+    "suppliers": "Dostawcy",
+    "products": "Produkty",
+    "services": "Usługi",
+    "inventory": "Spis",
+    "quotations": "Cytaty",
+    "invoices": "Faktury",
+    "payments": "Płatności",
+    "sales": "Obroty",
+    "purchaseOrders": "Zamówienia zakupu",
+    "expenses": "Wydatki",
+    "notifications": "Powiadomienia",
+    "team": "Zespół",
+    "billing": "Rozliczenia",
+    "company": "Firma",
+    "system": "System",
+    "auditLog": "Dziennik audytu",
+    "uploads": "Przesłane",
+    "settings": "Ustawienia",
+    "workspace": "Obszar roboczy",
+    "accountAdmin": "Konto i administrator",
+    "sidebarFootnote": "Zalogowano się bezpiecznie. Tokeny pozostają w plikach cookie httpOnly."
+  },
+  "subscription": {
+    "banner": "Twoja subskrypcja obszaru roboczego {platform} nie jest aktywna. Otwórz rozliczenia, aby zapłacić i przywrócić dostęp do CRM, zasobów reklamowych i narzędzi rozliczeniowych.",
+    "cta": "Przejdź do rozliczeń"
+  },
+  "dashboardHeader": {
+    "home": "Dom",
+    "marketingHomeTitle": "Strona główna witryny marketingowej",
+    "tagline": "Operacje · CRM · Zapasy · Fakturowanie",
+    "themeLight": "Przełącz na jasny motyw",
+    "themeDark": "Przełącz na ciemny motyw",
+    "accountMenu": "Menu konta",
+    "profilePrefs": "Profil i preferencje",
+    "signOut": "Wyloguj się",
+    "signedOut": "Wylogowałem się"
+  },
+  "marketing": {
+    "header": {
+      "features": "Cechy",
+      "howItWorks": "Jak to działa",
+      "signIn": "Zalogować się",
+      "createWorkspace": "Utwórz obszar roboczy"
+    },
+    "footer": {
+      "product": "Produkt",
+      "legal": "Prawny",
+      "account": "Konto",
+      "dashboard": "Panel",
+      "privacy": "Polityka prywatności",
+      "terms": "Warunki usługi",
+      "blurb": "Oprogramowanie operacyjne dla nowoczesnych firm — CRM, zapasy, rozliczenia i zespoły w jednym obszarze roboczym.",
+      "rights": "© {year} {platform}. Wszelkie prawa zastrzeżone.",
+      "tagline": "Stworzony dla zespołów, które wyrastają z arkuszy kalkulacyjnych."
+    }
+  },
+  "home": {
+    "badge1": "Przestrzenie robocze dla wielu najemców",
+    "badge2": "Dostęp oparty na rolach",
+    "badge3": "Gotowy do wypłaty",
+    "headline": "Prowadź operacje w przejrzysty sposób — każda firma, jedna dopracowana platforma.",
+    "subhead": "CRM, zapasy, oferty, faktury, płatności klientów, subskrypcje i administracja zespołem w jednym obszarze roboczym klasy produkcyjnej — stworzonym dla firm, które wyrosły z arkuszy kalkulacyjnych.",
+    "ctaStart": "Zacznij bezpłatnie",
+    "ctaSignIn": "Zalogować się",
+    "ctaFeatures": "Przeglądaj funkcje",
+    "mobileTitle": "Aplikacje mobilne",
+    "mobileHint": "Oferty sklepów pojawią się wkrótce. Przyciski to elementy zastępcze App Store i Google Play — po zarejestrowaniu możesz subskrybować aktualizacje z obszaru roboczego.",
+    "card1Title": "Ujednolicony rurociąg",
+    "card1Body": "Klienci, dostawcy, zapasy i ścieżki audytu w poszczególnych firmach.",
+    "card2Title": "Finanse i rozliczenia",
+    "card2Body": "Oferty, faktury, Paystack (najemca lub platforma) i subskrypcje.",
+    "card3Title": "Zbudowany dla zespołów",
+    "card3Body": "Zaproszenia, role, uprawnienia na poziomie wiersza i pulpit nawigacyjny, któremu ufają liderzy.",
+    "ctaSectionKicker": "Zobacz pełny obraz",
+    "ctaSectionBody": "Zapoznaj się z modułami, uprawnieniami i tym, jak Twój obszar roboczy przechodzi od rejestracji do pierwszej faktury.",
+    "ctaHowItWorks": "Jak to działa"
+  },
+  "auth": {
+    "layout": {
+      "backHome": "Powrót do domu"
+    },
+    "login": {
+      "title": "Zalogować się",
+      "description": "Użyj poświadczeń swojego obszaru roboczego. Sesje korzystają z bezpiecznych plików cookie.",
+      "email": "E-mail",
+      "password": "Hasło",
+      "forgot": "Zapomniałeś hasła?",
+      "submit": "Zalogować się",
+      "submitting": "Logowanie…",
+      "welcome": "Witamy z powrotem",
+      "failed": "Logowanie nie powiodło się",
+      "newWorkspace": "Nowe miejsce do pracy?",
+      "createCompany": "Stwórz swoją firmę",
+      "loading": "Załadunek…",
+      "validation": {
+        "emailRequired": "Adres e-mail jest wymagany",
+        "emailInvalid": "Wpisz prawidłowy adres e-mail",
+        "passwordRequired": "Hasło jest wymagane"
+      }
+    },
+    "setup": {
+      "title": "Utwórz obszar roboczy",
+      "description": "Utwórz nowy obszar roboczy: profil swojej firmy, konto właściciela i subskrypcję próbną platformy {platform}.",
+      "company": "Firma",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "E-mail",
+      "password": "Hasło",
+      "submit": "Utwórz obszar roboczy",
+      "submitting": "Tworzenie…",
+      "success": "Utworzono obszar roboczy",
+      "error": "Nie można utworzyć obszaru roboczego",
+      "hasAccount": "Masz już konto?",
+      "signIn": "Zalogować się",
+      "validation": {
+        "companyName": "Nazwa firmy jest wymagana",
+        "firstName": "Imię jest wymagane",
+        "lastName": "Nazwisko jest wymagane",
+        "passwordLen": "Użyj co najmniej 8 znaków"
+      }
+    },
+    "forgot": {
+      "title": "Zresetuj hasło",
+      "description": "Wyślemy Ci e-mail z linkiem umożliwiającym wybranie nowego hasła.",
+      "email": "E-mail",
+      "submit": "Wyślij link resetujący",
+      "submitting": "Przesyłka…",
+      "backLogin": "Wróć do logowania",
+      "toastInbox": "Sprawdź swoją skrzynkę odbiorczą",
+      "requestTitle": "Otrzymano żądanie",
+      "devHint": "Rozwój: e-mail może być niedostępny — użyj tego linku raz:",
+      "validation": {
+        "emailRequired": "Adres e-mail jest wymagany",
+        "emailInvalid": "Wpisz prawidłowy adres e-mail"
+      },
+      "genericError": "Coś poszło nie tak"
+    },
+    "reset": {
+      "title": "Ustaw nowe hasło",
+      "description": "Wybierz silne hasło do swojego konta.",
+      "email": "E-mail",
+      "password": "Nowe hasło",
+      "confirm": "Potwierdź hasło",
+      "submit": "Zaktualizuj hasło",
+      "submitting": "Oszczędność…",
+      "success": "Hasło zaktualizowane — możesz się już zalogować",
+      "failed": "Resetowanie nie powiodło się",
+      "backLogin": "Wróć do logowania",
+      "missingLink": "Nieprawidłowy link resetowania",
+      "missingDesc": "Użyj linku z e-maila lub poproś o ponowne zresetowanie podczas logowania.",
+      "validation": {
+        "tokenMissing": "Brak tokena resetowania",
+        "passwordLen": "Użyj co najmniej 8 znaków",
+        "mismatch": "Hasła nie pasują"
+      }
+    },
+    "invite": {
+      "title": "Zaakceptuj zaproszenie",
+      "description": "Ustaw hasło, aby dołączyć do obszaru roboczego zespołu.",
+      "invalidTitle": "Nieprawidłowy link do zaproszenia",
+      "invalidDesc": "Otwórz pełny link z e-maila z zaproszeniem. Jeśli wygasło, poproś administratora o wysłanie nowego zaproszenia.",
+      "password": "Hasło",
+      "confirm": "Potwierdź hasło",
+      "submit": "Dołącz do obszaru roboczego",
+      "submitting": "Łączący…",
+      "welcome": "Witamy w zespole",
+      "error": "Nie udało się ukończyć zaproszenia",
+      "validation": {
+        "tokenMissing": "Brak tokena resetowania",
+        "passwordLen": "Użyj co najmniej 8 znaków",
+        "mismatch": "Hasła nie pasują"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "SUKCES",
+      "failedBadge": "NIEPOWODZENIE",
+      "pendingBadge": "OCZEKUJE",
+      "successTitle": "Płatność pomyślna",
+      "failedTitle": "Płatność nie została zakończona",
+      "pendingTitle": "Płatność jest przetwarzana",
+      "successDesc": "Dzięki. Twoja płatność została otrzymana i jest uwzględniona na fakturze.",
+      "failedDesc": "Twoja płatność nie została ukończona. Możesz spróbować ponownie skorzystać z linku do płatności znajdującego się w e-mailu z fakturą.",
+      "pendingDesc": "Potwierdzamy Twoją płatność. Zwykle problem ten szybko ustępuje.",
+      "referenceLine": "Referencja: {reference}",
+      "home": "Idź do domu"
+    },
+    "billing": {
+      "successBadge": "SUKCES",
+      "pendingBadge": "AŻ DO",
+      "successTitle": "Otrzymano płatność za subskrypcję",
+      "pendingTitle": "Przetwarzanie subskrypcji",
+      "successDesc": "Dziękuję. Twoja subskrypcja Workspace zostanie zaktualizowana wkrótce po potwierdzeniu opłaty przez Paystack.",
+      "pendingDesc": "Jeśli dokonałeś płatności, potwierdzenie może chwilę potrwać.",
+      "reference": "Odniesienie:",
+      "backBilling": "Wracając do rozliczeń"
+    }
+  },
+  "publicDoc": {
+    "loading": "Ładowanie dokumentu…",
+    "unavailableTitle": "Dokument niedostępny",
+    "unavailableBody": "Ten link jest nieprawidłowy, wygasł lub dokument nie jest już dostępny.",
+    "customerCopy": "Kopia klienta",
+    "quotation": "Cytat",
+    "invoice": "Faktura",
+    "status": "Status:",
+    "customer": "Klient",
+    "dates": "Daty",
+    "issued": "Wydany:",
+    "validUntil": "Ważne do:",
+    "due": "Należny:",
+    "description": "Opis",
+    "qty": "Ilość",
+    "unit": "Jednostka",
+    "lineTotal": "Linia ogółem",
+    "noLines": "Brak elementów zamówienia.",
+    "total": "Całkowity:",
+    "paid": "Płatny:",
+    "balance": "Balansować:",
+    "notes": "Uwagi:"
+  }
+}

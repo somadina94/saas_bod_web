@@ -1,0 +1,138 @@
+{
+  "features": {
+    "title": "Functies",
+    "subtitle": "Eén enkele werkruimte voor distributie, retaildiensten en buitendienstactiviteiten – ingedeeld per bedrijf, afgesloten per functie en klaar voor echte geldstromen.",
+    "intro": "{platform} is ontworpen als een <strong>multi-tenant</strong> systeem: elke werkruimte is een bedrijf met zijn eigen gegevens. Gebruikers behoren per sessie tot één bedrijf; machtigingen bepalen welke modules verschijnen en welke rijacties beschikbaar zijn.",
+    "footnote": "Exacte schermen zijn afhankelijk van uw rol (eigenaar, beheerder, manager, verkoop, inventaris, accountant, ondersteuning, kijker). Eigenaren en beheerders zien doorgaans het volledige oppervlak; andere rollen nemen beheerde machtigingen over.",
+    "modules": [
+      {
+        "title": "Overzicht en analyses",
+        "desc": "Bedrijfsgericht dashboard met verkoop-, AR-, uitgaven- en voorraadsignalen."
+      },
+      {
+        "title": "Klanten & CRM",
+        "desc": "Accounts, contacten en geschiedenis met toestemmingsbewuste toegang."
+      },
+      {
+        "title": "Leveranciers",
+        "desc": "Leveranciersgegevens gekoppeld aan inkooporders en ontvangst."
+      },
+      {
+        "title": "Producten & diensten",
+        "desc": "Catalogus, SKU's, prijzen en optionele services naast fysieke goederen."
+      },
+      {
+        "title": "Inventaris",
+        "desc": "Voorraadbewegingen, -niveaus en bewustzijn van lage aandelen."
+      },
+      {
+        "title": "Offertes",
+        "desc": "Creëer, verzend en converteer offertes naar facturen zonder regels opnieuw in te voeren."
+      },
+      {
+        "title": "Facturen",
+        "desc": "Facturen opstellen, verzenden en volgen met e-mailstromen, indien geconfigureerd."
+      },
+      {
+        "title": "Betalingen",
+        "desc": "Betalingen registreren op facturen; ondersteunt Paystack-stromen voor klantbetalingen."
+      },
+      {
+        "title": "Verkoop",
+        "desc": "Directe verkoop met optionele voorraadaftrek voor productlijnen."
+      },
+      {
+        "title": "Inkooporders",
+        "desc": "Keur en ontvang aandelen van leveranciers met auditvriendelijke routes."
+      },
+      {
+        "title": "Uitgaven",
+        "desc": "Operationele uitgaven indienen, goedkeuren en volgen met categorieën."
+      },
+      {
+        "title": "Meldingen",
+        "desc": "In-app-waarschuwingen voor operationele gebeurtenissen die uw rol mag zien."
+      },
+      {
+        "title": "Team",
+        "desc": "Nodig personeel uit, wijs rollen toe, wijzig de status en verwijder de toegang veilig."
+      },
+      {
+        "title": "Facturering en abonnementen",
+        "desc": "Werkruimteabonnement op het platform (Paystack-afrekenen indien ingeschakeld)."
+      },
+      {
+        "title": "Bedrijfsprofiel",
+        "desc": "Juridische identiteit, branding en instellingen op werkruimteniveau."
+      },
+      {
+        "title": "Huurder loonstrook",
+        "desc": "Verbind uw verkoperssleutels voor klantfactuurbetalingen en webhooks."
+      },
+      {
+        "title": "Systeemvoorkeuren",
+        "desc": "Administratieve opties voor operators met toestemming voor bedrijfsinstellingen."
+      },
+      {
+        "title": "Auditlogboek",
+        "desc": "Onveranderlijk spoor van gevoelige acties voor nalevingsbeoordelingen."
+      },
+      {
+        "title": "Uploads",
+        "desc": "Bestanden voor Backblaze B2: logo's, avatars, bonnen en productafbeeldingen."
+      },
+      {
+        "title": "Profiel & voorkeuren",
+        "desc": "Persoonlijke gegevens, tijdzone en notificatievoorkeuren per gebruiker."
+      },
+      {
+        "title": "Diensten catalogus",
+        "desc": "Factureerbare regels die niet op voorraad zijn, zoals leverings- of installatiekosten."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "subtitle": "Van de eerste aanmelding tot het uitvoeren van facturen en inventarisatie: ontworpen voor operators die voorspelbare workflows nodig hebben, geen speelgoeddemonstraties.",
+    "qaLead": "Een gescripte QA-pas nodig?",
+    "qaLink": "Bekijk het volledige QA-script op GitHub",
+    "qaTail": "—rol-voor-rol checks en voorbeelddata voor {platform}.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Creëer uw werkruimte",
+        "body": "Registreer met uw bedrijfsnaam. U wordt de eigenaar van een nieuwe huurder: gegevens worden geïsoleerd van alle andere bedrijven op het platform."
+      },
+      {
+        "n": "02",
+        "title": "Veilige sessie",
+        "body": "Authenticatie maakt gebruik van httpOnly-cookies en kortstondige toegangstokens. Uw browser slaat nooit langlevende geheimen op in localStorage voor kern-API-aanroepen."
+      },
+      {
+        "n": "03",
+        "title": "Nodig het team uit",
+        "body": "Stuur e-mailuitnodigingen vanuit Team. Elk lid krijgt een rol (beheerder, manager, verkoop, inventaris, accountant, ondersteuning, kijker) met standaardrechten die u in de loop van de tijd kunt verfijnen."
+      },
+      {
+        "n": "04",
+        "title": "Configureer geldrails",
+        "body": "Voor platformfacturering voltooit u het afrekenen van het abonnement indien ingeschakeld. Voor klantfactuurbetalingen voegt u uw publieke/geheime Paystack-sleutels toe onder Bedrijf → Betalingen; configureer callback- en webhook-URL's in Paystack. Productiestapels moeten ENCRYPTION_KEY (64 hexadecimale tekens) instellen voor tenantgeheimen. Dit alles draait binnen {platform}."
+      },
+      {
+        "n": "05",
+        "title": "Dagelijks opereren",
+        "body": "Klanten, leveranciers en producten laden; offertes naar facturen uitvoeren; betalingen en uitgaven registreren; voorraad verplaatsen met voorraadbewegingen; gebruik inkooporders voor inkomende goederen."
+      },
+      {
+        "n": "06",
+        "title": "Blijf op de hoogte",
+        "body": "Meldingen brengen belangrijke gebeurtenissen naar voren. Het auditlogboek legt gevoelige acties vast ter beoordeling. Uploads slaan bestanden op in uw geconfigureerde objectopslag (bijvoorbeeld logo's en bonnen)."
+      },
+      {
+        "n": "07",
+        "title": "Toegang van de overheid",
+        "body": "Wijzig rollen, schort accounts op of verwijder teamgenoten van het teamscherm. Eigenaars kunnen niet worden verwijderd zonder dat een andere eigenaar de laatste sleutelhouder beschermt."
+      }
+    ]
+  }
+}

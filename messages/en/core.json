@@ -1,0 +1,254 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "copy": "Copy",
+    "view": "View ({count})",
+    "dash": "—",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Menu",
+    "navigate": "Navigate",
+    "language": "Language",
+    "yes": "Yes",
+    "no": "No",
+    "copied": "Copied"
+  },
+  "list": {
+    "actions": "Actions",
+    "noRecords": "No records found.",
+    "pageOf": "Page {page} of {totalPages} · {total} total",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "errors": {
+    "accessRestricted": "Access restricted",
+    "permissionDeniedDefault": "You do not have permission to view this area. Ask an administrator to update your role.",
+    "dashboardMetricsDenied": "You do not have access to the company dashboard metrics.",
+    "systemSettingsDenied": "System settings require company administration access."
+  },
+  "nav": {
+    "overview": "Overview",
+    "customers": "Customers",
+    "suppliers": "Suppliers",
+    "products": "Products",
+    "services": "Services",
+    "inventory": "Inventory",
+    "quotations": "Quotations",
+    "invoices": "Invoices",
+    "payments": "Payments",
+    "sales": "Sales",
+    "purchaseOrders": "Purchase orders",
+    "expenses": "Expenses",
+    "notifications": "Notifications",
+    "team": "Team",
+    "billing": "Billing",
+    "company": "Company",
+    "system": "System",
+    "auditLog": "Audit log",
+    "uploads": "Uploads",
+    "settings": "Settings",
+    "workspace": "Workspace",
+    "accountAdmin": "Account & admin",
+    "sidebarFootnote": "Signed in securely. Tokens stay in httpOnly cookies."
+  },
+  "subscription": {
+    "banner": "Your {platform} workspace subscription is not active. Open billing to pay and restore access to CRM, inventory, and billing tools.",
+    "cta": "Go to billing"
+  },
+  "dashboardHeader": {
+    "home": "Home",
+    "marketingHomeTitle": "Marketing site home",
+    "tagline": "Operations · CRM · Inventory · Billing",
+    "themeLight": "Switch to light theme",
+    "themeDark": "Switch to dark theme",
+    "accountMenu": "Account menu",
+    "profilePrefs": "Profile & preferences",
+    "signOut": "Sign out",
+    "signedOut": "Signed out"
+  },
+  "marketing": {
+    "header": {
+      "features": "Features",
+      "howItWorks": "How it works",
+      "signIn": "Sign in",
+      "createWorkspace": "Create workspace"
+    },
+    "footer": {
+      "product": "Product",
+      "legal": "Legal",
+      "account": "Account",
+      "dashboard": "Dashboard",
+      "privacy": "Privacy policy",
+      "terms": "Terms of service",
+      "blurb": "Operations software for modern businesses—CRM, inventory, billing, and teams in one workspace.",
+      "rights": "© {year} {platform}. All rights reserved.",
+      "tagline": "Built for teams who outgrow spreadsheets."
+    }
+  },
+  "home": {
+    "badge1": "Multi-tenant workspaces",
+    "badge2": "Role-based access",
+    "badge3": "Paystack-ready",
+    "headline": "Run operations with clarity—every company, one polished platform.",
+    "subhead": "CRM, inventory, quotes, invoices, customer payments, subscriptions, and team administration in a single production-grade workspace—built for businesses that have outgrown spreadsheets.",
+    "ctaStart": "Start free",
+    "ctaSignIn": "Sign in",
+    "ctaFeatures": "Explore features",
+    "mobileTitle": "Mobile apps",
+    "mobileHint": "Store listings are coming soon. Buttons are placeholders for App Store and Google Play—subscribe to updates from your workspace once you sign up.",
+    "card1Title": "Unified pipeline",
+    "card1Body": "Customers, suppliers, stock, and audit trails scoped per company.",
+    "card2Title": "Finance & billing",
+    "card2Body": "Quotes, invoices, Paystack (tenant or platform), and subscriptions.",
+    "card3Title": "Built for teams",
+    "card3Body": "Invites, roles, row-level permissions, and a dashboard that leaders trust.",
+    "ctaSectionKicker": "See the full picture",
+    "ctaSectionBody": "Walk through modules, permissions, and how your workspace goes from signup to first invoice.",
+    "ctaHowItWorks": "How it works"
+  },
+  "auth": {
+    "layout": {
+      "backHome": "Back to home"
+    },
+    "login": {
+      "title": "Sign in",
+      "description": "Use your workspace credentials. Sessions use secure cookies.",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot password?",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "welcome": "Welcome back",
+      "failed": "Sign in failed",
+      "newWorkspace": "New workspace?",
+      "createCompany": "Create your company",
+      "loading": "Loading…",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email",
+        "passwordRequired": "Password is required"
+      }
+    },
+    "setup": {
+      "title": "Create workspace",
+      "description": "Create a new workspace: your company profile, owner account, and a trial subscription to {platform}.",
+      "company": "Company",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create workspace",
+      "submitting": "Creating…",
+      "success": "Workspace created",
+      "error": "Could not create workspace",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "validation": {
+        "companyName": "Company name is required",
+        "firstName": "First name is required",
+        "lastName": "Last name is required",
+        "passwordLen": "Use at least 8 characters"
+      }
+    },
+    "forgot": {
+      "title": "Reset password",
+      "description": "We'll email you a link to choose a new password.",
+      "email": "Email",
+      "submit": "Send reset link",
+      "submitting": "Sending…",
+      "backLogin": "Back to sign in",
+      "toastInbox": "Check your inbox",
+      "requestTitle": "Request received",
+      "devHint": "Development: email may be unavailable—use this link once:",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Enter a valid email"
+      },
+      "genericError": "Something went wrong"
+    },
+    "reset": {
+      "title": "Set new password",
+      "description": "Choose a strong password for your account.",
+      "email": "Email",
+      "password": "New password",
+      "confirm": "Confirm password",
+      "submit": "Update password",
+      "submitting": "Saving…",
+      "success": "Password updated — you can sign in now",
+      "failed": "Reset failed",
+      "backLogin": "Back to sign in",
+      "missingLink": "Invalid reset link",
+      "missingDesc": "Use the link from your email, or request a new reset from sign in.",
+      "validation": {
+        "tokenMissing": "Reset token is missing",
+        "passwordLen": "Use at least 8 characters",
+        "mismatch": "Passwords do not match"
+      }
+    },
+    "invite": {
+      "title": "Accept invitation",
+      "description": "Set a password to join your team workspace.",
+      "invalidTitle": "Invalid invitation link",
+      "invalidDesc": "Open the full link from your invitation email. If it expired, ask an admin to send a new invite.",
+      "password": "Password",
+      "confirm": "Confirm password",
+      "submit": "Join workspace",
+      "submitting": "Joining…",
+      "welcome": "Welcome to the team",
+      "error": "Could not complete invite",
+      "validation": {
+        "tokenMissing": "Reset token is missing",
+        "passwordLen": "Use at least 8 characters",
+        "mismatch": "Passwords do not match"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "SUCCESS",
+      "failedBadge": "FAILED",
+      "pendingBadge": "PENDING",
+      "successTitle": "Payment successful",
+      "failedTitle": "Payment was not completed",
+      "pendingTitle": "Payment is processing",
+      "successDesc": "Thanks. Your payment has been received and is being applied to your invoice.",
+      "failedDesc": "Your payment did not complete. You can retry using the payment link in your invoice email.",
+      "pendingDesc": "We are confirming your payment. This usually resolves shortly.",
+      "referenceLine": "Reference: {reference}",
+      "home": "Go to home"
+    },
+    "billing": {
+      "successBadge": "SUCCESS",
+      "pendingBadge": "PENDING",
+      "successTitle": "Subscription payment received",
+      "pendingTitle": "Processing subscription",
+      "successDesc": "Thank you. Your workspace subscription will update shortly after Paystack confirms the charge.",
+      "pendingDesc": "If you completed payment, confirmation may take a moment.",
+      "reference": "Reference:",
+      "backBilling": "Back to billing"
+    }
+  },
+  "publicDoc": {
+    "loading": "Loading document…",
+    "unavailableTitle": "Document unavailable",
+    "unavailableBody": "This link is invalid, expired, or the document is no longer available.",
+    "customerCopy": "Customer copy",
+    "quotation": "Quotation",
+    "invoice": "Invoice",
+    "status": "Status:",
+    "customer": "Customer",
+    "dates": "Dates",
+    "issued": "Issued:",
+    "validUntil": "Valid until:",
+    "due": "Due:",
+    "description": "Description",
+    "qty": "Qty",
+    "unit": "Unit",
+    "lineTotal": "Line total",
+    "noLines": "No line items.",
+    "total": "Total:",
+    "paid": "Paid:",
+    "balance": "Balance:",
+    "notes": "Notes:"
+  }
+}

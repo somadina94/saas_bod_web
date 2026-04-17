@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { ListIcon, SparkleIcon, XIcon } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -13,13 +14,16 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
-
-const nav = [
-  { href: "/features", label: "Features" },
-  { href: "/how-it-works", label: "How it works" },
-] as const;
+import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
 
 export function SiteHeader({ className }: { className?: string }) {
+  const t = useTranslations("marketing.header");
+  const tc = useTranslations("common");
+  const nav = [
+    { href: "/features", label: t("features") },
+    { href: "/how-it-works", label: t("howItWorks") },
+  ] as const;
+
   return (
     <header
       className={cn(
@@ -55,16 +59,20 @@ export function SiteHeader({ className }: { className?: string }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LocaleSwitcher
+            className="h-8 w-[min(100%,9.5rem)] rounded-none text-xs hidden sm:inline-flex"
+            id="site-locale"
+          />
           <Button
             variant="ghost"
             size="sm"
             className="rounded-none text-[13px] hidden sm:inline-flex"
             asChild
           >
-            <Link href="/login">Sign in</Link>
+            <Link href="/login">{t("signIn")}</Link>
           </Button>
           <Button size="sm" className="rounded-none text-[13px]" asChild>
-            <Link href="/setup">Create workspace</Link>
+            <Link href="/setup">{t("createWorkspace")}</Link>
           </Button>
 
           <Sheet>
@@ -74,23 +82,23 @@ export function SiteHeader({ className }: { className?: string }) {
                 variant="outline"
                 size="icon-sm"
                 className="rounded-none md:hidden"
-                aria-label="Open menu"
+                aria-label={tc("openMenu")}
               >
                 <ListIcon className="size-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[min(100%,20rem)] rounded-none p-0">
               <SheetHeader className="border-b border-border p-4 text-left">
-                <SheetTitle className="sr-only">Menu</SheetTitle>
+                <SheetTitle className="sr-only">{tc("menuTitle")}</SheetTitle>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold">Navigate</span>
+                  <span className="text-sm font-semibold">{tc("navigate")}</span>
                   <SheetClose asChild>
                     <Button
                       type="button"
                       variant="ghost"
                       size="icon-sm"
                       className="rounded-none"
-                      aria-label="Close menu"
+                      aria-label={tc("closeMenu")}
                     >
                       <XIcon className="size-5" />
                     </Button>
@@ -113,7 +121,7 @@ export function SiteHeader({ className }: { className?: string }) {
                     href="/login"
                     className="hover:bg-muted rounded-none px-3 py-3 text-sm font-medium"
                   >
-                    Sign in
+                    {t("signIn")}
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
@@ -121,9 +129,12 @@ export function SiteHeader({ className }: { className?: string }) {
                     href="/setup"
                     className="bg-primary text-primary-foreground hover:bg-primary/90 mx-2 mt-2 rounded-none px-3 py-3 text-center text-sm font-medium"
                   >
-                    Create workspace
+                    {t("createWorkspace")}
                   </Link>
                 </SheetClose>
+                <div className="px-3 py-3">
+                  <LocaleSwitcher className="w-full rounded-none text-xs" />
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

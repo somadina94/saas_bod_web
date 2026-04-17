@@ -1,7 +1,7 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { useQuery } from "@tanstack/react-query";
 import { billingApi } from "@/lib/api/entities";
@@ -30,6 +30,7 @@ function subscriptionActive(sub: Record<string, unknown> | null | undefined) {
 }
 
 export function SubscriptionGate({ children }: { children: React.ReactNode }) {
+  const t = useTranslations("subscription");
   const pathname = usePathname() ?? "";
   const excluded = EXCLUDED.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 
@@ -57,11 +58,10 @@ export function SubscriptionGate({ children }: { children: React.ReactNode }) {
     <div className="relative flex flex-1 flex-col">
       <div className="bg-muted/50 border-b px-4 py-3 text-sm">
         <p className="text-muted-foreground">
-          Your {PLATFORM_DISPLAY_NAME} workspace subscription is not active. Open billing to pay and
-          restore access to CRM, inventory, and billing tools.
+          {t("banner", { platform: PLATFORM_DISPLAY_NAME })}
         </p>
         <Button asChild className="mt-2 rounded-none" size="sm">
-          <Link href="/dashboard/billing">Go to billing</Link>
+          <Link href="/dashboard/billing">{t("cta")}</Link>
         </Button>
       </div>
       <div className="pointer-events-none opacity-40">{children}</div>

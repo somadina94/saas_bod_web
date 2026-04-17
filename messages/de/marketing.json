@@ -1,0 +1,47 @@
+{
+  "features": {
+    "title": "Funktionen",
+    "subtitle": "Ein Arbeitsbereich für Vertrieb, Einzelhandelsdienstleistungen und Außendienst—mandantenfähig, rollenbasiert und bereit für echte Zahlungsströme.",
+    "intro": "{platform} ist als <strong>Multi-Tenant</strong>-System konzipiert: Jeder Arbeitsbereich ist ein Unternehmen mit eigenen Daten. Nutzer gehören pro Sitzung einem Unternehmen an; Berechtigungen steuern Module und Zeilenaktionen.",
+    "footnote": "Die genauen Ansichten hängen von Ihrer Rolle ab (Inhaber, Admin, Manager, Vertrieb, Lager, Buchhaltung, Support, Betrachter). Inhaber und Admins sehen typischerweise die volle Oberfläche; andere Rollen erhalten passende Rechte.",
+    "modules": [
+      { "title": "Übersicht & Analysen", "desc": "Unternehmensbezogenes Dashboard mit Umsatz, Forderungen, Ausgaben und Lager-Signalen." },
+      { "title": "Kunden & CRM", "desc": "Konten, Kontakte und Verlauf mit berechtigungsbewusstem Zugriff." },
+      { "title": "Lieferanten", "desc": "Lieferantendaten verbunden mit Bestellungen und Wareneingang." },
+      { "title": "Produkte & Leistungen", "desc": "Katalog, SKUs, Preise und optionale Dienstleistungen neben physischen Gütern." },
+      { "title": "Lager", "desc": "Bestandsbewegungen, Bestände und Niedrigbestandswarnung." },
+      { "title": "Angebote", "desc": "Angebote erstellen, senden und ohne Doppelarbeit in Rechnungen umwandeln." },
+      { "title": "Rechnungen", "desc": "Entwürfe, Versand und Verfolgung mit E-Mail-Flows wo konfiguriert." },
+      { "title": "Zahlungen", "desc": "Zahlungen gegen Rechnungen erfassen; Paystack-Flows für Kundenzahlungen." },
+      { "title": "Verkauf", "desc": "Direktverkauf mit optionaler Lagerbuchung für Produktlinien." },
+      { "title": "Bestellungen", "desc": "Ware gegen Lieferanten annehmen und mit prüfbaren Spuren verbuchen." },
+      { "title": "Ausgaben", "desc": "Betriebsausgaben erfassen, freigeben und mit Kategorien verfolgen." },
+      { "title": "Benachrichtigungen", "desc": "In-App-Hinweise zu Ereignissen, die Ihre Rolle sehen darf." },
+      { "title": "Team", "desc": "Personal einladen, Rollen vergeben, Status ändern und Zugriff sicher entfernen." },
+      { "title": "Abrechnung & Abonnements", "desc": "Arbeitsbereich-Abonnement für die Plattform (Paystack-Checkout wo aktiviert)." },
+      { "title": "Unternehmensprofil", "desc": "Rechtliche Identität, Branding und Einstellungen auf Arbeitsbereichsebene." },
+      { "title": "Mandanten-Paystack", "desc": "Händlerschlüssel für Kundenrechnungen und Webhooks verbinden." },
+      { "title": "Systemeinstellungen", "desc": "Administrative Optionen für Betreiber mit Unternehmenseinstellungs-Berechtigung." },
+      { "title": "Prüfprotokoll", "desc": "Nachweis sensibler Aktionen für Compliance-Prüfungen." },
+      { "title": "Uploads", "desc": "Dateien in Backblaze B2—Logos, Avatare, Belege und Produktbilder." },
+      { "title": "Profil & Einstellungen", "desc": "Persönliche Daten, Zeitzone und Benachrichtigungen pro Nutzer." },
+      { "title": "Leistungskatalog", "desc": "Nicht-lagernde Positionen wie Lieferung oder Montage." }
+    ]
+  },
+  "howItWorks": {
+    "title": "So funktioniert’s",
+    "subtitle": "Von der ersten Registrierung bis zu laufenden Rechnungen und Lager—für Betriebsteams mit klaren Abläufen.",
+    "qaLead": "Brauchen Sie ein QA-Skript?",
+    "qaLink": "Vollständiges QA-Skript auf GitHub ansehen",
+    "qaTail": "—Rollenweise Prüfungen und Beispieldaten für {platform}.",
+    "steps": [
+      { "n": "01", "title": "Arbeitsbereich erstellen", "body": "Registrieren Sie sich mit Ihrem Firmennamen. Sie werden Inhaber eines neuen Mandanten—Daten sind von allen anderen Unternehmen auf der Plattform getrennt." },
+      { "n": "02", "title": "Sichere Sitzung", "body": "Authentifizierung nutzt httpOnly-Cookies und kurzlebige Zugriffstoken. Der Browser speichert keine langfristigen Geheimnisse in localStorage für Kern-API-Aufrufe." },
+      { "n": "03", "title": "Team einladen", "body": "E-Mail-Einladungen über Team. Jedes Mitglied erhält eine Rolle (Admin, Manager, Vertrieb, Lager, Buchhaltung, Support, Betrachter) mit anpassbaren Standardrechten." },
+      { "n": "04", "title": "Zahlungswege konfigurieren", "body": "Für Plattform-Abrechnung Checkout abschließen wo aktiviert. Für Kundenrechnungen Paystack Public/Secret unter Unternehmen → Zahlungen hinterlegen; Callback- und Webhook-URLs in Paystack setzen. Produktionsumgebungen sollten ENCRYPTION_KEY (64 Hex) für Mandantengeheimnisse setzen. Alles läuft in {platform}." },
+      { "n": "05", "title": "Täglich arbeiten", "body": "Kunden, Lieferanten und Produkte pflegen; Angebote in Rechnungen; Zahlungen und Ausgaben buchen; Bestand bewegen; Bestellungen für Wareneingang nutzen." },
+      { "n": "06", "title": "Informiert bleiben", "body": "Benachrichtigungen zeigen wichtige Ereignisse. Das Prüfprotokoll erfasst sensible Aktionen. Uploads speichern Dateien in Ihrem Objektspeicher (z. B. Logos und Belege)." },
+      { "n": "07", "title": "Zugriff steuern", "body": "Rollen ändern, Konten sperren oder Teammitglieder entfernen. Inhaber können nicht ohne anderen Inhaber entfernt werden—Schutz des letzten Schlüsselinhabers." }
+    ]
+  }
+}

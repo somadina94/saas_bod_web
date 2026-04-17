@@ -1,23 +1,25 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { SparkleIcon } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 
-const product = [
-  { href: "/features", label: "Features" },
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/setup", label: "Create workspace" },
-] as const;
-
-const legal = [
-  { href: "/privacy", label: "Privacy policy" },
-  { href: "/terms", label: "Terms of service" },
-] as const;
-
 export function SiteFooter({ className }: { className?: string }) {
+  const t = useTranslations("marketing.footer");
+  const th = useTranslations("marketing.header");
   const year = new Date().getFullYear();
+  const product = [
+    { href: "/features", label: th("features") },
+    { href: "/how-it-works", label: th("howItWorks") },
+    { href: "/setup", label: th("createWorkspace") },
+  ] as const;
+  const legal = [
+    { href: "/privacy", label: t("privacy") },
+    { href: "/terms", label: t("terms") },
+  ] as const;
+
   return (
     <footer
       className={cn(
@@ -35,13 +37,12 @@ export function SiteFooter({ className }: { className?: string }) {
               {PLATFORM_DISPLAY_NAME}
             </Link>
             <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
-              Operations software for modern businesses—CRM, inventory, billing, and
-              teams in one workspace.
+              {t("blurb")}
             </p>
           </div>
           <div>
             <h3 className="text-foreground mb-4 text-xs font-semibold uppercase tracking-widest">
-              Product
+              {t("product")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               {product.map((l) => (
@@ -58,7 +59,7 @@ export function SiteFooter({ className }: { className?: string }) {
           </div>
           <div>
             <h3 className="text-foreground mb-4 text-xs font-semibold uppercase tracking-widest">
-              Legal
+              {t("legal")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               {legal.map((l) => (
@@ -75,7 +76,7 @@ export function SiteFooter({ className }: { className?: string }) {
           </div>
           <div>
             <h3 className="text-foreground mb-4 text-xs font-semibold uppercase tracking-widest">
-              Account
+              {t("account")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -83,7 +84,7 @@ export function SiteFooter({ className }: { className?: string }) {
                   href="/login"
                   className="hover:text-foreground transition-colors underline-offset-4 hover:underline"
                 >
-                  Sign in
+                  {th("signIn")}
                 </Link>
               </li>
               <li>
@@ -91,17 +92,15 @@ export function SiteFooter({ className }: { className?: string }) {
                   href="/dashboard"
                   className="hover:text-foreground transition-colors underline-offset-4 hover:underline"
                 >
-                  Dashboard
+                  {t("dashboard")}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-border mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-xs md:flex-row">
-          <p>© {year} {PLATFORM_DISPLAY_NAME}. All rights reserved.</p>
-          <p className="text-center md:text-right">
-            Built for teams who outgrow spreadsheets.
-          </p>
+          <p>{t("rights", { year, platform: PLATFORM_DISPLAY_NAME })}</p>
+          <p className="text-center md:text-right">{t("tagline")}</p>
         </div>
       </div>
     </footer>

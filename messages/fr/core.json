@@ -1,0 +1,252 @@
+{
+  "common": {
+    "loading": "Chargement…",
+    "copy": "Copier",
+    "view": "Voir ({count})",
+    "dash": "—",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "menuTitle": "Menu",
+    "navigate": "Naviguer",
+    "language": "Langue",
+    "yes": "Oui",
+    "no": "Non",
+    "copied": "Copié"
+  },
+  "list": {
+    "actions": "Actions",
+    "noRecords": "Aucun enregistrement.",
+    "pageOf": "Page {page} sur {totalPages} · {total} au total",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "errors": {
+    "accessRestricted": "Accès restreint",
+    "permissionDeniedDefault": "Vous n’avez pas la permission d’accéder à cette zone. Demandez à un administrateur de mettre à jour votre rôle.",
+    "dashboardMetricsDenied": "Vous n’avez pas accès aux indicateurs du tableau de bord entreprise.",
+    "systemSettingsDenied": "Les paramètres système nécessitent des droits d’administration entreprise."
+  },
+  "nav": {
+    "overview": "Vue d’ensemble",
+    "customers": "Clients",
+    "suppliers": "Fournisseurs",
+    "products": "Produits",
+    "services": "Services",
+    "inventory": "Stock",
+    "quotations": "Devis",
+    "invoices": "Factures",
+    "payments": "Paiements",
+    "sales": "Ventes",
+    "purchaseOrders": "Bons de commande",
+    "expenses": "Dépenses",
+    "notifications": "Notifications",
+    "team": "Équipe",
+    "billing": "Facturation",
+    "company": "Entreprise",
+    "system": "Système",
+    "auditLog": "Journal d’audit",
+    "uploads": "Téléversements",
+    "settings": "Paramètres",
+    "workspace": "Espace de travail",
+    "accountAdmin": "Compte & admin",
+    "sidebarFootnote": "Session sécurisée. Les jetons restent dans des cookies httpOnly."
+  },
+  "subscription": {
+    "banner": "L’abonnement de votre espace {platform} n’est pas actif. Ouvrez la facturation pour payer et rétablir l’accès au CRM, au stock et à la facturation.",
+    "cta": "Aller à la facturation"
+  },
+  "dashboardHeader": {
+    "home": "Accueil",
+    "marketingHomeTitle": "Site marketing",
+    "tagline": "Opérations · CRM · Stock · Facturation",
+    "themeLight": "Passer au thème clair",
+    "themeDark": "Passer au thème sombre",
+    "accountMenu": "Menu du compte",
+    "profilePrefs": "Profil et préférences",
+    "signOut": "Se déconnecter",
+    "signedOut": "Déconnecté"
+  },
+  "marketing": {
+    "header": {
+      "features": "Fonctionnalités",
+      "howItWorks": "Fonctionnement",
+      "signIn": "Connexion",
+      "createWorkspace": "Créer un espace"
+    },
+    "footer": {
+      "product": "Produit",
+      "legal": "Légal",
+      "account": "Compte",
+      "dashboard": "Tableau de bord",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "blurb": "Logiciel opérationnel pour les entreprises modernes—CRM, stock, facturation et équipes dans un seul espace.",
+      "rights": "© {year} {platform}. Tous droits réservés.",
+      "tagline": "Pour les équipes qui dépassent les tableurs."
+    }
+  },
+  "home": {
+    "badge1": "Espaces multi-locataires",
+    "badge2": "Accès par rôle",
+    "badge3": "Compatible Paystack",
+    "headline": "Pilotez vos opérations avec clarté—chaque entreprise, une plateforme soignée.",
+    "subhead": "CRM, stock, devis, factures, paiements clients, abonnements et administration d’équipe dans un espace de niveau production—pour les entreprises qui ont dépassé les feuilles de calcul.",
+    "ctaStart": "Commencer gratuitement",
+    "ctaSignIn": "Connexion",
+    "ctaFeatures": "Découvrir les fonctionnalités",
+    "mobileTitle": "Applications mobiles",
+    "mobileHint": "Les fiches magasin arrivent bientôt. Les boutons sont des placeholders App Store et Google Play—abonnez-vous aux mises à jour depuis votre espace.",
+    "card1Title": "Pipeline unifié",
+    "card1Body": "Clients, fournisseurs, stock et pistes d’audit par entreprise.",
+    "card2Title": "Finance et facturation",
+    "card2Body": "Devis, factures, Paystack (locataire ou plateforme) et abonnements.",
+    "card3Title": "Conçu pour les équipes",
+    "card3Body": "Invitations, rôles, permissions fines et tableau de bord pour les dirigeants.",
+    "ctaSectionKicker": "Voir l’ensemble",
+    "ctaSectionBody": "Parcourez les modules, les permissions et le parcours jusqu’à la première facture.",
+    "ctaHowItWorks": "Fonctionnement"
+  },
+  "auth": {
+    "layout": { "backHome": "Retour à l’accueil" },
+    "login": {
+      "title": "Connexion",
+      "description": "Utilisez vos identifiants d’espace. Les sessions utilisent des cookies sécurisés.",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "forgot": "Mot de passe oublié ?",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "welcome": "Bon retour",
+      "failed": "Échec de la connexion",
+      "newWorkspace": "Nouvel espace ?",
+      "createCompany": "Créer votre entreprise",
+      "loading": "Chargement…",
+      "validation": {
+        "emailRequired": "L’e-mail est requis",
+        "emailInvalid": "Saisissez un e-mail valide",
+        "passwordRequired": "Le mot de passe est requis"
+      }
+    },
+    "setup": {
+      "title": "Créer un espace",
+      "description": "Nouvel espace : profil entreprise, compte propriétaire et essai pour {platform}.",
+      "company": "Entreprise",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "submit": "Créer l’espace",
+      "submitting": "Création…",
+      "success": "Espace créé",
+      "error": "Impossible de créer l’espace",
+      "hasAccount": "Déjà un compte ?",
+      "signIn": "Connexion",
+      "validation": {
+        "companyName": "Le nom de l’entreprise est requis",
+        "firstName": "Le prénom est requis",
+        "lastName": "Le nom est requis",
+        "passwordLen": "Au moins 8 caractères"
+      }
+    },
+    "forgot": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+      "email": "E-mail",
+      "submit": "Envoyer le lien",
+      "submitting": "Envoi…",
+      "backLogin": "Retour à la connexion",
+      "toastInbox": "Vérifiez votre boîte mail",
+      "requestTitle": "Demande reçue",
+      "devHint": "Développement : l’e-mail peut être indisponible—utilisez ce lien une fois :",
+      "validation": {
+        "emailRequired": "L’e-mail est requis",
+        "emailInvalid": "Saisissez un e-mail valide"
+      },
+      "genericError": "Une erreur s’est produite"
+    },
+    "reset": {
+      "title": "Nouveau mot de passe",
+      "description": "Choisissez un mot de passe fort.",
+      "email": "E-mail",
+      "password": "Nouveau mot de passe",
+      "confirm": "Confirmer le mot de passe",
+      "submit": "Mettre à jour",
+      "submitting": "Enregistrement…",
+      "success": "Mot de passe mis à jour — vous pouvez vous connecter",
+      "failed": "Échec de la réinitialisation",
+      "backLogin": "Retour à la connexion",
+      "missingLink": "Lien de réinitialisation invalide",
+      "missingDesc": "Utilisez le lien reçu par e-mail ou demandez une nouvelle réinitialisation.",
+      "validation": {
+        "tokenMissing": "Jeton de réinitialisation manquant",
+        "passwordLen": "Au moins 8 caractères",
+        "mismatch": "Les mots de passe ne correspondent pas"
+      }
+    },
+    "invite": {
+      "title": "Accepter l’invitation",
+      "description": "Définissez un mot de passe pour rejoindre l’équipe.",
+      "invalidTitle": "Lien d’invitation invalide",
+      "invalidDesc": "Ouvrez le lien complet de l’e-mail d’invitation. S’il a expiré, demandez une nouvelle invitation à un administrateur.",
+      "password": "Mot de passe",
+      "confirm": "Confirmer le mot de passe",
+      "submit": "Rejoindre l’espace",
+      "submitting": "Rejoindre…",
+      "welcome": "Bienvenue dans l’équipe",
+      "error": "Impossible de finaliser l’invitation",
+      "validation": {
+        "tokenMissing": "Jeton manquant",
+        "passwordLen": "Au moins 8 caractères",
+        "mismatch": "Les mots de passe ne correspondent pas"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "SUCCÈS",
+      "failedBadge": "ÉCHEC",
+      "pendingBadge": "EN ATTENTE",
+      "successTitle": "Paiement réussi",
+      "failedTitle": "Paiement non terminé",
+      "pendingTitle": "Paiement en cours",
+      "successDesc": "Merci. Votre paiement a été reçu et est appliqué à la facture.",
+      "failedDesc": "Le paiement n’a pas abouti. Réessayez via le lien dans l’e-mail de facture.",
+      "pendingDesc": "Nous confirmons votre paiement. C’est généralement rapide.",
+      "referenceLine": "Référence : {reference}",
+      "home": "Accueil"
+    },
+    "billing": {
+      "successBadge": "SUCCÈS",
+      "pendingBadge": "EN ATTENTE",
+      "successTitle": "Paiement d’abonnement reçu",
+      "pendingTitle": "Traitement de l’abonnement",
+      "successDesc": "Merci. L’abonnement de votre espace sera mis à jour après confirmation Paystack.",
+      "pendingDesc": "Si vous avez payé, la confirmation peut prendre un instant.",
+      "reference": "Référence :",
+      "backBilling": "Retour à la facturation"
+    }
+  },
+  "publicDoc": {
+    "loading": "Chargement du document…",
+    "unavailableTitle": "Document indisponible",
+    "unavailableBody": "Ce lien est invalide, expiré ou le document n’est plus disponible.",
+    "customerCopy": "Copie client",
+    "quotation": "Devis",
+    "invoice": "Facture",
+    "status": "Statut :",
+    "customer": "Client",
+    "dates": "Dates",
+    "issued": "Émis :",
+    "validUntil": "Valide jusqu’au :",
+    "due": "Échéance :",
+    "description": "Description",
+    "qty": "Qté",
+    "unit": "Unité",
+    "lineTotal": "Total ligne",
+    "noLines": "Aucune ligne.",
+    "total": "Total :",
+    "paid": "Payé :",
+    "balance": "Solde :",
+    "notes": "Notes :"
+  }
+}

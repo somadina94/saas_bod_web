@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useTranslations } from "next-intl";
 import { z } from "zod";
 import { toast } from "sonner";
 import { companyApi } from "@/lib/api/entities";
@@ -21,21 +22,26 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const schema = z.object({
-  name: z.string().min(1),
-  email: z.string().optional(),
-  phone: z.string().optional(),
-  currency: z.string().min(1),
-  taxRate: z.string().optional(),
-});
-
-type FormValues = z.infer<typeof schema>;
-
 export function CompanyEditForm({
   initial,
 }: {
   initial: Record<string, unknown>;
 }) {
+  const t = useTranslations("dashboard.companyEdit");
+  const tv = useTranslations("dashboard.companyEdit.validation");
+  const schema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(1, tv("nameRequired")),
+        email: z.string().optional(),
+        phone: z.string().optional(),
+        currency: z.string().min(1, tv("currencyRequired")),
+        taxRate: z.string().optional(),
+      }),
+    [tv],
+  );
+  type FormValues = z.infer<typeof schema>;
+
   const qc = useQueryClient();
   const canEdit = useAppSelector(
     (s) =>
@@ -80,10 +86,10 @@ export function CompanyEditForm({
         currency: values.currency,
         taxRate: tr !== undefined && tr !== "" ? Number(tr) : undefined,
       });
-      toast.success("Company updated");
+      toast.success(t("saved"));
       await qc.invalidateQueries({ queryKey: ["company"] });
     } catch (e: unknown) {
-      toast.error(e instanceof ApiError ? e.message : "Update failed");
+      toast.error(e instanceof ApiError ? e.message : t("updateFailed"));
     }
   }
 
@@ -94,10 +100,8 @@ export function CompanyEditForm({
   return (
     <Card className="max-w-xl rounded-none border">
       <CardHeader>
-        <CardTitle className="text-base">Edit company</CardTitle>
-        <CardDescription>
-          Visible only to roles with company settings permission.
-        </CardDescription>
+        <CardTitle className="text-base">{t("title")}</CardTitle>
+        <CardDescription>{t("description")}</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -107,7 +111,7 @@ export function CompanyEditForm({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Legal name</FormLabel>
+                  <FormLabel>{t("legalName")}</FormLabel>
                   <FormControl>
                     <Input className="rounded-none" {...field} />
                   </FormControl>
@@ -121,7 +125,7 @@ export function CompanyEditForm({
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{t("email")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -134,7 +138,7 @@ export function CompanyEditForm({
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone</FormLabel>
+                    <FormLabel>{t("phone")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -149,7 +153,7 @@ export function CompanyEditForm({
                 name="currency"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Currency code</FormLabel>
+                    <FormLabel>{t("currencyCode")}</FormLabel>
                     <FormControl>
                       <Input className="rounded-none" {...field} />
                     </FormControl>
@@ -162,7 +166,7 @@ export function CompanyEditForm({
                 name="taxRate"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Default tax %</FormLabel>
+                    <FormLabel>{t("taxPercent")}</FormLabel>
                     <FormControl>
                       <Input
                         type="number"
@@ -181,7 +185,7 @@ export function CompanyEditForm({
               className="rounded-none"
               disabled={form.formState.isSubmitting}
             >
-              {form.formState.isSubmitting ? "Saving…" : "Save company"}
+              {form.formState.isSubmitting ? t("saving") : t("save")}
             </Button>
           </form>
         </Form>

@@ -1,0 +1,138 @@
+{
+  "features": {
+    "title": "Cechy",
+    "subtitle": "Pojedynczy obszar roboczy do dystrybucji, usług detalicznych i operacji w terenie — ograniczony do firmy, podzielony na role i gotowy na przepływ prawdziwych pieniędzy.",
+    "intro": "{platform} została zaprojektowana jako system <strong>wielu najemców</strong>: każdy obszar roboczy to firma z własnymi danymi. Użytkownicy należą do jednej firmy na sesję; uprawnienia określają, które moduły się pojawiają i które akcje w wierszach są dostępne.",
+    "footnote": "Dokładne ekrany zależą od Twojej roli (właściciel, administrator, menedżer, sprzedaż, zapasy, księgowy, wsparcie, przeglądający). Właściciele i administratorzy zazwyczaj widzą całą powierzchnię; inne role dziedziczą uprawnienia wyselekcjonowane.",
+    "modules": [
+      {
+        "title": "Przegląd i analizy",
+        "desc": "Panel obejmujący całą firmę, zawierający sygnały dotyczące sprzedaży, AR, wydatków i zapasów."
+      },
+      {
+        "title": "Klienci i CRM",
+        "desc": "Konta, kontakty i historia z dostępem zależnym od uprawnień."
+      },
+      {
+        "title": "Dostawcy",
+        "desc": "Dokumentacja dostawcy powiązana z zamówieniami zakupu i odbiorami."
+      },
+      {
+        "title": "Produkty i usługi",
+        "desc": "Katalog, jednostki SKU, ceny i usługi opcjonalne obok towarów fizycznych."
+      },
+      {
+        "title": "Spis",
+        "desc": "Ruchy, poziomy zapasów i świadomość niskiego poziomu zapasów."
+      },
+      {
+        "title": "Cytaty",
+        "desc": "Twórz, wysyłaj i konwertuj oferty na faktury bez konieczności ponownego wprowadzania wierszy."
+      },
+      {
+        "title": "Faktury",
+        "desc": "Twórz, wysyłaj i śledź faktury za pomocą przepływów poczty e-mail, jeśli jest to skonfigurowane."
+      },
+      {
+        "title": "Płatności",
+        "desc": "Rejestruj płatności na podstawie faktur; obsługuje przepływy Paystack dla płatności klientów."
+      },
+      {
+        "title": "Obroty",
+        "desc": "Sprzedaż bezpośrednia z opcjonalnym odliczeniem zapasów dla linii produktów."
+      },
+      {
+        "title": "Zamówienia zakupu",
+        "desc": "Zatwierdzaj i otrzymuj zapasy od dostawców ze ścieżkami umożliwiającymi audyt."
+      },
+      {
+        "title": "Wydatki",
+        "desc": "Przesyłaj, zatwierdzaj i śledź wydatki operacyjne za pomocą kategorii."
+      },
+      {
+        "title": "Powiadomienia",
+        "desc": "Alerty w aplikacji dotyczące zdarzeń operacyjnych, które Twoja rola może zobaczyć."
+      },
+      {
+        "title": "Zespół",
+        "desc": "Zapraszaj pracowników, przypisuj role, zmieniaj status i bezpiecznie usuwaj dostęp."
+      },
+      {
+        "title": "Rozliczenia i subskrypcje",
+        "desc": "Subskrypcja platformy Workspace (kasa Paystack, jeśli jest włączona)."
+      },
+      {
+        "title": "Profil firmy",
+        "desc": "Tożsamość prawna, marka i ustawienia na poziomie obszaru roboczego."
+      },
+      {
+        "title": "Stawka najemcy",
+        "desc": "Połącz klucze sprzedawcy w celu płatności za faktury klientów i elementów webhook."
+      },
+      {
+        "title": "Preferencje systemowe",
+        "desc": "Opcje administracyjne dla operatorów z uprawnieniami do ustawień firmy."
+      },
+      {
+        "title": "Dziennik audytu",
+        "desc": "Niezmienny ślad wrażliwych działań na potrzeby przeglądów zgodności."
+      },
+      {
+        "title": "Przesłane",
+        "desc": "Pliki do Backblaze B2 — logo, awatary, rachunki i zdjęcia produktów."
+      },
+      {
+        "title": "Profil i preferencje",
+        "desc": "Dane osobowe, strefa czasowa i preferencje powiadomień dla każdego użytkownika."
+      },
+      {
+        "title": "Katalog usług",
+        "desc": "Pozycje rozliczane poza magazynem, takie jak opłaty za dostawę lub instalację."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Jak to działa",
+    "subtitle": "Od pierwszej rejestracji po bieżące faktury i inwentaryzację — zaprojektowane dla operatorów, którzy potrzebują przewidywalnych przepływów pracy, a nie demonstracji zabawek.",
+    "qaLead": "Potrzebujesz skryptowej przepustki kontroli jakości?",
+    "qaLink": "Zobacz pełny skrypt kontroli jakości w serwisie GitHub",
+    "qaTail": "—weryfikacje według ról i przykładowe dane dla {platform}.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Stwórz swoje miejsce do pracy",
+        "body": "Zarejestruj się, podając nazwę swojej firmy. Stajesz się właścicielem nowego najemcy – dane są odizolowane od wszystkich innych firm na platformie."
+      },
+      {
+        "n": "02",
+        "title": "Bezpieczna sesja",
+        "body": "Uwierzytelnianie wykorzystuje pliki cookie httpOnly i krótkotrwałe tokeny dostępu. Twoja przeglądarka nigdy nie przechowuje długotrwałych sekretów w localStorage dla podstawowych wywołań API."
+      },
+      {
+        "n": "03",
+        "title": "Zaproś zespół",
+        "body": "Wysyłaj zaproszenia e-mailem od zespołu. Każdy członek otrzymuje rolę (administrator, menedżer, sprzedaż, zapasy, księgowy, wsparcie, przeglądający) z domyślnymi uprawnieniami, które można z czasem udoskonalać."
+      },
+      {
+        "n": "04",
+        "title": "Skonfiguruj szyny pieniężne",
+        "body": "W przypadku rozliczeń za platformę dokończ płatność za subskrypcję, jeśli jest włączona. W przypadku płatności za faktury klientów dodaj swoje publiczne/tajne klucze Paystack w sekcji Firma → Płatności; skonfiguruj adresy URL wywołania zwrotnego i webhooka w Paystack. Stosy produkcyjne powinny ustawić ENCRYPTION_KEY (64 znaki szesnastkowe) dla wpisów tajnych dzierżawcy. Wszystko to działa wewnątrz {platformy}."
+      },
+      {
+        "n": "05",
+        "title": "Działaj codziennie",
+        "body": "Załaduj klientów, dostawców i produkty; uruchamiaj wyceny do faktur; rejestrować płatności i wydatki; przesuwaj zapasy wraz z ruchami zapasów; korzystaj z zamówień zakupu towarów przychodzących."
+      },
+      {
+        "n": "06",
+        "title": "Bądź na bieżąco",
+        "body": "Powiadomienia informują o ważnych wydarzeniach. Dziennik audytu rejestruje wrażliwe działania w celu przeglądu. Przesyła pliki sklepu do skonfigurowanej pamięci obiektów (np. logo i paragony)."
+      },
+      {
+        "n": "07",
+        "title": "Zarządzaj dostępem",
+        "body": "Zmieniaj role, zawieszaj konta lub usuwaj członków drużyny z ekranu zespołu. Właścicieli nie można usunąć bez innego właściciela — chroni to ostatniego posiadacza klucza."
+      }
+    ]
+  }
+}

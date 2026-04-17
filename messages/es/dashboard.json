@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "Tu espacio de trabajo",
+      "subhead": "Esta descripción general está dirigida a su empresa. Utilice la barra lateral para acceder a CRM, inventario, facturación y más; todo sigue teniendo en cuenta los permisos.",
+      "loading": "Cargando descripción general…",
+      "greetingMorning": "Buen día",
+      "greetingAfternoon": "Buenas tardes",
+      "greetingEvening": "Buenas noches",
+      "there": "allá",
+      "kpiSales": "Ventas (mes)",
+      "kpiSalesHint": "Ventas completadas este mes",
+      "kpiOutstanding": "Facturas pendientes",
+      "kpiOutstandingHint": "Saldo aún adeudado",
+      "kpiCustomers": "Clientes",
+      "kpiCustomersHint": "Registros activos",
+      "kpiLowStock": "SKU con existencias bajas",
+      "kpiLowStockHint": "En o por debajo de reordenar",
+      "chartTitle": "Pulso de efectivo y pasivo",
+      "chartSubtitle": "Compare las ventas mensuales, los AR pendientes y los gastos pagados.",
+      "chartAmount": "Cantidad",
+      "networkTitle": "Red",
+      "networkSubtitle": "La relación rápida cuenta.",
+      "suppliers": "Proveedores",
+      "expensesMonth": "Gastos (mes)",
+      "networkTip": "Consejo: fije los módulos que usa a diario; la barra lateral se contrae en íconos en pantallas más pequeñas para enfocarse.",
+      "chartSales": "Ventas (MTD)",
+      "chartOutstanding": "Pendiente",
+      "chartExpenses": "Gastos"
+    },
+    "customers": {
+      "title": "Clientes",
+      "description": "Registros activos de CRM con saldos y datos de contacto.",
+      "toastCopied": "ID de cliente copiado",
+      "columns": {
+        "id": "IDENTIFICACIÓN",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "status": "Estado",
+        "balance": "Balance",
+        "docs": "Documentos"
+      }
+    },
+    "suppliers": {
+      "title": "Proveedores",
+      "description": "Proveedores y socios de cumplimiento vinculados a las compras.",
+      "toastCopied": "ID del proveedor copiado",
+      "columns": {
+        "id": "IDENTIFICACIÓN",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "status": "Estado",
+        "docs": "Documentos"
+      }
+    },
+    "products": {
+      "title": "Productos",
+      "description": "Artículos del catálogo con stock y visibilidad de SKU.",
+      "toastCopied": "ID del producto copiado",
+      "columns": {
+        "id": "IDENTIFICACIÓN",
+        "name": "Nombre",
+        "sku": "SKU",
+        "onHand": "En mano",
+        "status": "Estado",
+        "image": "Imagen",
+        "preview": "Ver"
+      }
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "Servicios facturables y partidas recurrentes.",
+      "columns": {
+        "name": "Nombre",
+        "code": "Código",
+        "price": "Precio",
+        "status": "Estado"
+      }
+    },
+    "inventory": {
+      "title": "Movimientos bursátiles",
+      "description": "Entradas, salidas, traslados y ajustes.",
+      "lowStockTitle": "Stock bajo",
+      "lowStockProduct": "Producto",
+      "lowStockOnHand": "Disponible",
+      "lowStockReorder": "Punto de pedido",
+      "lowStockAllOk": "Todos los SKU con seguimiento están por encima de los niveles de pedido.",
+      "columns": {
+        "type": "Tipo",
+        "qty": "Cantidad",
+        "productId": "ID del producto",
+        "when": "Cuando"
+      }
+    },
+    "quotations": {
+      "title": "Cotizaciones",
+      "description": "Cotizaciones de ventas antes de que se conviertan en facturas.",
+      "columns": {
+        "number": "Número",
+        "status": "Estado",
+        "total": "Total",
+        "issued": "Emitido"
+      }
+    },
+    "invoices": {
+      "title": "Facturas",
+      "description": "Cuentas por cobrar con saldos y estados.",
+      "columns": {
+        "number": "Número",
+        "status": "Estado",
+        "total": "Total",
+        "due": "Pendiente"
+      }
+    },
+    "payments": {
+      "title": "Pagos",
+      "description": "Pagos capturados, incluidos los flujos de Paystack.",
+      "columns": {
+        "number": "Número",
+        "method": "Método",
+        "amount": "Cantidad",
+        "status": "Estado",
+        "recorded": "Grabado"
+      }
+    },
+    "sales": {
+      "title": "Ventas",
+      "description": "Órdenes de venta completadas y en curso.",
+      "columns": {
+        "saleNum": "Venta #",
+        "status": "Estado",
+        "total": "Total",
+        "created": "Creado"
+      }
+    },
+    "purchaseOrders": {
+      "title": "Órdenes de compra",
+      "description": "Ciclo de vida de las adquisiciones ligado a los proveedores.",
+      "columns": {
+        "poNum": "número de pedido",
+        "status": "Estado",
+        "total": "Total",
+        "created": "Creado"
+      }
+    },
+    "expenses": {
+      "title": "Gastos",
+      "description": "Seguimiento de gastos con aprobaciones cuando esté configurado.",
+      "toastCopied": "ID de gasto copiado",
+      "columns": {
+        "id": "IDENTIFICACIÓN",
+        "title": "Título",
+        "amount": "Cantidad",
+        "status": "Estado",
+        "date": "Fecha",
+        "receipt": "Recibo",
+        "view": "Ver"
+      }
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "description": "Tu bandeja de entrada personal en todo el espacio de trabajo.",
+      "markAllRead": "Marcar todo como leído",
+      "markAllReadToast": "Todas las notificaciones marcadas como leídas",
+      "updateFailed": "La actualización falló",
+      "columns": {
+        "title": "Título",
+        "read": "Leer",
+        "received": "Recibió"
+      }
+    },
+    "users": {
+      "title": "Equipo",
+      "description": "Invite a colegas, asigne roles y administre el acceso. Los propietarios y las personas con permiso de administración de usuarios pueden invitar a compañeros de equipo, cambiar roles y estados o eliminar el acceso.",
+      "columns": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "role": "Role",
+        "status": "Estado"
+      }
+    },
+    "auditLogs": {
+      "title": "Registro de auditoría",
+      "description": "Rastro inmutable de acciones sensibles.",
+      "columns": {
+        "action": "Acción",
+        "entity": "Entidad",
+        "actor": "Actor",
+        "when": "Cuando"
+      }
+    },
+    "billing": {
+      "title": "Facturación",
+      "description": "La suscripción a la plataforma para {platform} se cobra a través de Paystack utilizando las claves del operador en las variables de entorno del servidor, no las claves de Paystack de su inquilino.",
+      "currentPlan": "Plan actual",
+      "noSub": "Aún no hay registro de suscripción.",
+      "statusPrefix": "Estado:",
+      "renews": "· Renueva {fecha}",
+      "pricingLine": "Estándar:",
+      "perMonth": "/ mes",
+      "perYear": "/ año",
+      "or": "o",
+      "payMonthly": "Paga mensualmente",
+      "payYearly": "Paga anualmente",
+      "redirecting": "Redirigiendo…",
+      "checkoutFailed": "Pago fallido",
+      "callback": {
+        "badgeSuccess": "ÉXITO",
+        "badgePending": "PENDIENTE",
+        "titleSuccess": "Pago de suscripción recibido",
+        "titlePending": "Procesando la suscripción",
+        "bodySuccess": "Gracias. La suscripción de su espacio de trabajo se actualizará en breve cuando Paystack confirme el cargo.",
+        "bodyPending": "Si completó el pago, la confirmación puede tardar un momento.",
+        "referenceLine": "Referencia: {reference}",
+        "backToBilling": "Volver a facturación"
+      }
+    },
+    "company": {
+      "title": "Compañía",
+      "description": "Entidad legal y valores operativos predeterminados compartidos en su espacio de trabajo.",
+      "loading": "Cargando empresa…",
+      "notFound": "Perfil de empresa no encontrado.",
+      "error": "No se pudo cargar la empresa.",
+      "industry": "Industria",
+      "currency": "Divisa",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "taxRate": "Tasa impositiva predeterminada"
+    },
+    "system": {
+      "title": "Sistema",
+      "description": "Instantánea de configuración sin formato para administradores.",
+      "rawSettings": "Configuraciones sin procesar"
+    },
+    "settings": {
+      "pageTitle": "Perfil y preferencias",
+      "pageDescription": "Las actualizaciones se sincronizan con su cuenta inmediatamente. La autenticación sensible aún reside en las cookies httpOnly.",
+      "cardTitle": "Datos personales",
+      "signedInAs": "Iniciaste sesión como {correo electrónico}",
+      "firstName": "Nombre de pila",
+      "lastName": "Apellido",
+      "phone": "Teléfono",
+      "timezone": "Zona horaria",
+      "save": "Guardar cambios",
+      "saving": "Ahorro…",
+      "saved": "Perfil actualizado",
+      "updateFailed": "La actualización falló",
+      "validation": {
+        "firstNameRequired": "El nombre es obligatorio",
+        "lastNameRequired": "El apellido es obligatorio"
+      }
+    },
+    "uploads": {
+      "title": "Subidas",
+      "description": "Los archivos se almacenan por tipo y se conectan a entidades cuando corresponde (por ejemplo, avatares, logotipos).",
+      "cardTitle": "Subir archivo",
+      "cardHint": "Máximo ~10 MB por solicitud (límite del servidor).",
+      "kindLabel": "Amable",
+      "fileLabel": "Archivo",
+      "labelProduct": "Producto",
+      "labelExpense": "Gastos",
+      "labelCustomer": "Cliente",
+      "labelSupplier": "Proveedor",
+      "upload": "Subir",
+      "uploading": "Subiendo…",
+      "chooseFile": "Elige un archivo",
+      "selectRecord": "Seleccione el registro relacionado",
+      "uploaded": "subido",
+      "uploadedUrl": "URL: {url}",
+      "avatarHint": "Avatar actualizado: actualice si está en caché.",
+      "uploadFailed": "Error al subir",
+      "searchProduct": "Buscar y seleccionar producto",
+      "searchExpense": "Buscar y seleccionar gasto",
+      "searchCustomer": "Buscar y seleccionar cliente",
+      "searchSupplier": "Buscar y seleccionar proveedor",
+      "kinds": {
+        "company_logo": "Logotipo de la empresa",
+        "user_avatar": "avatar de usuario",
+        "customer_doc": "documento de cliente",
+        "supplier_doc": "Documento de proveedor",
+        "expense_receipt": "Recibo de gastos",
+        "product_image": "Imagen del producto"
+      }
+    },
+    "companyEdit": {
+      "title": "Editar empresa",
+      "description": "Visible solo para roles con permiso de configuración de la empresa.",
+      "legalName": "Nombre legal",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "currencyCode": "Código de moneda",
+      "taxPercent": "% de impuesto predeterminado",
+      "save": "salvar empresa",
+      "saving": "Ahorro…",
+      "saved": "Empresa actualizada",
+      "updateFailed": "La actualización falló",
+      "validation": {
+        "nameRequired": "El nombre legal es obligatorio",
+        "currencyRequired": "El código de moneda es obligatorio"
+      }
+    },
+    "paystack": {
+      "title": "Pagos / Pila de pagos",
+      "description": "Los pagos de facturas de clientes utilizan su cuenta comercial Paystack. Pegue las URL de devolución de llamada y webhooks en Paystack Dashboard → Configuración → API/Webhooks.",
+      "callbackUrl": "URL de devolución de llamada",
+      "webhookUrl": "URL de webhook",
+      "publicKey": "Clave pública",
+      "secretKey": "clave secreta",
+      "pkPlaceholder": "pk_live_… o pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• configurado — ingrese para rotar",
+      "saveKeys": "guardar claves",
+      "testConnection": "Conexión de prueba",
+      "footNote": "La prueba de conexión utiliza la clave secreta ya guardada en el servidor, no la que sólo se escribe en el campo. Guarde una nueva clave antes de probarla.",
+      "saved": "Configuración de pago guardada",
+      "saveFailed": "Error al guardar",
+      "validOk": "Las credenciales de Paystack son válidas",
+      "validBad": "Paystack rechazó la clave secreta guardada. Verifique la clave en Paystack Dashboard, guárdela aquí y luego pruébela nuevamente.",
+      "testFailed": "Prueba fallida"
+    }
+  }
+}

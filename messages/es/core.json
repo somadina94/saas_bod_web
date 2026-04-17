@@ -1,0 +1,254 @@
+{
+  "common": {
+    "loading": "Cargando…",
+    "copy": "Copiar",
+    "view": "Ver ({count})",
+    "dash": null,
+    "openMenu": "abrir menú",
+    "closeMenu": "Cerrar menú",
+    "menuTitle": "Menú",
+    "navigate": "Navegar por",
+    "language": "Idioma",
+    "yes": "Sí",
+    "no": "No",
+    "copied": "Copiado"
+  },
+  "list": {
+    "actions": "Comportamiento",
+    "noRecords": "No se encontraron registros.",
+    "pageOf": "Página {página} de {totalPages} · {total} total",
+    "previous": "Anterior",
+    "next": "Próximo"
+  },
+  "errors": {
+    "accessRestricted": "Acceso restringido",
+    "permissionDeniedDefault": "No tienes permiso para ver esta área. Pídale a un administrador que actualice su función.",
+    "dashboardMetricsDenied": "No tiene acceso a las métricas del panel de la empresa.",
+    "systemSettingsDenied": "La configuración del sistema requiere acceso de administración de la empresa."
+  },
+  "nav": {
+    "overview": "Descripción general",
+    "customers": "Clientes",
+    "suppliers": "Proveedores",
+    "products": "Productos",
+    "services": "Servicios",
+    "inventory": "Inventario",
+    "quotations": "Cotizaciones",
+    "invoices": "Facturas",
+    "payments": "Pagos",
+    "sales": "Ventas",
+    "purchaseOrders": "Órdenes de compra",
+    "expenses": "Gastos",
+    "notifications": "Notificaciones",
+    "team": "Equipo",
+    "billing": "Facturación",
+    "company": "Compañía",
+    "system": "Sistema",
+    "auditLog": "Registro de auditoría",
+    "uploads": "Subidas",
+    "settings": "Ajustes",
+    "workspace": "Espacio de trabajo",
+    "accountAdmin": "Cuenta y administrador",
+    "sidebarFootnote": "Ha iniciado sesión de forma segura. Los tokens permanecen en cookies httpOnly."
+  },
+  "subscription": {
+    "banner": "Su suscripción al espacio de trabajo de {platform} no está activa. Abra la facturación para pagar y restaurar el acceso a CRM, inventario y herramientas de facturación.",
+    "cta": "Ir a facturación"
+  },
+  "dashboardHeader": {
+    "home": "Hogar",
+    "marketingHomeTitle": "Inicio del sitio de marketing",
+    "tagline": "Operaciones · CRM · Inventario · Facturación",
+    "themeLight": "Cambiar al tema claro",
+    "themeDark": "Cambiar al tema oscuro",
+    "accountMenu": "Menú de cuenta",
+    "profilePrefs": "Perfil y preferencias",
+    "signOut": "desconectar",
+    "signedOut": "Cerrado sesión"
+  },
+  "marketing": {
+    "header": {
+      "features": "Características",
+      "howItWorks": "como funciona",
+      "signIn": "Iniciar sesión",
+      "createWorkspace": "Crear espacio de trabajo"
+    },
+    "footer": {
+      "product": "Producto",
+      "legal": "Legal",
+      "account": "Cuenta",
+      "dashboard": "Panel",
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio",
+      "blurb": "Software de operaciones para empresas modernas: CRM, inventario, facturación y equipos en un solo espacio de trabajo.",
+      "rights": "© {year} {platform}. Reservados todos los derechos.",
+      "tagline": "Creado para equipos que superan las hojas de cálculo."
+    }
+  },
+  "home": {
+    "badge1": "Espacios de trabajo multiinquilino",
+    "badge2": "Acceso basado en roles",
+    "badge3": "Listo para la pila de pago",
+    "headline": "Ejecute operaciones con claridad: cada empresa, una plataforma pulida.",
+    "subhead": "CRM, inventario, cotizaciones, facturas, pagos de clientes, suscripciones y administración de equipos en un único espacio de trabajo de nivel de producción, creado para empresas que han superado las hojas de cálculo.",
+    "ctaStart": "Empieza gratis",
+    "ctaSignIn": "Iniciar sesión",
+    "ctaFeatures": "Explorar características",
+    "mobileTitle": "Aplicaciones móviles",
+    "mobileHint": "Los listados de tiendas estarán disponibles pronto. Los botones son marcadores de posición para App Store y Google Play; suscríbase a las actualizaciones desde su espacio de trabajo una vez que se registre.",
+    "card1Title": "Tubería unificada",
+    "card1Body": "Clientes, proveedores, existencias y pistas de auditoría con alcance por empresa.",
+    "card2Title": "Finanzas y facturación",
+    "card2Body": "Cotizaciones, facturas, Paystack (inquilino o plataforma) y suscripciones.",
+    "card3Title": "Creado para equipos",
+    "card3Body": "Invitaciones, roles, permisos a nivel de fila y un panel en el que los líderes confían.",
+    "ctaSectionKicker": "Ver la imagen completa",
+    "ctaSectionBody": "Explore los módulos, los permisos y cómo va su espacio de trabajo desde el registro hasta la primera factura.",
+    "ctaHowItWorks": "como funciona"
+  },
+  "auth": {
+    "layout": {
+      "backHome": "De vuelta a casa"
+    },
+    "login": {
+      "title": "Iniciar sesión",
+      "description": "Utilice las credenciales de su espacio de trabajo. Las sesiones utilizan cookies seguras.",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot": "¿Has olvidado tu contraseña?",
+      "submit": "Iniciar sesión",
+      "submitting": "Iniciando sesión…",
+      "welcome": "Bienvenido de nuevo",
+      "failed": "Error al iniciar sesión",
+      "newWorkspace": "¿Nuevo espacio de trabajo?",
+      "createCompany": "Crea tu empresa",
+      "loading": "Cargando…",
+      "validation": {
+        "emailRequired": "Se requiere correo electrónico",
+        "emailInvalid": "Introduce un correo electrónico válido",
+        "passwordRequired": "Se requiere contraseña"
+      }
+    },
+    "setup": {
+      "title": "Crear espacio de trabajo",
+      "description": "Cree un nuevo espacio de trabajo: el perfil de su empresa, su cuenta de propietario y una suscripción de prueba a {platform}.",
+      "company": "Compañía",
+      "firstName": "Nombre de pila",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear espacio de trabajo",
+      "submitting": "Creando…",
+      "success": "Espacio de trabajo creado",
+      "error": "No se pudo crear el espacio de trabajo",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión",
+      "validation": {
+        "companyName": "El nombre de la empresa es obligatorio.",
+        "firstName": "El nombre es obligatorio",
+        "lastName": "Se requiere apellido",
+        "passwordLen": "Utilice al menos 8 caracteres"
+      }
+    },
+    "forgot": {
+      "title": "Restablecer contraseña",
+      "description": "Le enviaremos por correo electrónico un enlace para elegir una nueva contraseña.",
+      "email": "Correo electrónico",
+      "submit": "Enviar enlace de reinicio",
+      "submitting": "Envío…",
+      "backLogin": "Volver para iniciar sesión",
+      "toastInbox": "Revisa tu bandeja de entrada",
+      "requestTitle": "Solicitud recibida",
+      "devHint": "Desarrollo: es posible que el correo electrónico no esté disponible; utilice este enlace una vez:",
+      "validation": {
+        "emailRequired": "Se requiere correo electrónico",
+        "emailInvalid": "Introduce un correo electrónico válido"
+      },
+      "genericError": "algo salió mal"
+    },
+    "reset": {
+      "title": "Establecer nueva contraseña",
+      "description": "Elija una contraseña segura para su cuenta.",
+      "email": "Correo electrónico",
+      "password": "Nueva contraseña",
+      "confirm": "Confirmar Contraseña",
+      "submit": "Actualizar contraseña",
+      "submitting": "Ahorro…",
+      "success": "Contraseña actualizada: puedes iniciar sesión ahora",
+      "failed": "Error al restablecer",
+      "backLogin": "Volver para iniciar sesión",
+      "missingLink": "Enlace de reinicio no válido",
+      "missingDesc": "Utilice el enlace de su correo electrónico o solicite un nuevo reinicio desde el inicio de sesión.",
+      "validation": {
+        "tokenMissing": "Falta el token de reinicio",
+        "passwordLen": "Utilice al menos 8 caracteres",
+        "mismatch": "Las contraseñas no coinciden"
+      }
+    },
+    "invite": {
+      "title": "Aceptar invitación",
+      "description": "Establezca una contraseña para unirse al espacio de trabajo de su equipo.",
+      "invalidTitle": "Enlace de invitación no válido",
+      "invalidDesc": "Abra el enlace completo de su correo electrónico de invitación. Si expiró, pídale a un administrador que envíe una nueva invitación.",
+      "password": "Contraseña",
+      "confirm": "Confirmar Contraseña",
+      "submit": "Unirse al espacio de trabajo",
+      "submitting": "Unión…",
+      "welcome": "Bienvenido al equipo",
+      "error": "No se pudo completar la invitación",
+      "validation": {
+        "tokenMissing": "Falta el token de reinicio",
+        "passwordLen": "Utilice al menos 8 caracteres",
+        "mismatch": "Las contraseñas no coinciden"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "ÉXITO",
+      "failedBadge": "FALLIDO",
+      "pendingBadge": "PENDIENTE",
+      "successTitle": "Pago exitoso",
+      "failedTitle": "El pago no se completó",
+      "pendingTitle": "El pago se está procesando.",
+      "successDesc": "Gracias. Su pago ha sido recibido y se está aplicando a su factura.",
+      "failedDesc": "Su pago no se completó. Puede volver a intentarlo utilizando el enlace de pago en el correo electrónico de su factura.",
+      "pendingDesc": "Estamos confirmando tu pago. Esto suele resolverse en breve.",
+      "referenceLine": "Referencia: {reference}",
+      "home": "ir a casa"
+    },
+    "billing": {
+      "successBadge": "ÉXITO",
+      "pendingBadge": "PENDIENTE",
+      "successTitle": "Pago de suscripción recibido",
+      "pendingTitle": "Suscripción de procesamiento",
+      "successDesc": "Gracias. La suscripción de su espacio de trabajo se actualizará poco después de que Paystack confirme el cargo.",
+      "pendingDesc": "Si completó el pago, la confirmación puede tardar un momento.",
+      "reference": "Referencia:",
+      "backBilling": "Volver a facturación"
+    }
+  },
+  "publicDoc": {
+    "loading": "Cargando documento…",
+    "unavailableTitle": "Documento no disponible",
+    "unavailableBody": "Este enlace no es válido, ha caducado o el documento ya no está disponible.",
+    "customerCopy": "Copia del cliente",
+    "quotation": "Cotización",
+    "invoice": "Factura",
+    "status": "Estado:",
+    "customer": "Cliente",
+    "dates": "Fechas",
+    "issued": "Emitido:",
+    "validUntil": "Válido hasta:",
+    "due": "Pendiente:",
+    "description": "Descripción",
+    "qty": "Cantidad",
+    "unit": "Unidad",
+    "lineTotal": "Total de línea",
+    "noLines": "Sin líneas de pedido.",
+    "total": "Total:",
+    "paid": "Pagado:",
+    "balance": "Balance:",
+    "notes": "Notas:"
+  }
+}

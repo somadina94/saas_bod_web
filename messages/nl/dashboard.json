@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "Jouw werkruimte",
+      "subhead": "Dit overzicht is toegespitst op uw bedrijf. Gebruik de zijbalk om naar CRM, inventaris, facturering en meer te gaan: alles blijft op de hoogte van de toestemming.",
+      "loading": "Overzicht laden…",
+      "greetingMorning": "Goedemorgen",
+      "greetingAfternoon": "Goedemiddag",
+      "greetingEvening": "Goedeavond",
+      "there": "daar",
+      "kpiSales": "Verkoop (maand)",
+      "kpiSalesHint": "Verkoop afgerond deze maand",
+      "kpiOutstanding": "Openstaande facturen",
+      "kpiOutstandingHint": "Saldo moet nog betaald worden",
+      "kpiCustomers": "Klanten",
+      "kpiCustomersHint": "Actieve records",
+      "kpiLowStock": "SKU's met weinig voorraad",
+      "kpiLowStockHint": "Bij of onder nabestelling",
+      "chartTitle": "Cash- en aansprakelijkheidspuls",
+      "chartSubtitle": "Vergelijk maandelijkse verkopen, uitstaande AR en betaalde uitgaven.",
+      "chartAmount": "Hoeveelheid",
+      "networkTitle": "Netwerk",
+      "networkSubtitle": "Een snelle relatie telt.",
+      "suppliers": "Leveranciers",
+      "expensesMonth": "Kosten (maand)",
+      "networkTip": "Tip: maak modules vast die u dagelijks gebruikt: de zijbalk wordt samengevouwen tot pictogrammen op kleinere schermen voor meer focus.",
+      "chartSales": "Verkoop (MTD)",
+      "chartOutstanding": "Uitstekend",
+      "chartExpenses": "Uitgaven"
+    },
+    "customers": {
+      "title": "Klanten",
+      "description": "Actieve CRM-records met saldi en contactgegevens.",
+      "toastCopied": "Klant-ID gekopieerd",
+      "columns": {
+        "id": "Identiteitskaart",
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "status": "Status",
+        "balance": "Evenwicht",
+        "docs": "Documenten"
+      }
+    },
+    "suppliers": {
+      "title": "Leveranciers",
+      "description": "Leveranciers en fulfilmentpartners gekoppeld aan inkoop.",
+      "toastCopied": "Leveranciers-ID gekopieerd",
+      "columns": {
+        "id": "Identiteitskaart",
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "status": "Status",
+        "docs": "Documenten"
+      }
+    },
+    "products": {
+      "title": "Producten",
+      "description": "Catalogusartikelen met voorraad- en SKU-zichtbaarheid.",
+      "toastCopied": "Product-ID gekopieerd",
+      "columns": {
+        "id": "Identiteitskaart",
+        "name": "Naam",
+        "sku": "SKU",
+        "onHand": "Bij de hand",
+        "status": "Status",
+        "image": "Afbeelding",
+        "preview": "Bekijk"
+      }
+    },
+    "services": {
+      "title": "Diensten",
+      "description": "Factureerbare services en terugkerende regelitems.",
+      "columns": {
+        "name": "Naam",
+        "code": "Code",
+        "price": "Prijs",
+        "status": "Status"
+      }
+    },
+    "inventory": {
+      "title": "Voorraadbewegingen",
+      "description": "Inkomend, uitgaand, overdrachten en aanpassingen.",
+      "lowStockTitle": "Lage voorraad",
+      "lowStockProduct": "Product",
+      "lowStockOnHand": "Op voorraad",
+      "lowStockReorder": "Bijbestelniveau",
+      "lowStockAllOk": "Alle gevolgde SKU’s liggen boven de bijbestelniveaus.",
+      "columns": {
+        "type": "Type",
+        "qty": "Aantal",
+        "productId": "Product-ID",
+        "when": "Wanneer"
+      }
+    },
+    "quotations": {
+      "title": "Offertes",
+      "description": "Verkoopoffertes voordat ze worden omgezet in facturen.",
+      "columns": {
+        "number": "Nummer",
+        "status": "Status",
+        "total": "Totaal",
+        "issued": "Uitgegeven"
+      }
+    },
+    "invoices": {
+      "title": "Facturen",
+      "description": "Debiteuren met saldi en statussen.",
+      "columns": {
+        "number": "Nummer",
+        "status": "Status",
+        "total": "Totaal",
+        "due": "Vanwege"
+      }
+    },
+    "payments": {
+      "title": "Betalingen",
+      "description": "Vastgelegde betalingen inclusief Paystack-stromen.",
+      "columns": {
+        "number": "Nummer",
+        "method": "Methode",
+        "amount": "Hoeveelheid",
+        "status": "Status",
+        "recorded": "Opgenomen"
+      }
+    },
+    "sales": {
+      "title": "Verkoop",
+      "description": "Voltooide en lopende verkooporders.",
+      "columns": {
+        "saleNum": "Verkoop #",
+        "status": "Status",
+        "total": "Totaal",
+        "created": "Gemaakt"
+      }
+    },
+    "purchaseOrders": {
+      "title": "Inkooporders",
+      "description": "Inkooplevenscyclus gekoppeld aan leveranciers.",
+      "columns": {
+        "poNum": "PO #",
+        "status": "Status",
+        "total": "Totaal",
+        "created": "Gemaakt"
+      }
+    },
+    "expenses": {
+      "title": "Uitgaven",
+      "description": "Het bijhouden van uitgaven met goedkeuringen, indien geconfigureerd.",
+      "toastCopied": "Onkosten-ID gekopieerd",
+      "columns": {
+        "id": "Identiteitskaart",
+        "title": "Titel",
+        "amount": "Hoeveelheid",
+        "status": "Status",
+        "date": "Datum",
+        "receipt": "Ontvangst",
+        "view": "Bekijken"
+      }
+    },
+    "notifications": {
+      "title": "Meldingen",
+      "description": "Uw persoonlijke inbox in de hele werkruimte.",
+      "markAllRead": "Markeer alles als gelezen",
+      "markAllReadToast": "Alle meldingen gemarkeerd als gelezen",
+      "updateFailed": "Update mislukt",
+      "columns": {
+        "title": "Titel",
+        "read": "Lezen",
+        "received": "Ontvangen"
+      }
+    },
+    "users": {
+      "title": "Team",
+      "description": "Nodig collega's uit, wijs rollen toe en beheer de toegang. Eigenaren en mensen met toestemming voor gebruikersbeheer kunnen teamgenoten uitnodigen, rollen en status wijzigen of de toegang intrekken.",
+      "columns": {
+        "name": "Naam",
+        "email": "E-mail",
+        "role": "Rol",
+        "status": "Status"
+      }
+    },
+    "auditLogs": {
+      "title": "Auditlogboek",
+      "description": "Onveranderlijk spoor van gevoelige acties.",
+      "columns": {
+        "action": "Actie",
+        "entity": "Entiteit",
+        "actor": "Acteur",
+        "when": "Wanneer"
+      }
+    },
+    "billing": {
+      "title": "Facturering",
+      "description": "Het platformabonnement voor {platform} wordt in rekening gebracht via Paystack met behulp van de operatorsleutels in serveromgevingsvariabelen - niet uw tenant-Paystack-sleutels.",
+      "currentPlan": "Huidig ​​abonnement",
+      "noSub": "Nog geen abonnementsrecord.",
+      "statusPrefix": "Status:",
+      "renews": "· Verlengt op {datum}",
+      "pricingLine": "Standaard:",
+      "perMonth": "/ maand",
+      "perYear": "/ jaar",
+      "or": "of",
+      "payMonthly": "Betaal maandelijks",
+      "payYearly": "Jaarlijks betalen",
+      "redirecting": "Omleiden…",
+      "checkoutFailed": "Afrekenen mislukt",
+      "callback": {
+        "badgeSuccess": "GELUKT",
+        "badgePending": "IN BEHANDELING",
+        "titleSuccess": "Abonnementsbetaling ontvangen",
+        "titlePending": "Abonnement wordt verwerkt",
+        "bodySuccess": "Bedankt. Uw werkruimte-abonnement wordt bijgewerkt zodra Paystack de afschrijving bevestigt.",
+        "bodyPending": "Als u de betaling heeft voltooid, kan bevestiging even duren.",
+        "referenceLine": "Referentie: {reference}",
+        "backToBilling": "Terug naar facturatie"
+      }
+    },
+    "company": {
+      "title": "Bedrijf",
+      "description": "Rechtspersoon en operationele standaarden gedeeld in uw werkruimte.",
+      "loading": "Laadbedrijf…",
+      "notFound": "Bedrijfsprofiel niet gevonden.",
+      "error": "Kan bedrijf niet laden.",
+      "industry": "Industrie",
+      "currency": "Munteenheid",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "taxRate": "Standaard belastingtarief"
+    },
+    "system": {
+      "title": "Systeem",
+      "description": "Onbewerkte configuratiemomentopname voor beheerders.",
+      "rawSettings": "Ruwe instellingen"
+    },
+    "settings": {
+      "pageTitle": "Profiel & voorkeuren",
+      "pageDescription": "Updates sync to your account immediately. Sensitive auth still lives in httpOnly cookies.",
+      "cardTitle": "Personal details",
+      "signedInAs": "Signed in as {email}",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "timezone": "Timezone",
+      "save": "Wijzigingen opslaan",
+      "saving": "Besparing…",
+      "saved": "Profiel bijgewerkt",
+      "updateFailed": "Update mislukt",
+      "validation": {
+        "firstNameRequired": "Voornaam is verplicht",
+        "lastNameRequired": "Achternaam is verplicht"
+      }
+    },
+    "uploads": {
+      "title": "Uploads",
+      "description": "Bestanden worden per soort opgeslagen en, indien van toepassing, gekoppeld aan entiteiten (bijvoorbeeld avatars, logo's).",
+      "cardTitle": "Bestand uploaden",
+      "cardHint": "Maximaal ~10 MB per verzoek (serverlimiet).",
+      "kindLabel": "Vriendelijk",
+      "fileLabel": "Bestand",
+      "labelProduct": "Product",
+      "labelExpense": "Kosten",
+      "labelCustomer": "Klant",
+      "labelSupplier": "Leverancier",
+      "upload": "Uploaden",
+      "uploading": "Uploaden…",
+      "chooseFile": "Kies een bestand",
+      "selectRecord": "Selecteer de gerelateerde record",
+      "uploaded": "Geüpload",
+      "uploadedUrl": "URL: {url}",
+      "avatarHint": "Avatar geüpdatet – vernieuwen indien in de cache opgeslagen.",
+      "uploadFailed": "Uploaden mislukt",
+      "searchProduct": "Zoek en selecteer product",
+      "searchExpense": "Zoek en selecteer kosten",
+      "searchCustomer": "Zoek en selecteer klant",
+      "searchSupplier": "Zoek en selecteer leverancier",
+      "kinds": {
+        "company_logo": "Bedrijfslogo",
+        "user_avatar": "Gebruikersavatar",
+        "customer_doc": "Klantdocument",
+        "supplier_doc": "Leveranciersdocument",
+        "expense_receipt": "Onkostennota",
+        "product_image": "Productafbeelding"
+      }
+    },
+    "companyEdit": {
+      "title": "Bedrijf bewerken",
+      "description": "Alleen zichtbaar voor rollen met toestemming voor bedrijfsinstellingen.",
+      "legalName": "Wettelijke naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "currencyCode": "Valutacode",
+      "taxPercent": "Standaardbelasting%",
+      "save": "Bedrijf opslaan",
+      "saving": "Besparing…",
+      "saved": "Bedrijf bijgewerkt",
+      "updateFailed": "Update mislukt",
+      "validation": {
+        "nameRequired": "Wettelijke naam is verplicht",
+        "currencyRequired": "Valutacode is verplicht"
+      }
+    },
+    "paystack": {
+      "title": "Betalingen / Salaris",
+      "description": "Klantfactuurbetalingen gebruiken uw Paystack-handelaarsaccount. Plak de callback- en webhook-URL's in Paystack Dashboard → Instellingen → API / Webhooks.",
+      "callbackUrl": "Terugbel-URL",
+      "webhookUrl": "Webhook-URL",
+      "publicKey": "Openbare sleutel",
+      "secretKey": "Geheime sleutel",
+      "pkPlaceholder": "pk_live_… of pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• geconfigureerd — voer in om te roteren",
+      "saveKeys": "Sleutels bewaren",
+      "testConnection": "Verbinding testen",
+      "footNote": "De verbindingstest maakt gebruik van de geheime sleutel die al op de server is opgeslagen, en niet van wat alleen in het veld is getypt. Bewaar een nieuwe sleutel voordat u deze test.",
+      "saved": "Betaalinstellingen opgeslagen",
+      "saveFailed": "Opslaan mislukt",
+      "validOk": "Paystack-referenties zijn geldig",
+      "validBad": "Paystack heeft de opgeslagen geheime sleutel afgewezen. Controleer de sleutel in Paystack Dashboard, sla deze hier op en test vervolgens opnieuw.",
+      "testFailed": "Test mislukt"
+    }
+  }
+}

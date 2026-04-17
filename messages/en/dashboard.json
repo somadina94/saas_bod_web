@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "Your workspace",
+      "subhead": "This overview is scoped to your company. Use the sidebar to jump into CRM, inventory, billing, and more—everything stays permission-aware.",
+      "loading": "Loading overview…",
+      "greetingMorning": "Good morning",
+      "greetingAfternoon": "Good afternoon",
+      "greetingEvening": "Good evening",
+      "there": "there",
+      "kpiSales": "Sales (month)",
+      "kpiSalesHint": "Completed sales this month",
+      "kpiOutstanding": "Outstanding invoices",
+      "kpiOutstandingHint": "Balance still due",
+      "kpiCustomers": "Customers",
+      "kpiCustomersHint": "Active records",
+      "kpiLowStock": "Low stock SKUs",
+      "kpiLowStockHint": "At or below reorder",
+      "chartTitle": "Cash & liability pulse",
+      "chartSubtitle": "Compare monthly sales, outstanding AR, and paid expenses.",
+      "chartAmount": "Amount",
+      "networkTitle": "Network",
+      "networkSubtitle": "Quick relationship counts.",
+      "suppliers": "Suppliers",
+      "expensesMonth": "Expenses (month)",
+      "networkTip": "Tip: pin modules you use daily—the sidebar collapses to icons on smaller screens for focus.",
+      "chartSales": "Sales (MTD)",
+      "chartOutstanding": "Outstanding",
+      "chartExpenses": "Expenses"
+    },
+    "customers": {
+      "title": "Customers",
+      "description": "Active CRM records with balances and contact details.",
+      "toastCopied": "Customer ID copied",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "status": "Status",
+        "balance": "Balance",
+        "docs": "Docs"
+      }
+    },
+    "suppliers": {
+      "title": "Suppliers",
+      "description": "Vendors and fulfillment partners linked to purchasing.",
+      "toastCopied": "Supplier ID copied",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "status": "Status",
+        "docs": "Docs"
+      }
+    },
+    "products": {
+      "title": "Products",
+      "description": "Catalog items with stock and SKU visibility.",
+      "toastCopied": "Product ID copied",
+      "columns": {
+        "id": "ID",
+        "name": "Name",
+        "sku": "SKU",
+        "onHand": "On hand",
+        "status": "Status",
+        "image": "Image",
+        "preview": "View"
+      }
+    },
+    "services": {
+      "title": "Services",
+      "description": "Billable services and recurring line items.",
+      "columns": {
+        "name": "Name",
+        "code": "Code",
+        "price": "Price",
+        "status": "Status"
+      }
+    },
+    "inventory": {
+      "title": "Stock movements",
+      "description": "Inbound, outbound, transfers, and adjustments.",
+      "lowStockTitle": "Low stock",
+      "lowStockProduct": "Product",
+      "lowStockOnHand": "On hand",
+      "lowStockReorder": "Reorder",
+      "lowStockAllOk": "All tracked SKUs are above reorder levels.",
+      "columns": {
+        "type": "Type",
+        "qty": "Qty",
+        "productId": "Product ID",
+        "when": "When"
+      }
+    },
+    "quotations": {
+      "title": "Quotations",
+      "description": "Sales quotes before they convert to invoices.",
+      "columns": {
+        "number": "Number",
+        "status": "Status",
+        "total": "Total",
+        "issued": "Issued"
+      }
+    },
+    "invoices": {
+      "title": "Invoices",
+      "description": "Accounts receivable with balances and statuses.",
+      "columns": {
+        "number": "Number",
+        "status": "Status",
+        "total": "Total",
+        "due": "Due"
+      }
+    },
+    "payments": {
+      "title": "Payments",
+      "description": "Captured payments including Paystack flows.",
+      "columns": {
+        "number": "Number",
+        "method": "Method",
+        "amount": "Amount",
+        "status": "Status",
+        "recorded": "Recorded"
+      }
+    },
+    "sales": {
+      "title": "Sales",
+      "description": "Completed and in-progress sales orders.",
+      "columns": {
+        "saleNum": "Sale #",
+        "status": "Status",
+        "total": "Total",
+        "created": "Created"
+      }
+    },
+    "purchaseOrders": {
+      "title": "Purchase orders",
+      "description": "Procurement lifecycle tied to suppliers.",
+      "columns": {
+        "poNum": "PO #",
+        "status": "Status",
+        "total": "Total",
+        "created": "Created"
+      }
+    },
+    "expenses": {
+      "title": "Expenses",
+      "description": "Spend tracking with approvals where configured.",
+      "toastCopied": "Expense ID copied",
+      "columns": {
+        "id": "ID",
+        "title": "Title",
+        "amount": "Amount",
+        "status": "Status",
+        "date": "Date",
+        "receipt": "Receipt",
+        "view": "View"
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Your personal inbox across the workspace.",
+      "markAllRead": "Mark all read",
+      "markAllReadToast": "All notifications marked read",
+      "updateFailed": "Update failed",
+      "columns": {
+        "title": "Title",
+        "read": "Read",
+        "received": "Received"
+      }
+    },
+    "users": {
+      "title": "Team",
+      "description": "Invite colleagues, assign roles, and manage access. Owners and people with user-management permission can invite teammates, change roles and status, or remove access.",
+      "columns": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status"
+      }
+    },
+    "auditLogs": {
+      "title": "Audit log",
+      "description": "Immutable trail of sensitive actions.",
+      "columns": {
+        "action": "Action",
+        "entity": "Entity",
+        "actor": "Actor",
+        "when": "When"
+      }
+    },
+    "billing": {
+      "title": "Billing",
+      "description": "Platform subscription for {platform} is charged via Paystack using the operator keys in server environment variables — not your tenant Paystack keys.",
+      "currentPlan": "Current plan",
+      "noSub": "No subscription record yet.",
+      "statusPrefix": "Status:",
+      "renews": "· Renews {date}",
+      "pricingLine": "Standard:",
+      "perMonth": "/ month",
+      "perYear": "/ year",
+      "or": "or",
+      "payMonthly": "Pay monthly",
+      "payYearly": "Pay yearly",
+      "redirecting": "Redirecting…",
+      "checkoutFailed": "Checkout failed",
+      "callback": {
+        "badgeSuccess": "SUCCESS",
+        "badgePending": "PENDING",
+        "titleSuccess": "Subscription payment received",
+        "titlePending": "Processing subscription",
+        "bodySuccess": "Thank you. Your workspace subscription will update shortly after Paystack confirms the charge.",
+        "bodyPending": "If you completed payment, confirmation may take a moment.",
+        "referenceLine": "Reference: {reference}",
+        "backToBilling": "Back to billing"
+      }
+    },
+    "company": {
+      "title": "Company",
+      "description": "Legal entity and operating defaults shared across your workspace.",
+      "loading": "Loading company…",
+      "notFound": "Company profile not found.",
+      "error": "Could not load company.",
+      "industry": "Industry",
+      "currency": "Currency",
+      "email": "Email",
+      "phone": "Phone",
+      "taxRate": "Default tax rate"
+    },
+    "system": {
+      "title": "System",
+      "description": "Raw configuration snapshot for administrators.",
+      "rawSettings": "Raw settings"
+    },
+    "settings": {
+      "pageTitle": "Profile & preferences",
+      "pageDescription": "Updates sync to your account immediately. Sensitive auth still lives in httpOnly cookies.",
+      "cardTitle": "Personal details",
+      "signedInAs": "Signed in as {email}",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "timezone": "Timezone",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "saved": "Profile updated",
+      "updateFailed": "Update failed",
+      "validation": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required"
+      }
+    },
+    "uploads": {
+      "title": "Uploads",
+      "description": "Files are stored per kind and wired to entities when applicable (e.g. avatars, logos).",
+      "cardTitle": "Upload file",
+      "cardHint": "Max ~10MB per request (server limit).",
+      "kindLabel": "Kind",
+      "fileLabel": "File",
+      "labelProduct": "Product",
+      "labelExpense": "Expense",
+      "labelCustomer": "Customer",
+      "labelSupplier": "Supplier",
+      "upload": "Upload",
+      "uploading": "Uploading…",
+      "chooseFile": "Choose a file",
+      "selectRecord": "Select the related record",
+      "uploaded": "Uploaded",
+      "uploadedUrl": "URL: {url}",
+      "avatarHint": "Avatar updated — refresh if cached.",
+      "uploadFailed": "Upload failed",
+      "searchProduct": "Search and select product",
+      "searchExpense": "Search and select expense",
+      "searchCustomer": "Search and select customer",
+      "searchSupplier": "Search and select supplier",
+      "kinds": {
+        "company_logo": "Company logo",
+        "user_avatar": "User avatar",
+        "customer_doc": "Customer document",
+        "supplier_doc": "Supplier document",
+        "expense_receipt": "Expense receipt",
+        "product_image": "Product image"
+      }
+    },
+    "companyEdit": {
+      "title": "Edit company",
+      "description": "Visible only to roles with company settings permission.",
+      "legalName": "Legal name",
+      "email": "Email",
+      "phone": "Phone",
+      "currencyCode": "Currency code",
+      "taxPercent": "Default tax %",
+      "save": "Save company",
+      "saving": "Saving…",
+      "saved": "Company updated",
+      "updateFailed": "Update failed",
+      "validation": {
+        "nameRequired": "Legal name is required",
+        "currencyRequired": "Currency code is required"
+      }
+    },
+    "paystack": {
+      "title": "Payments / Paystack",
+      "description": "Customer invoice payments use your Paystack merchant account. Paste the callback and webhook URLs in Paystack Dashboard → Settings → API / Webhooks.",
+      "callbackUrl": "Callback URL",
+      "webhookUrl": "Webhook URL",
+      "publicKey": "Public key",
+      "secretKey": "Secret key",
+      "pkPlaceholder": "pk_live_… or pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• configured — enter to rotate",
+      "saveKeys": "Save keys",
+      "testConnection": "Test connection",
+      "footNote": "The connection test uses the secret key already saved on the server—not what is only typed in the field. Save a new key before testing it.",
+      "saved": "Payment settings saved",
+      "saveFailed": "Save failed",
+      "validOk": "Paystack credentials are valid",
+      "validBad": "Paystack rejected the saved secret key. Check the key in Paystack Dashboard, save it here, then test again.",
+      "testFailed": "Test failed"
+    }
+  }
+}

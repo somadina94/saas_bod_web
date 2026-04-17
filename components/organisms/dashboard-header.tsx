@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
 import {
   HouseIcon,
   MoonIcon,
@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
+import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
 
 function initials(first?: string, last?: string) {
   const a = (first?.[0] ?? "").toUpperCase();
@@ -34,6 +35,7 @@ function initials(first?: string, last?: string) {
 }
 
 export function DashboardHeader() {
+  const t = useTranslations("dashboardHeader");
   const router = useRouter();
   const dispatch = useAppDispatch();
   const user = useAppSelector((s) => s.auth.user);
@@ -43,7 +45,7 @@ export function DashboardHeader() {
     try {
       await logoutRequest();
       dispatch(clearAuth());
-      toast.success("Signed out");
+      toast.success(t("signedOut"));
       router.push("/login");
       router.refresh();
     } catch {
@@ -65,28 +67,30 @@ export function DashboardHeader() {
             className="text-muted-foreground hover:text-foreground hidden rounded-none gap-1.5 px-2 sm:inline-flex"
             asChild
           >
-            <Link href="/" title="Marketing site home">
+            <Link href="/" title={t("marketingHomeTitle")}>
               <HouseIcon className="size-4 shrink-0" aria-hidden />
               <span className="max-w-[6rem] truncate text-xs font-medium max-sm:sr-only">
-                Home
+                {t("home")}
               </span>
             </Link>
           </Button>
           <Separator orientation="vertical" className="hidden h-6 sm:block" />
           <p className="text-muted-foreground hidden text-xs md:block">
-            Operations · CRM · Inventory · Billing
+            {t("tagline")}
           </p>
         </div>
         <div className="flex items-center gap-1.5">
+          <LocaleSwitcher
+            className="h-8 w-[min(100%,9.5rem)] rounded-none text-xs"
+            id="dashboard-locale"
+          />
           <Button
             type="button"
             variant="ghost"
             size="icon-sm"
             className="rounded-none"
             aria-label={
-              resolvedTheme === "dark"
-                ? "Switch to light theme"
-                : "Switch to dark theme"
+              resolvedTheme === "dark" ? t("themeLight") : t("themeDark")
             }
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
@@ -101,7 +105,7 @@ export function DashboardHeader() {
                 variant="ghost"
                 size="sm"
                 className="gap-2 rounded-none px-2"
-                aria-label="Account menu"
+                aria-label={t("accountMenu")}
               >
                 <Avatar className="size-7 rounded-none">
                   {user?.profileImageUrl ? (
@@ -136,7 +140,7 @@ export function DashboardHeader() {
               <DropdownMenuItem asChild>
                 <Link href="/dashboard/settings" className="cursor-pointer">
                   <UserIcon className="size-4" />
-                  Profile &amp; preferences
+                  {t("profilePrefs")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
@@ -148,7 +152,7 @@ export function DashboardHeader() {
                 }}
               >
                 <SignOutIcon className="size-4" />
-                Sign out
+                {t("signOut")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

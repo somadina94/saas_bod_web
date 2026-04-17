@@ -1,0 +1,138 @@
+{
+  "features": {
+    "title": "Características",
+    "subtitle": "Un único espacio de trabajo para distribución, servicios minoristas y operaciones de campo, con alcance por empresa, controlado por función y listo para flujos de dinero reales.",
+    "intro": "{platform} está diseñado como un sistema <strong>multi-inquilino</strong>: cada espacio de trabajo es una empresa con sus propios datos. Los usuarios pertenecen a una empresa por sesión; Los permisos determinan qué módulos aparecen y qué acciones de fila están disponibles.",
+    "footnote": "Las pantallas exactas dependen de su función (propietario, administrador, gerente, ventas, inventario, contador, soporte, espectador). Los propietarios y administradores suelen ver la superficie completa; otros roles heredan permisos seleccionados.",
+    "modules": [
+      {
+        "title": "Descripción general y análisis",
+        "desc": "Panel de control de alcance empresarial con señales de ventas, AR, gastos y acciones."
+      },
+      {
+        "title": "Clientes y CRM",
+        "desc": "Cuentas, contactos e historial con acceso basado en permisos."
+      },
+      {
+        "title": "Proveedores",
+        "desc": "Registros de proveedores vinculados a órdenes de compra y recepción."
+      },
+      {
+        "title": "Productos y servicios",
+        "desc": "Catálogo, SKU, precios y servicios opcionales junto con productos físicos."
+      },
+      {
+        "title": "Inventario",
+        "desc": "Movimientos de stock, niveles y conciencia de stock bajo."
+      },
+      {
+        "title": "Cotizaciones",
+        "desc": "Cree, envíe y convierta cotizaciones en facturas sin tener que volver a ingresar líneas."
+      },
+      {
+        "title": "Facturas",
+        "desc": "Redacte, envíe y realice un seguimiento de facturas con flujos de correo electrónico cuando esté configurado."
+      },
+      {
+        "title": "Pagos",
+        "desc": "Registrar pagos contra facturas; admite flujos de Paystack para el pago de los clientes."
+      },
+      {
+        "title": "Ventas",
+        "desc": "Ventas directas con deducción de inventario opcional para líneas de productos."
+      },
+      {
+        "title": "Órdenes de compra",
+        "desc": "Aprobar y recibir stock de proveedores con seguimientos fáciles de auditar."
+      },
+      {
+        "title": "Gastos",
+        "desc": "Envíe, apruebe y realice un seguimiento del gasto operativo con categorías."
+      },
+      {
+        "title": "Notificaciones",
+        "desc": "Alertas en la aplicación para eventos operativos que su función puede ver."
+      },
+      {
+        "title": "Equipo",
+        "desc": "Invite al personal, asigne roles, cambie el estado y elimine el acceso de forma segura."
+      },
+      {
+        "title": "Facturación y suscripciones",
+        "desc": "Suscripción del espacio de trabajo a la plataforma (pago de Paystack cuando esté habilitado)."
+      },
+      {
+        "title": "Perfil de la empresa",
+        "desc": "Identidad legal, marca y configuración a nivel de espacio de trabajo."
+      },
+      {
+        "title": "Pila de pago del inquilino",
+        "desc": "Conecte sus claves de comerciante para pagos de facturas de clientes y webhooks."
+      },
+      {
+        "title": "Preferencias del sistema",
+        "desc": "Opciones administrativas para operadores con permiso de configuración de empresa."
+      },
+      {
+        "title": "Registro de auditoría",
+        "desc": "Seguimiento de estilo inmutable de acciones sensibles para revisiones de cumplimiento."
+      },
+      {
+        "title": "Subidas",
+        "desc": "Archivos para Backblaze B2: logotipos, avatares, recibos e imágenes de productos."
+      },
+      {
+        "title": "Perfil y preferencias",
+        "desc": "Detalles personales, zona horaria y preferencias de notificación por usuario."
+      },
+      {
+        "title": "Catálogo de servicios",
+        "desc": "Líneas facturables sin stock, como tarifas de entrega o instalación."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "como funciona",
+    "subtitle": "Desde el primer registro hasta la ejecución de facturas e inventario, diseñado para operadores que necesitan flujos de trabajo predecibles, no demostraciones de juguetes.",
+    "qaLead": "¿Necesita un pase de control de calidad con guión?",
+    "qaLink": "Vea el script de control de calidad completo en GitHub",
+    "qaTail": "—Comprobaciones por rol y datos de prueba para {platform}.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Crea tu espacio de trabajo",
+        "body": "Regístrese con el nombre de su empresa. Usted se convierte en propietario de un nuevo inquilino: los datos están aislados de todos los demás negocios en la plataforma."
+      },
+      {
+        "n": "02",
+        "title": "Sesión segura",
+        "body": "La autenticación utiliza cookies httpOnly y tokens de acceso de corta duración. Su navegador nunca almacena secretos de larga duración en localStorage para llamadas API principales."
+      },
+      {
+        "n": "03",
+        "title": "invitar al equipo",
+        "body": "Enviar invitaciones por correo electrónico desde el equipo. Cada miembro tiene una función (administrador, gerente, ventas, inventario, contable, soporte, espectador) con permisos predeterminados que puede perfeccionar con el tiempo."
+      },
+      {
+        "n": "04",
+        "title": "Configurar rieles de dinero",
+        "body": "Para la facturación de la plataforma, complete el pago de la suscripción cuando esté habilitado. Para pagos de facturas de clientes, agregue sus claves públicas/secretas de Paystack en Empresa → Pagos; configure las URL de devolución de llamada y webhook en Paystack. Las pilas de producción deben configurar ENCRYPTION_KEY (64 caracteres hexadecimales) para los secretos de los inquilinos. Todo esto se ejecuta dentro de {platform}."
+      },
+      {
+        "n": "05",
+        "title": "Operar diariamente",
+        "body": "Cargar clientes, proveedores y productos; ejecutar cotizaciones a facturas; registrar pagos y gastos; mover stock con movimientos de inventario; utilizar órdenes de compra para mercancías entrantes."
+      },
+      {
+        "n": "06",
+        "title": "Mantente informado",
+        "body": "Las notificaciones muestran eventos importantes. El registro de auditoría captura acciones confidenciales para su revisión. Carga archivos de la tienda en su almacenamiento de objetos configurado (por ejemplo, logotipos y recibos)."
+      },
+      {
+        "n": "07",
+        "title": "Gobernar el acceso",
+        "body": "Cambie roles, suspenda cuentas o elimine compañeros de equipo de la pantalla Equipo. Los propietarios no se pueden eliminar sin otro propietario, protegiendo al último poseedor de claves."
+      }
+    ]
+  }
+}

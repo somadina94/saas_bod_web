@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, type ReactNode } from "react";
+import { useTranslations } from "next-intl";
 import { useQuery } from "@tanstack/react-query";
 import { CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 import { ApiError, apiFetch } from "@/lib/api/client";
@@ -51,6 +52,7 @@ export function ResourceListPage({
   /** When set, an Actions column is appended (e.g. row menus). */
   rowActions?: (row: Record<string, unknown>) => ReactNode;
 }) {
+  const t = useTranslations("list");
   const [page, setPage] = useState(1);
 
   const query = useQuery({
@@ -103,7 +105,7 @@ export function ResourceListPage({
                 <TableHead key={c.id}>{c.header}</TableHead>
               ))}
               {rowActions ? (
-                <TableHead className="w-[4rem] text-right">Actions</TableHead>
+                <TableHead className="w-[4rem] text-right">{t("actions")}</TableHead>
               ) : null}
             </TableRow>
           </TableHeader>
@@ -129,7 +131,7 @@ export function ResourceListPage({
                   colSpan={columns.length + (rowActions ? 1 : 0)}
                   className="text-muted-foreground py-12 text-center text-sm"
                 >
-                  No records found.
+                  {t("noRecords")}
                 </TableCell>
               </TableRow>
             ) : (
@@ -153,8 +155,11 @@ export function ResourceListPage({
       {pagination && pagination.totalPages > 1 ? (
         <div className="flex items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs">
-            Page {pagination.page} of {pagination.totalPages} · {pagination.total}{" "}
-            total
+            {t("pageOf", {
+              page: pagination.page,
+              totalPages: pagination.totalPages,
+              total: pagination.total,
+            })}
           </p>
           <div className="flex items-center gap-2">
             <Button
@@ -166,7 +171,7 @@ export function ResourceListPage({
               onClick={() => setPage((p) => Math.max(1, p - 1))}
             >
               <CaretLeftIcon className="size-4" aria-hidden />
-              Previous
+              {t("previous")}
             </Button>
             <Button
               type="button"
@@ -176,7 +181,7 @@ export function ResourceListPage({
               disabled={!canNext}
               onClick={() => setPage((p) => p + 1)}
             >
-              Next
+              {t("next")}
               <CaretRightIcon className="size-4" aria-hidden />
             </Button>
           </div>

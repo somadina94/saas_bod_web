@@ -1,0 +1,254 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "copy": "Kopiëren",
+    "view": "Bekijken ({count})",
+    "dash": null,
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "menuTitle": "Menu",
+    "navigate": "Navigeren",
+    "language": "Taal",
+    "yes": "Ja",
+    "no": "Nee",
+    "copied": "Gekopieerd"
+  },
+  "list": {
+    "actions": "Acties",
+    "noRecords": "Geen gegevens gevonden.",
+    "pageOf": "Pagina {page} van {totalPages} · {total} totaal",
+    "previous": "Vorig",
+    "next": "Volgende"
+  },
+  "errors": {
+    "accessRestricted": "Toegang beperkt",
+    "permissionDeniedDefault": "U heeft geen toestemming om dit gebied te bekijken. Vraag een beheerder om uw rol bij te werken.",
+    "dashboardMetricsDenied": "U heeft geen toegang tot de statistieken van het bedrijfsdashboard.",
+    "systemSettingsDenied": "Voor systeeminstellingen is toegang tot het bedrijfsbeheer vereist."
+  },
+  "nav": {
+    "overview": "Overzicht",
+    "customers": "Klanten",
+    "suppliers": "Leveranciers",
+    "products": "Producten",
+    "services": "Diensten",
+    "inventory": "Inventaris",
+    "quotations": "Offertes",
+    "invoices": "Facturen",
+    "payments": "Betalingen",
+    "sales": "Verkoop",
+    "purchaseOrders": "Inkooporders",
+    "expenses": "Uitgaven",
+    "notifications": "Meldingen",
+    "team": "Team",
+    "billing": "Facturering",
+    "company": "Bedrijf",
+    "system": "Systeem",
+    "auditLog": "Auditlogboek",
+    "uploads": "Uploads",
+    "settings": "Instellingen",
+    "workspace": "Werkruimte",
+    "accountAdmin": "Account & beheerder",
+    "sidebarFootnote": "Veilig ingelogd. Tokens blijven in httpOnly-cookies."
+  },
+  "subscription": {
+    "banner": "Uw {platform}-werkruimteabonnement is niet actief. Open facturering om te betalen en de toegang tot CRM-, voorraad- en factureringstools te herstellen.",
+    "cta": "Ga naar facturering"
+  },
+  "dashboardHeader": {
+    "home": "Thuis",
+    "marketingHomeTitle": "Marketingsite naar huis",
+    "tagline": "Operaties · CRM · Voorraad · Facturering",
+    "themeLight": "Schakel over naar het lichtthema",
+    "themeDark": "Schakel over naar een donker thema",
+    "accountMenu": "Accountmenu",
+    "profilePrefs": "Profiel & voorkeuren",
+    "signOut": "Meld u af",
+    "signedOut": "Uitgelogd"
+  },
+  "marketing": {
+    "header": {
+      "features": "Functies",
+      "howItWorks": "Hoe het werkt",
+      "signIn": "Log in",
+      "createWorkspace": "Creëer werkruimte"
+    },
+    "footer": {
+      "product": "Product",
+      "legal": "Legaal",
+      "account": "Rekening",
+      "dashboard": "Dashboard",
+      "privacy": "Privacybeleid",
+      "terms": "Servicevoorwaarden",
+      "blurb": "Operationele software voor moderne bedrijven: CRM, inventaris, facturering en teams in één werkruimte.",
+      "rights": "© {year} {platform}. Alle rechten voorbehouden.",
+      "tagline": "Gebouwd voor teams die spreadsheets ontgroeien."
+    }
+  },
+  "home": {
+    "badge1": "Werkruimtes voor meerdere tenants",
+    "badge2": "Op rollen gebaseerde toegang",
+    "badge3": "Klaar voor PayStack",
+    "headline": "Voer uw activiteiten helder uit: elk bedrijf, één gepolijst platform.",
+    "subhead": "CRM, inventaris, offertes, facturen, klantbetalingen, abonnementen en teambeheer in één productiegerichte werkruimte, gebouwd voor bedrijven die spreadsheets zijn ontgroeid.",
+    "ctaStart": "Begin gratis",
+    "ctaSignIn": "Log in",
+    "ctaFeatures": "Ontdek functies",
+    "mobileTitle": "Mobiele apps",
+    "mobileHint": "Winkelvermeldingen volgen binnenkort. Knoppen zijn tijdelijke aanduidingen voor de App Store en Google Play. Abonneer u op updates vanuit uw werkruimte zodra u zich aanmeldt.",
+    "card1Title": "Uniforme pijplijn",
+    "card1Body": "Klanten, leveranciers, voorraad en audit trails per bedrijf.",
+    "card2Title": "Financiën en facturering",
+    "card2Body": "Offertes, facturen, Paystack (huurder of platform) en abonnementen.",
+    "card3Title": "Gebouwd voor teams",
+    "card3Body": "Uitnodigingen, rollen, machtigingen op rijniveau en een dashboard dat leiders vertrouwen.",
+    "ctaSectionKicker": "Bekijk het volledige plaatje",
+    "ctaSectionBody": "Bekijk de modules, machtigingen en hoe uw werkruimte verloopt vanaf de aanmelding tot de eerste factuur.",
+    "ctaHowItWorks": "Hoe het werkt"
+  },
+  "auth": {
+    "layout": {
+      "backHome": "Terug naar huis"
+    },
+    "login": {
+      "title": "Log in",
+      "description": "Gebruik uw inloggegevens voor de werkruimte. Sessies maken gebruik van beveiligde cookies.",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "forgot": "Wachtwoord vergeten?",
+      "submit": "Log in",
+      "submitting": "Inloggen…",
+      "welcome": "Welkom terug",
+      "failed": "Aanmelden mislukt",
+      "newWorkspace": "Nieuwe werkruimte?",
+      "createCompany": "Creëer uw bedrijf",
+      "loading": "Laden...",
+      "validation": {
+        "emailRequired": "E-mail is vereist",
+        "emailInvalid": "Voer een geldig e-mailadres in",
+        "passwordRequired": "Wachtwoord is vereist"
+      }
+    },
+    "setup": {
+      "title": "Creëer werkruimte",
+      "description": "Maak een nieuwe werkruimte: uw bedrijfsprofiel, eigenaarsaccount en een proefabonnement op {platform}.",
+      "company": "Bedrijf",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "submit": "Creëer werkruimte",
+      "submitting": "Creëren…",
+      "success": "Werkruimte gecreëerd",
+      "error": "Kan geen werkruimte maken",
+      "hasAccount": "Heeft u al een account?",
+      "signIn": "Log in",
+      "validation": {
+        "companyName": "Bedrijfsnaam is vereist",
+        "firstName": "Voornaam is vereist",
+        "lastName": "Achternaam is vereist",
+        "passwordLen": "Gebruik minimaal 8 tekens"
+      }
+    },
+    "forgot": {
+      "title": "Wachtwoord opnieuw instellen",
+      "description": "We sturen u per e-mail een link waarmee u een nieuw wachtwoord kunt kiezen.",
+      "email": "E-mail",
+      "submit": "Resetlink verzenden",
+      "submitting": "Verzenden…",
+      "backLogin": "Terug naar inloggen",
+      "toastInbox": "Controleer je inbox",
+      "requestTitle": "Verzoek ontvangen",
+      "devHint": "Ontwikkeling: e-mail is mogelijk niet beschikbaar. Gebruik deze link één keer:",
+      "validation": {
+        "emailRequired": "E-mail is vereist",
+        "emailInvalid": "Voer een geldig e-mailadres in"
+      },
+      "genericError": "Er is iets misgegaan"
+    },
+    "reset": {
+      "title": "Nieuw wachtwoord instellen",
+      "description": "Kies een sterk wachtwoord voor uw account.",
+      "email": "E-mail",
+      "password": "Nieuw wachtwoord",
+      "confirm": "Bevestig wachtwoord",
+      "submit": "Wachtwoord bijwerken",
+      "submitting": "Besparing…",
+      "success": "Wachtwoord bijgewerkt: u kunt nu inloggen",
+      "failed": "Resetten mislukt",
+      "backLogin": "Terug naar inloggen",
+      "missingLink": "Ongeldige resetlink",
+      "missingDesc": "Gebruik de link uit uw e-mail of vraag een nieuwe reset aan via inloggen.",
+      "validation": {
+        "tokenMissing": "Resettoken ontbreekt",
+        "passwordLen": "Gebruik minimaal 8 tekens",
+        "mismatch": "Wachtwoorden komen niet overeen"
+      }
+    },
+    "invite": {
+      "title": "Accepteer de uitnodiging",
+      "description": "Stel een wachtwoord in om lid te worden van uw teamwerkruimte.",
+      "invalidTitle": "Ongeldige uitnodigingslink",
+      "invalidDesc": "Open de volledige link uit uw uitnodigingsmail. Als de uitnodiging is verlopen, vraagt ​​u een beheerder om een ​​nieuwe uitnodiging te sturen.",
+      "password": "Wachtwoord",
+      "confirm": "Bevestig wachtwoord",
+      "submit": "Sluit je aan bij de werkruimte",
+      "submitting": "Deelnemen…",
+      "welcome": "Welkom bij het team",
+      "error": "Kan de uitnodiging niet voltooien",
+      "validation": {
+        "tokenMissing": "Resettoken ontbreekt",
+        "passwordLen": "Gebruik minimaal 8 tekens",
+        "mismatch": "Wachtwoorden komen niet overeen"
+      }
+    }
+  },
+  "callbacks": {
+    "payment": {
+      "successBadge": "GELUKT",
+      "failedBadge": "MISLUKT",
+      "pendingBadge": "IN BEHANDELING",
+      "successTitle": "Betaling succesvol",
+      "failedTitle": "De betaling is niet voltooid",
+      "pendingTitle": "De betaling wordt verwerkt",
+      "successDesc": "Bedankt. Uw betaling is ontvangen en wordt toegepast op uw factuur.",
+      "failedDesc": "Uw betaling is niet voltooid. U kunt het opnieuw proberen via de betaallink in uw factuur-e-mail.",
+      "pendingDesc": "Wij bevestigen uw betaling. Dit verdwijnt meestal snel.",
+      "referenceLine": "Referentie: {reference}",
+      "home": "Ga naar huis"
+    },
+    "billing": {
+      "successBadge": "SUCCES",
+      "pendingBadge": "IN BEHANDELING",
+      "successTitle": "Abonnementsbetaling ontvangen",
+      "pendingTitle": "Abonnement verwerken",
+      "successDesc": "Bedankt. Uw werkruimteabonnement wordt bijgewerkt kort nadat Paystack de afschrijving heeft bevestigd.",
+      "pendingDesc": "Als u de betaling heeft voltooid, kan de bevestiging even duren.",
+      "reference": "Referentie:",
+      "backBilling": "Terug naar facturering"
+    }
+  },
+  "publicDoc": {
+    "loading": "Document laden…",
+    "unavailableTitle": "Document niet beschikbaar",
+    "unavailableBody": "Deze link is ongeldig, verlopen of het document is niet langer beschikbaar.",
+    "customerCopy": "Klant exemplaar",
+    "quotation": "Offerte",
+    "invoice": "Factuur",
+    "status": "Status:",
+    "customer": "Klant",
+    "dates": "Datums",
+    "issued": "Uitgegeven:",
+    "validUntil": "Geldig tot:",
+    "due": "Vanwege:",
+    "description": "Beschrijving",
+    "qty": "Aantal",
+    "unit": "Eenheid",
+    "lineTotal": "Lijntotaal",
+    "noLines": "Geen regelitems.",
+    "total": "Totaal:",
+    "paid": "Betaald:",
+    "balance": "Evenwicht:",
+    "notes": "Opmerkingen:"
+  }
+}

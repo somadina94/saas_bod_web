@@ -1,0 +1,138 @@
+{
+  "features": {
+    "title": "Caratteristiche",
+    "subtitle": "Un unico spazio di lavoro per la distribuzione, i servizi di vendita al dettaglio e le operazioni sul campo, delimitato dall'azienda, delimitato in base al ruolo e pronto per flussi di denaro reali.",
+    "intro": "{platform} è concepito come un sistema <strong>multi-tenant</strong>: ogni spazio di lavoro è un'azienda con i propri dati. Gli utenti appartengono ad una società per sessione; le autorizzazioni determinano quali moduli vengono visualizzati e quali azioni sulle righe sono disponibili.",
+    "footnote": "Le schermate esatte dipendono dal tuo ruolo (proprietario, amministratore, manager, vendite, inventario, contabile, supporto, visualizzatore). I proprietari e gli amministratori in genere vedono l'intera superficie; gli altri ruoli ereditano le autorizzazioni curate.",
+    "modules": [
+      {
+        "title": "Panoramica e analisi",
+        "desc": "Dashboard a livello aziendale con segnali di vendita, AR, spese e azioni."
+      },
+      {
+        "title": "Clienti e CRM",
+        "desc": "Account, contatti e cronologia con accesso sensibile alle autorizzazioni."
+      },
+      {
+        "title": "Fornitori",
+        "desc": "Record dei fornitori legati agli ordini di acquisto e alla ricezione."
+      },
+      {
+        "title": "Prodotti e servizi",
+        "desc": "Catalogo, SKU, prezzi e servizi opzionali insieme ai beni fisici."
+      },
+      {
+        "title": "Inventario",
+        "desc": "Movimenti delle scorte, livelli e consapevolezza di scorte scarse."
+      },
+      {
+        "title": "Citazioni",
+        "desc": "Crea, invia e converti preventivi in ​​fatture senza dover reimpostare le righe."
+      },
+      {
+        "title": "Fatture",
+        "desc": "Redige, invia e monitora le fatture con flussi di posta elettronica, ove configurato."
+      },
+      {
+        "title": "Pagamenti",
+        "desc": "Registrare i pagamenti rispetto alle fatture; supporta i flussi Paystack per la retribuzione dei clienti."
+      },
+      {
+        "title": "Saldi",
+        "desc": "Vendite dirette con detrazione opzionale dell'inventario per le linee di prodotti."
+      },
+      {
+        "title": "Ordini di acquisto",
+        "desc": "Approva e ricevi scorte da fornitori con percorsi facili da controllare."
+      },
+      {
+        "title": "Spese",
+        "desc": "Invia, approva e monitora la spesa operativa con le categorie."
+      },
+      {
+        "title": "Notifiche",
+        "desc": "Avvisi in-app per eventi operativi che il tuo ruolo può vedere."
+      },
+      {
+        "title": "Squadra",
+        "desc": "Invita il personale, assegna ruoli, modifica lo stato e rimuovi l'accesso in sicurezza."
+      },
+      {
+        "title": "Fatturazione e abbonamenti",
+        "desc": "Abbonamento Workspace alla piattaforma (pagamento Paystack dove abilitato)."
+      },
+      {
+        "title": "Profilo Aziendale",
+        "desc": "Identità legale, marchio e impostazioni a livello di area di lavoro."
+      },
+      {
+        "title": "Busta paga dell'inquilino",
+        "desc": "Collega le tue chiavi commerciante per i pagamenti delle fatture cliente e i webhook."
+      },
+      {
+        "title": "Preferenze di sistema",
+        "desc": "Opzioni amministrative per operatori con permesso di impostazione aziendale."
+      },
+      {
+        "title": "Registro di controllo",
+        "desc": "Percorso in stile immutabile di azioni sensibili per le revisioni di conformità."
+      },
+      {
+        "title": "Caricamenti",
+        "desc": "File per Backblaze B2: loghi, avatar, ricevute e immagini di prodotti."
+      },
+      {
+        "title": "Profilo e preferenze",
+        "desc": "Dettagli personali, fuso orario e preferenze di notifica per utente."
+      },
+      {
+        "title": "Catalogo dei servizi",
+        "desc": "Linee fatturabili non in stock, ad esempio spese di consegna o di installazione."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Come funziona",
+    "subtitle": "Dalla prima registrazione alla gestione delle fatture e dell'inventario, progettato per gli operatori che necessitano di flussi di lavoro prevedibili e non di demo di giocattoli.",
+    "qaLead": "Hai bisogno di un passaggio QA con script?",
+    "qaLink": "Visualizza lo script completo del QA su GitHub",
+    "qaTail": "—controlli per ruolo e dati di esempio per {platform}.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Crea il tuo spazio di lavoro",
+        "body": "Registrati con il nome della tua azienda. Diventi il ​​proprietario di un nuovo inquilino: i dati sono isolati da tutte le altre attività sulla piattaforma."
+      },
+      {
+        "n": "02",
+        "title": "Sessione sicura",
+        "body": "L'autenticazione utilizza cookie httpOnly e token di accesso di breve durata. Il tuo browser non memorizza mai segreti di lunga durata in localStorage per le chiamate API principali."
+      },
+      {
+        "n": "03",
+        "title": "Invita la squadra",
+        "body": "Invia inviti e-mail dal team. Ogni membro ottiene un ruolo (amministratore, manager, vendite, inventario, contabile, supporto, visualizzatore) con autorizzazioni predefinite che puoi perfezionare nel tempo."
+      },
+      {
+        "n": "04",
+        "title": "Configura i money rail",
+        "body": "Per la fatturazione della piattaforma, completa il pagamento dell'abbonamento dove abilitato. Per i pagamenti con fatture cliente, aggiungi le chiavi pubbliche/segrete del tuo Paystack in Azienda → Pagamenti; configurare gli URL di callback e webhook in Paystack. Gli stack di produzione devono impostare ENCRYPTION_KEY (64 caratteri esadecimali) per i segreti del tenant. Tutto questo viene eseguito all'interno di {platform}."
+      },
+      {
+        "n": "05",
+        "title": "Operare quotidianamente",
+        "body": "Caricare clienti, fornitori e prodotti; eseguire preventivi per fatture; registrare pagamenti e spese; spostare le scorte con movimenti di inventario; utilizzare gli ordini di acquisto per le merci in entrata."
+      },
+      {
+        "n": "06",
+        "title": "Rimani informato",
+        "body": "Le notifiche emergono eventi importanti. Il registro di controllo acquisisce azioni sensibili per la revisione. Carica i file del negozio nell'archivio oggetti configurato (ad esempio loghi e ricevute)."
+      },
+      {
+        "n": "07",
+        "title": "Regolare l'accesso",
+        "body": "Modifica ruoli, sospendi account o rimuovi compagni di squadra dalla schermata Team. I proprietari non possono essere rimossi senza un altro proprietario, proteggendo l'ultimo detentore delle chiavi."
+      }
+    ]
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "Il tuo spazio di lavoro",
+      "subhead": "Questa panoramica riguarda la tua azienda. Utilizza la barra laterale per accedere a CRM, inventario, fatturazione e altro ancora: tutto rimane in funzione delle autorizzazioni.",
+      "loading": "Caricamento panoramica...",
+      "greetingMorning": "Buongiorno",
+      "greetingAfternoon": "Buon pomeriggio",
+      "greetingEvening": "Buonasera",
+      "there": "Là",
+      "kpiSales": "Vendite (mese)",
+      "kpiSalesHint": "Vendite completate questo mese",
+      "kpiOutstanding": "Fatture in sospeso",
+      "kpiOutstandingHint": "Saldo ancora dovuto",
+      "kpiCustomers": "Clienti",
+      "kpiCustomersHint": "Record attivi",
+      "kpiLowStock": "SKU in stock basso",
+      "kpiLowStockHint": "A o sotto riordina",
+      "chartTitle": "Impulso di liquidità e passività",
+      "chartSubtitle": "Confronta le vendite mensili, l'AR in sospeso e le spese pagate.",
+      "chartAmount": "Quantità",
+      "networkTitle": "Rete",
+      "networkSubtitle": "La relazione veloce conta.",
+      "suppliers": "Fornitori",
+      "expensesMonth": "Spese (mese)",
+      "networkTip": "Suggerimento: aggiungi i moduli che usi quotidianamente: la barra laterale si riduce a icone su schermi più piccoli per concentrarti.",
+      "chartSales": "Vendite (MTD)",
+      "chartOutstanding": "Eccezionale",
+      "chartExpenses": "Spese"
+    },
+    "customers": {
+      "title": "Clienti",
+      "description": "Record CRM attivi con saldi e dettagli di contatto.",
+      "toastCopied": "ID cliente copiato",
+      "columns": {
+        "id": "ID",
+        "name": "Nome",
+        "email": "E-mail",
+        "phone": "Telefono",
+        "status": "Stato",
+        "balance": "Bilancia",
+        "docs": "Documenti"
+      }
+    },
+    "suppliers": {
+      "title": "Fornitori",
+      "description": "Fornitori e partner di evasione ordini collegati agli acquisti.",
+      "toastCopied": "ID fornitore copiato",
+      "columns": {
+        "id": "ID",
+        "name": "Nome",
+        "email": "E-mail",
+        "phone": "Telefono",
+        "status": "Stato",
+        "docs": "Documenti"
+      }
+    },
+    "products": {
+      "title": "Prodotti",
+      "description": "Articoli del catalogo con visibilità dello stock e dello SKU.",
+      "toastCopied": "ID prodotto copiato",
+      "columns": {
+        "id": "ID",
+        "name": "Nome",
+        "sku": "SKU",
+        "onHand": "A portata di mano",
+        "status": "Stato",
+        "image": "Immagine",
+        "preview": "Apri"
+      }
+    },
+    "services": {
+      "title": "Servizi",
+      "description": "Servizi fatturabili e voci ricorrenti.",
+      "columns": {
+        "name": "Nome",
+        "code": "Codice",
+        "price": "Prezzo",
+        "status": "Stato"
+      }
+    },
+    "inventory": {
+      "title": "Movimenti di borsa",
+      "description": "In entrata, in uscita, trasferimenti e aggiustamenti.",
+      "lowStockTitle": "Scorte basse",
+      "lowStockProduct": "Prodotto",
+      "lowStockOnHand": "Disponibile",
+      "lowStockReorder": "Riordino",
+      "lowStockAllOk": "Tutti gli SKU monitorati sono sopra le soglie di riordino.",
+      "columns": {
+        "type": "Tipo",
+        "qty": "Qtà",
+        "productId": "ID prodotto",
+        "when": "Quando"
+      }
+    },
+    "quotations": {
+      "title": "Citazioni",
+      "description": "Preventivi di vendita prima della conversione in fatture.",
+      "columns": {
+        "number": "Numero",
+        "status": "Stato",
+        "total": "Totale",
+        "issued": "Rilasciato"
+      }
+    },
+    "invoices": {
+      "title": "Fatture",
+      "description": "Contabilità clienti con saldi e stati.",
+      "columns": {
+        "number": "Numero",
+        "status": "Stato",
+        "total": "Totale",
+        "due": "Dovuto"
+      }
+    },
+    "payments": {
+      "title": "Pagamenti",
+      "description": "Pagamenti acquisiti inclusi i flussi di busta paga.",
+      "columns": {
+        "number": "Numero",
+        "method": "Metodo",
+        "amount": "Quantità",
+        "status": "Stato",
+        "recorded": "Registrato"
+      }
+    },
+    "sales": {
+      "title": "Saldi",
+      "description": "Ordini di vendita completati e in corso.",
+      "columns": {
+        "saleNum": "Vendita #",
+        "status": "Stato",
+        "total": "Totale",
+        "created": "Creato"
+      }
+    },
+    "purchaseOrders": {
+      "title": "Ordini di acquisto",
+      "description": "Ciclo di vita dell'approvvigionamento legato ai fornitori.",
+      "columns": {
+        "poNum": "Numero ordine",
+        "status": "Stato",
+        "total": "Totale",
+        "created": "Creato"
+      }
+    },
+    "expenses": {
+      "title": "Spese",
+      "description": "Monitoraggio della spesa con approvazioni, ove configurato.",
+      "toastCopied": "ID spesa copiato",
+      "columns": {
+        "id": "ID",
+        "title": "Titolo",
+        "amount": "Quantità",
+        "status": "Stato",
+        "date": "Data",
+        "receipt": "Ricevuta",
+        "view": "Apri"
+      }
+    },
+    "notifications": {
+      "title": "Notifiche",
+      "description": "La tua casella di posta personale in tutto lo spazio di lavoro.",
+      "markAllRead": "Segna tutto letto",
+      "markAllReadToast": "Tutte le notifiche contrassegnate come lette",
+      "updateFailed": "Aggiornamento non riuscito",
+      "columns": {
+        "title": "Titolo",
+        "read": "Leggere",
+        "received": "Ricevuto"
+      }
+    },
+    "users": {
+      "title": "Squadra",
+      "description": "Invita colleghi, assegna ruoli e gestisci gli accessi. I proprietari e le persone con autorizzazione di gestione utenti possono invitare compagni di squadra, modificare ruoli e stato o rimuovere l'accesso.",
+      "columns": {
+        "name": "Nome",
+        "email": "E-mail",
+        "role": "Ruolo",
+        "status": "Stato"
+      }
+    },
+    "auditLogs": {
+      "title": "Registro di controllo",
+      "description": "Scia immutabile di azioni sensibili.",
+      "columns": {
+        "action": "Azione",
+        "entity": "Entità",
+        "actor": "Attore",
+        "when": "Quando"
+      }
+    },
+    "billing": {
+      "title": "Fatturazione",
+      "description": "L'abbonamento alla piattaforma per {platform} viene addebitato tramite Paystack utilizzando le chiavi dell'operatore nelle variabili di ambiente del server, non le chiavi Paystack del tenant.",
+      "currentPlan": "Piano attuale",
+      "noSub": "Nessun record di abbonamento ancora.",
+      "statusPrefix": "Stato:",
+      "renews": "· Rinnova il {data}",
+      "pricingLine": "Standard:",
+      "perMonth": "/ mese",
+      "perYear": "/ anno",
+      "or": "O",
+      "payMonthly": "Paga mensilmente",
+      "payYearly": "Paga annualmente",
+      "redirecting": "Reindirizzamento...",
+      "checkoutFailed": "Il pagamento non è riuscito",
+      "callback": {
+        "badgeSuccess": "SUCCESSO",
+        "badgePending": "IN ATTESA",
+        "titleSuccess": "Pagamento abbonamento ricevuto",
+        "titlePending": "Elaborazione abbonamento",
+        "bodySuccess": "Grazie. L'abbonamento al workspace verrà aggiornato a breve dopo la conferma dell'addebito da parte di Paystack.",
+        "bodyPending": "Se hai completato il pagamento, la conferma potrebbe richiedere un attimo.",
+        "referenceLine": "Riferimento: {reference}",
+        "backToBilling": "Torna alla fatturazione"
+      }
+    },
+    "company": {
+      "title": "Azienda",
+      "description": "Persona giuridica e impostazioni predefinite operative condivise nel tuo spazio di lavoro.",
+      "loading": "Caricamento azienda…",
+      "notFound": "Profilo aziendale non trovato.",
+      "error": "Impossibile caricare l'azienda.",
+      "industry": "Industria",
+      "currency": "Valuta",
+      "email": "E-mail",
+      "phone": "Telefono",
+      "taxRate": "Aliquota fiscale predefinita"
+    },
+    "system": {
+      "title": "Sistema",
+      "description": "Snapshot della configurazione grezza per gli amministratori.",
+      "rawSettings": "Impostazioni grezze"
+    },
+    "settings": {
+      "pageTitle": "Profilo e preferenze",
+      "pageDescription": "Gli aggiornamenti si sincronizzano immediatamente con il tuo account. L'autenticazione sensibile risiede ancora nei cookie httpOnly.",
+      "cardTitle": "Dettagli personali",
+      "signedInAs": "Accedi come {email}",
+      "firstName": "Nome di battesimo",
+      "lastName": "Cognome",
+      "phone": "Telefono",
+      "timezone": "Fuso orario",
+      "save": "Salva modifiche",
+      "saving": "Risparmio…",
+      "saved": "Profilo aggiornato",
+      "updateFailed": "Aggiornamento non riuscito",
+      "validation": {
+        "firstNameRequired": "Il nome è obbligatorio",
+        "lastNameRequired": "Il cognome è obbligatorio"
+      }
+    },
+    "uploads": {
+      "title": "Caricamenti",
+      "description": "I file vengono archiviati per tipo e collegati alle entità quando applicabile (ad esempio avatar, loghi).",
+      "cardTitle": "Carica file",
+      "cardHint": "Massimo ~10 MB per richiesta (limite del server).",
+      "kindLabel": "Tipo",
+      "fileLabel": "File",
+      "labelProduct": "Prodotto",
+      "labelExpense": "Spese",
+      "labelCustomer": "Cliente",
+      "labelSupplier": "Fornitore",
+      "upload": "Caricamento",
+      "uploading": "Caricamento…",
+      "chooseFile": "Scegli un file",
+      "selectRecord": "Seleziona il record correlato",
+      "uploaded": "Caricato",
+      "uploadedUrl": "URL: {url}",
+      "avatarHint": "Avatar aggiornato: aggiorna se memorizzato nella cache.",
+      "uploadFailed": "Caricamento non riuscito",
+      "searchProduct": "Cerca e seleziona il prodotto",
+      "searchExpense": "Cerca e seleziona la spesa",
+      "searchCustomer": "Cerca e seleziona il cliente",
+      "searchSupplier": "Cerca e seleziona il fornitore",
+      "kinds": {
+        "company_logo": "Logo aziendale",
+        "user_avatar": "Avatar dell'utente",
+        "customer_doc": "Documento del cliente",
+        "supplier_doc": "Documento del fornitore",
+        "expense_receipt": "Ricevuta di spesa",
+        "product_image": "Immagine del prodotto"
+      }
+    },
+    "companyEdit": {
+      "title": "Modifica azienda",
+      "description": "Visibile solo ai ruoli con autorizzazione per le impostazioni aziendali.",
+      "legalName": "Nome legale",
+      "email": "E-mail",
+      "phone": "Telefono",
+      "currencyCode": "Codice valuta",
+      "taxPercent": "% imposta predefinita",
+      "save": "Salva la compagnia",
+      "saving": "Risparmio…",
+      "saved": "Azienda aggiornata",
+      "updateFailed": "Aggiornamento non riuscito",
+      "validation": {
+        "nameRequired": "Il nome legale è obbligatorio",
+        "currencyRequired": "Il codice valuta è obbligatorio"
+      }
+    },
+    "paystack": {
+      "title": "Pagamenti / Busta paga",
+      "description": "I pagamenti delle fatture cliente utilizzano il tuo account commerciante Paystack. Incolla gli URL di callback e webhook nella dashboard di Paystack → Impostazioni → API/Webhook.",
+      "callbackUrl": "URL di richiamata",
+      "webhookUrl": "URL del webhook",
+      "publicKey": "Chiave pubblica",
+      "secretKey": "Chiave segreta",
+      "pkPlaceholder": "pk_live_… o pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• configurato: premere per ruotare",
+      "saveKeys": "Salva le chiavi",
+      "testConnection": "Testare la connessione",
+      "footNote": "Il test di connessione utilizza la chiave segreta già salvata sul server, non quella semplicemente digitata nel campo. Salvare una nuova chiave prima di testarla.",
+      "saved": "Impostazioni di pagamento salvate",
+      "saveFailed": "Salvataggio non riuscito",
+      "validOk": "Le credenziali del busta paga sono valide",
+      "validBad": "Paystack ha rifiutato la chiave segreta salvata. Controlla la chiave nella dashboard di Paystack, salvala qui, quindi riprova.",
+      "testFailed": "Prova fallita"
+    }
+  }
+}

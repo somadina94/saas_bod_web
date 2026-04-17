@@ -1,0 +1,324 @@
+{
+  "dashboard": {
+    "overview": {
+      "badge": "مساحة العمل الخاصة بك",
+      "subhead": "هذه النظرة العامة مخصصة لشركتك. استخدم الشريط الجانبي للانتقال إلى نظام إدارة علاقات العملاء (CRM) والمخزون والفوترة وغير ذلك الكثير، حيث يظل كل شيء خاضعًا للإذن.",
+      "loading": "جارٍ تحميل النظرة العامة…",
+      "greetingMorning": "صباح الخير",
+      "greetingAfternoon": "مساء الخير",
+      "greetingEvening": "مساء الخير",
+      "there": "هناك",
+      "kpiSales": "المبيعات (الشهر)",
+      "kpiSalesHint": "اكتملت المبيعات هذا الشهر",
+      "kpiOutstanding": "الفواتير المعلقة",
+      "kpiOutstandingHint": "الرصيد لا يزال مستحقا",
+      "kpiCustomers": "عملاء",
+      "kpiCustomersHint": "السجلات النشطة",
+      "kpiLowStock": "وحدات SKU منخفضة المخزون",
+      "kpiLowStockHint": "عند أو أقل من إعادة الترتيب",
+      "chartTitle": "نبض النقد والالتزامات",
+      "chartSubtitle": "قارن المبيعات الشهرية والواقع المعزز والنفقات المدفوعة.",
+      "chartAmount": "كمية",
+      "networkTitle": "شبكة",
+      "networkSubtitle": "أهمية العلاقة السريعة.",
+      "suppliers": "الموردين",
+      "expensesMonth": "النفقات (شهر)",
+      "networkTip": "نصيحة: قم بتثبيت الوحدات التي تستخدمها يوميًا - يتم طي الشريط الجانبي إلى أيقونات على الشاشات الصغيرة للتركيز.",
+      "chartSales": "المبيعات (مليون دينار)",
+      "chartOutstanding": "متميز",
+      "chartExpenses": "نفقات"
+    },
+    "customers": {
+      "title": "عملاء",
+      "description": "سجلات CRM النشطة مع الأرصدة وتفاصيل الاتصال.",
+      "toastCopied": "تم نسخ معرف العميل",
+      "columns": {
+        "id": "بطاقة تعريف",
+        "name": "اسم",
+        "email": "بريد إلكتروني",
+        "phone": "هاتف",
+        "status": "حالة",
+        "balance": "توازن",
+        "docs": "المستندات"
+      }
+    },
+    "suppliers": {
+      "title": "الموردين",
+      "description": "البائعون وشركاء التنفيذ المرتبطون بالشراء.",
+      "toastCopied": "تم نسخ معرف المورد",
+      "columns": {
+        "id": "بطاقة تعريف",
+        "name": "اسم",
+        "email": "بريد إلكتروني",
+        "phone": "هاتف",
+        "status": "حالة",
+        "docs": "المستندات"
+      }
+    },
+    "products": {
+      "title": "منتجات",
+      "description": "عناصر الكتالوج مع رؤية المخزون وSKU.",
+      "toastCopied": "تم نسخ معرف المنتج",
+      "columns": {
+        "id": "بطاقة تعريف",
+        "name": "اسم",
+        "sku": "رمز التخزين التعريفي",
+        "onHand": "في متناول اليد",
+        "status": "حالة",
+        "image": "صورة",
+        "preview": "منظر"
+      }
+    },
+    "services": {
+      "title": "خدمات",
+      "description": "الخدمات القابلة للفوترة والبنود المتكررة.",
+      "columns": {
+        "name": "اسم",
+        "code": "شفرة",
+        "price": "سعر",
+        "status": "حالة"
+      }
+    },
+    "inventory": {
+      "title": "تحركات الأسهم",
+      "description": "الواردة والصادرة والتحويلات والتعديلات.",
+      "lowStockTitle": "مخزون منخفض",
+      "lowStockProduct": "منتج",
+      "lowStockOnHand": "في متناول اليد",
+      "lowStockReorder": "إعادة الترتيب",
+      "lowStockAllOk": "جميع وحدات SKU المتعقبة أعلى من مستويات إعادة الطلب.",
+      "columns": {
+        "type": "يكتب",
+        "qty": "الكمية",
+        "productId": "معرف المنتج",
+        "when": "متى"
+      }
+    },
+    "quotations": {
+      "title": "الاقتباسات",
+      "description": "عروض أسعار المبيعات قبل تحويلها إلى فواتير.",
+      "columns": {
+        "number": "رقم",
+        "status": "حالة",
+        "total": "المجموع",
+        "issued": "صادر"
+      }
+    },
+    "invoices": {
+      "title": "الفواتير",
+      "description": "حسابات القبض مع الأرصدة والحالات.",
+      "columns": {
+        "number": "رقم",
+        "status": "حالة",
+        "total": "المجموع",
+        "due": "حق"
+      }
+    },
+    "payments": {
+      "title": "المدفوعات",
+      "description": "المدفوعات الملتقطة بما في ذلك تدفقات Paystack.",
+      "columns": {
+        "number": "رقم",
+        "method": "طريقة",
+        "amount": "كمية",
+        "status": "حالة",
+        "recorded": "مسجلة"
+      }
+    },
+    "sales": {
+      "title": "مبيعات",
+      "description": "أوامر البيع المكتملة وقيد التنفيذ.",
+      "columns": {
+        "saleNum": "أُوكَازيُون #",
+        "status": "حالة",
+        "total": "المجموع",
+        "created": "مخلوق"
+      }
+    },
+    "purchaseOrders": {
+      "title": "أوامر الشراء",
+      "description": "ترتبط دورة حياة المشتريات بالموردين.",
+      "columns": {
+        "poNum": "رقم طلب الشراء",
+        "status": "حالة",
+        "total": "المجموع",
+        "created": "مخلوق"
+      }
+    },
+    "expenses": {
+      "title": "نفقات",
+      "description": "تتبع الإنفاق مع الموافقات حيث تم تكوينها.",
+      "toastCopied": "تم نسخ معرف المصروفات",
+      "columns": {
+        "id": "بطاقة تعريف",
+        "title": "عنوان",
+        "amount": "كمية",
+        "status": "حالة",
+        "date": "تاريخ",
+        "receipt": "إيصال",
+        "view": "منظر"
+      }
+    },
+    "notifications": {
+      "title": "إشعارات",
+      "description": "صندوق الوارد الشخصي الخاص بك عبر مساحة العمل.",
+      "markAllRead": "وضع علامة على كل قراءة",
+      "markAllReadToast": "تم وضع علامة \"مقروءة\" على جميع الإشعارات",
+      "updateFailed": "فشل التحديث",
+      "columns": {
+        "title": "عنوان",
+        "read": "يقرأ",
+        "received": "تلقى"
+      }
+    },
+    "users": {
+      "title": "فريق",
+      "description": "قم بدعوة الزملاء، وتعيين الأدوار، وإدارة الوصول. يمكن للمالكين والأشخاص الذين لديهم إذن إدارة المستخدم دعوة زملائهم في الفريق، أو تغيير الأدوار والحالة، أو إزالة الوصول.",
+      "columns": {
+        "name": "اسم",
+        "email": "بريد إلكتروني",
+        "role": "دور",
+        "status": "حالة"
+      }
+    },
+    "auditLogs": {
+      "title": "سجل التدقيق",
+      "description": "درب غير قابل للتغيير من الإجراءات الحساسة.",
+      "columns": {
+        "action": "فعل",
+        "entity": "كيان",
+        "actor": "ممثل",
+        "when": "متى"
+      }
+    },
+    "billing": {
+      "title": "الفواتير",
+      "description": "يتم تحصيل رسوم اشتراك النظام الأساسي لـ {platform} عبر Paystack باستخدام مفاتيح المشغل في متغيرات بيئة الخادم - وليس مفاتيح Paystack الخاصة بالمستأجر.",
+      "currentPlan": "الخطة الحالية",
+      "noSub": "لا يوجد سجل الاشتراك حتى الآن.",
+      "statusPrefix": "حالة:",
+      "renews": "· يُجدَّد في {date}",
+      "pricingLine": "معيار:",
+      "perMonth": "/ شهر",
+      "perYear": "/ سنة",
+      "or": "أو",
+      "payMonthly": "ادفع شهريا",
+      "payYearly": "ادفع سنويا",
+      "redirecting": "إعادة التوجيه...",
+      "checkoutFailed": "فشل الخروج",
+      "callback": {
+        "badgeSuccess": "نجاح",
+        "badgePending": "قيد الانتظار",
+        "titleSuccess": "تم استلام مبلغ الاشتراك",
+        "titlePending": "معالجة الاشتراك",
+        "bodySuccess": "شكرًا لك. سيتم تحديث اشتراك مساحة العمل الخاصة بك بعد وقت قصير من تأكيد Paystack للرسوم.",
+        "bodyPending": "إذا أكملت الدفع، فقد يستغرق التأكيد بعض الوقت.",
+        "referenceLine": "المرجع: {reference}",
+        "backToBilling": "العودة إلى الفواتير"
+      }
+    },
+    "company": {
+      "title": "شركة",
+      "description": "تتم مشاركة الكيان القانوني وافتراضيات التشغيل عبر مساحة العمل الخاصة بك.",
+      "loading": "جاري تحميل الشركة...",
+      "notFound": "لم يتم العثور على الملف التعريفي للشركة.",
+      "error": "لا يمكن تحميل الشركة.",
+      "industry": "صناعة",
+      "currency": "عملة",
+      "email": "بريد إلكتروني",
+      "phone": "هاتف",
+      "taxRate": "معدل الضريبة الافتراضي"
+    },
+    "system": {
+      "title": "نظام",
+      "description": "لقطة التكوين الأولية للمسؤولين.",
+      "rawSettings": "الإعدادات الخام"
+    },
+    "settings": {
+      "pageTitle": "الملف الشخصي والتفضيلات",
+      "pageDescription": "تتم مزامنة التحديثات مع حسابك على الفور. لا تزال المصادقة الحساسة موجودة في ملفات تعريف الارتباط httpOnly.",
+      "cardTitle": "التفاصيل الشخصية",
+      "signedInAs": "تم تسجيل الدخول باسم {email}",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "phone": "هاتف",
+      "timezone": "المنطقة الزمنية",
+      "save": "حفظ التغييرات",
+      "saving": "توفير…",
+      "saved": "تم تحديث الملف الشخصي",
+      "updateFailed": "فشل التحديث",
+      "validation": {
+        "firstNameRequired": "الاسم الأول مطلوب",
+        "lastNameRequired": "الاسم الأخير مطلوب"
+      }
+    },
+    "uploads": {
+      "title": "التحميلات",
+      "description": "يتم تخزين الملفات حسب النوع وإرسالها إلى الكيانات عند الاقتضاء (مثل الصور الرمزية والشعارات).",
+      "cardTitle": "تحميل الملف",
+      "cardHint": "الحد الأقصى ~ 10 ميجابايت لكل طلب (حد الخادم).",
+      "kindLabel": "عطوف",
+      "fileLabel": "ملف",
+      "labelProduct": "منتج",
+      "labelExpense": "حساب",
+      "labelCustomer": "عميل",
+      "labelSupplier": "مزود",
+      "upload": "رفع",
+      "uploading": "جارٍ التحميل…",
+      "chooseFile": "اختر ملفًا",
+      "selectRecord": "حدد السجل ذي الصلة",
+      "uploaded": "تم الرفع",
+      "uploadedUrl": "عنوان URL: {url}",
+      "avatarHint": "تم تحديث الصورة الرمزية - قم بالتحديث في حالة تخزينها مؤقتًا.",
+      "uploadFailed": "فشل التحميل",
+      "searchProduct": "بحث واختيار المنتج",
+      "searchExpense": "بحث واختيار النفقات",
+      "searchCustomer": "بحث واختيار العملاء",
+      "searchSupplier": "بحث واختيار المورد",
+      "kinds": {
+        "company_logo": "شعار الشركة",
+        "user_avatar": "الصورة الرمزية للمستخدم",
+        "customer_doc": "وثيقة العميل",
+        "supplier_doc": "وثيقة المورد",
+        "expense_receipt": "إيصال المصاريف",
+        "product_image": "صورة المنتج"
+      }
+    },
+    "companyEdit": {
+      "title": "تحرير الشركة",
+      "description": "مرئي فقط للأدوار التي لديها إذن إعدادات الشركة.",
+      "legalName": "الاسم القانوني",
+      "email": "بريد إلكتروني",
+      "phone": "هاتف",
+      "currencyCode": "رمز العملة",
+      "taxPercent": "الضريبة الافتراضية %",
+      "save": "حفظ الشركة",
+      "saving": "توفير…",
+      "saved": "تم تحديث الشركة",
+      "updateFailed": "فشل التحديث",
+      "validation": {
+        "nameRequired": "الاسم القانوني مطلوب",
+        "currencyRequired": "مطلوب رمز العملة"
+      }
+    },
+    "paystack": {
+      "title": "المدفوعات / الراتب",
+      "description": "تستخدم دفعات فاتورة العميل حساب التاجر Paystack الخاص بك. الصق عناوين URL لرد الاتصال وخطاف الويب في Paystack Dashboard → الإعدادات → API / Webhooks.",
+      "callbackUrl": "عنوان URL لرد الاتصال",
+      "webhookUrl": "عنوان URL للويب هوك",
+      "publicKey": "المفتاح العام",
+      "secretKey": "المفتاح السري",
+      "pkPlaceholder": "pk_live_… أو pk_test_…",
+      "skPlaceholderNew": "sk_live_…",
+      "skPlaceholderConfigured": "•••• تم تكوينه — أدخل للتدوير",
+      "saveKeys": "حفظ المفاتيح",
+      "testConnection": "اتصال الاختبار",
+      "footNote": "يستخدم اختبار الاتصال المفتاح السري المحفوظ بالفعل على الخادم، وليس ما يتم كتابته فقط في الحقل. احفظ المفتاح الجديد قبل اختباره.",
+      "saved": "تم حفظ إعدادات الدفع",
+      "saveFailed": "فشل الحفظ",
+      "validOk": "بيانات اعتماد Paystack صالحة",
+      "validBad": "رفض Paystack المفتاح السري المحفوظ. تحقق من المفتاح في Paystack Dashboard، واحفظه هنا، ثم اختبره مرة أخرى.",
+      "testFailed": "فشل الاختبار"
+    }
+  }
+}

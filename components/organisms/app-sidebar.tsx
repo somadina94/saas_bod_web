@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   dashboardNavMain,
   dashboardNavSecondary,
@@ -26,6 +26,7 @@ import { SparkleIcon } from "@phosphor-icons/react";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 
 export function AppSidebar() {
+  const t = useTranslations("nav");
   const pathname = usePathname();
   const user = useAppSelector((s) => s.auth.user);
   const main = filterNavForUser(dashboardNavMain, user);
@@ -51,7 +52,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Workspace</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("workspace")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {main.map((item) => {
@@ -65,11 +66,11 @@ export function AppSidebar() {
                     <SidebarMenuButton
                       asChild
                       isActive={active}
-                      tooltip={item.title}
+                      tooltip={t(item.titleKey as never)}
                     >
                       <Link href={item.href}>
                         <Icon className="size-4" aria-hidden />
-                        <span>{item.title}</span>
+                        <span>{t(item.titleKey as never)}</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -80,7 +81,7 @@ export function AppSidebar() {
         </SidebarGroup>
         <SidebarSeparator />
         <SidebarGroup>
-          <SidebarGroupLabel>Account &amp; admin</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("accountAdmin")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {secondary.map((item) => {
@@ -93,11 +94,11 @@ export function AppSidebar() {
                     <SidebarMenuButton
                       asChild
                       isActive={active}
-                      tooltip={item.title}
+                      tooltip={t(item.titleKey as never)}
                     >
                       <Link href={item.href}>
                         <Icon className="size-4" aria-hidden />
-                        <span>{item.title}</span>
+                        <span>{t(item.titleKey as never)}</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -109,7 +110,7 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter className="text-muted-foreground border-t border-sidebar-border/60 text-[10px] leading-snug">
         <p className="group-data-[collapsible=icon]:hidden px-2">
-          Signed in securely. Tokens stay in httpOnly cookies.
+          {t("sidebarFootnote")}
         </p>
       </SidebarFooter>
       <SidebarRail />

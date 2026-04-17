@@ -46,7 +46,7 @@ export default function MarketingHome() {
       <section className="relative min-h-[min(42vh,28rem)] border-b border-border/40">
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/operations.jpg"
+            src="/hero-operations.jpg"
             alt=""
             fill
             priority

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
+import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { toast } from "sonner";
 import { billingApi } from "@/lib/api/entities";
 import { ApiError } from "@/lib/api/client";
@@ -43,7 +44,7 @@ export default function BillingPage() {
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Billing</h1>
         <p className="text-muted-foreground mt-1 max-w-2xl text-sm">
-          Platform subscription for BOD is charged via Paystack using the
+          Platform subscription for {PLATFORM_DISPLAY_NAME} is charged via Paystack using the
           operator keys in server environment variables — not your tenant Paystack
           keys.
         </p>

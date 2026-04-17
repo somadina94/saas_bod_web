@@ -1,4 +1,6 @@
-# BOD — QA script for a bottled water distributor
+# JAHBYTE BOD — QA script for a bottled water distributor
+
+**Canonical copy (GitHub):** [github.com/somadina94/saas_bod_web/blob/main/doc.md](https://github.com/somadina94/saas_bod_web/blob/main/doc.md)
 
 Use **one browser profile per role** so sessions do not clash. This script assumes a **production-ready deployment** with working SMTP and a real invite email flow.
 
@@ -7,6 +9,27 @@ Use **one browser profile per role** so sessions do not clash. This script assum
 **Money display** uses **NGN** in list columns.
 
 **Base URL:** your deployed URL.
+
+## Architecture: multi-tenant SaaS
+
+**JAHBYTE BOD** is a **multi-tenant** product: each **company** is an isolated workspace (`companyId` on users and tenant data). A user belongs to one workspace per account; JWT/session carries **company scope** so API routes and queries stay tenant-safe.
+
+If you are migrating from an older **single-tenant** mental model, treat every “global” record as **per-company** instead: customers, invoices, Paystack webhooks, uploads, and subscriptions are all scoped to the active workspace.
+
+## Extended platform features (beyond core CRM/inventory)
+
+These are important for production QA and operator setup:
+
+| Area | What to verify |
+|------|----------------|
+| **Platform billing** | **Billing** lets the workspace pay for the **JAHBYTE BOD** subscription (Paystack checkout when enabled). Distinct from customer invoice payments. |
+| **Tenant Paystack** | Under **Company** (or billing-related settings), tenants can save **Paystack public/secret keys** for **their own** customer payments, callback URL, tenant webhook URL, and **test connection** (balance API). In **production**, the API must have **`ENCRYPTION_KEY`** set to **64 hex characters** (32 bytes, e.g. `openssl rand -hex 32`) so secrets encrypt/decrypt; missing key surfaces a clear configuration error instead of a silent failure. |
+| **Team administration** | **Team** supports **invite**, **role change**, **status** (active / suspended / disabled), and **remove from team** (soft delete). Workspace **owner** rows show as Owner and cannot be edited via those actions. |
+| **Uploads** | **Uploads** sends files to **Backblaze B2** when env is set (`B2_*`). Kinds include **company logo**, **user avatar** (updates profile image), receipts, product images, etc. |
+| **Public links** | Customers may receive **public invoice/quotation** links (tokenized URLs under `/public/...`) without logging into the dashboard. |
+| **Marketing site** | The public **home**, **Features**, **How it works**, **Privacy**, and **Terms** pages describe the product; auth pages link **Back to home**; the dashboard header links **Home** to the marketing site. |
+
+The rest of this document is still the **end-to-end bottled-water QA script**—use it unchanged for role and flow coverage.
 
 ## Pre-flight
 

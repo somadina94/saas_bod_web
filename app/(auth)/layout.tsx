@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AuthLayout({
   children,
 }: {
@@ -13,7 +15,20 @@ export default function AuthLayout({
         }}
         aria-hidden
       />
-      <div className="relative z-10 w-full max-w-md">{children}</div>
+      <div className="relative z-10 w-full max-w-md">
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm font-medium transition-colors"
+          >
+            <span aria-hidden className="text-base leading-none">
+              ←
+            </span>
+            Back to home
+          </Link>
+        </div>
+        {children}
+      </div>
     </div>
   );
 }

@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { MoonIcon, SignOutIcon, SunIcon, UserIcon } from "@phosphor-icons/react";
+import {
+  HouseIcon,
+  MoonIcon,
+  SignOutIcon,
+  SunIcon,
+  UserIcon,
+} from "@phosphor-icons/react";
 import { useTheme } from "@/components/providers/theme-provider";
 import { toast } from "sonner";
 import { logoutRequest } from "@/lib/api/auth-client";
@@ -51,9 +57,26 @@ export function DashboardHeader() {
       <SidebarTrigger className="-ml-1" />
       <Separator orientation="vertical" className="mr-1 h-6" />
       <div className="flex flex-1 items-center justify-between gap-3">
-        <p className="text-muted-foreground hidden text-xs sm:block">
-          Operations · CRM · Inventory · Billing
-        </p>
+        <div className="flex min-w-0 items-center gap-2">
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            className="text-muted-foreground hover:text-foreground hidden rounded-none gap-1.5 px-2 sm:inline-flex"
+            asChild
+          >
+            <Link href="/" title="Marketing site home">
+              <HouseIcon className="size-4 shrink-0" aria-hidden />
+              <span className="max-w-[6rem] truncate text-xs font-medium max-sm:sr-only">
+                Home
+              </span>
+            </Link>
+          </Button>
+          <Separator orientation="vertical" className="hidden h-6 sm:block" />
+          <p className="text-muted-foreground hidden text-xs md:block">
+            Operations · CRM · Inventory · Billing
+          </p>
+        </div>
         <div className="flex items-center gap-1.5">
           <Button
             type="button"

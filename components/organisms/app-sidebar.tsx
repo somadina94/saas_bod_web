@@ -23,6 +23,7 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { SparkleIcon } from "@phosphor-icons/react";
+import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -40,8 +41,11 @@ export function AppSidebar() {
           <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-none shadow-sm">
             <SparkleIcon className="size-4" weight="fill" aria-hidden />
           </span>
-          <span className="group-data-[collapsible=icon]:hidden font-semibold tracking-tight">
-            BOD
+          <span
+            className="group-data-[collapsible=icon]:hidden max-w-[11rem] truncate text-left text-xs font-semibold leading-tight tracking-tight sm:max-w-[14rem]"
+            title={PLATFORM_DISPLAY_NAME}
+          >
+            {PLATFORM_DISPLAY_NAME}
           </span>
         </Link>
       </SidebarHeader>

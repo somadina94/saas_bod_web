@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { z } from "zod";
 import { toast } from "sonner";
 import { SparkleIcon } from "@phosphor-icons/react";
+import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { registerBootstrapRequest } from "@/lib/api/auth-client";
 import { setUser } from "@/lib/store/slices/authSlice";
 import { useAppDispatch } from "@/lib/store/hooks";
@@ -83,7 +84,7 @@ export default function SetupPage() {
               <CardTitle className="text-xl">Create workspace</CardTitle>
               <CardDescription>
                 Create a new workspace: your company profile, owner account, and
-                a trial subscription to BOD.
+                a trial subscription to {PLATFORM_DISPLAY_NAME}.
               </CardDescription>
             </div>
           </div>

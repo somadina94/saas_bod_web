@@ -1,6 +1,6 @@
 {
-  "name": "BOD — Business operations dashboard",
-  "short_name": "BOD",
+  "name": "JAHBYTE BOD — Business operations dashboard",
+  "short_name": "JAHBYTE BOD",
   "description": "CRM, inventory, quotations, invoicing, and payments in one workspace.",
   "start_url": "/dashboard",
   "scope": "/",

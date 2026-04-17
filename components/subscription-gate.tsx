@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { useQuery } from "@tanstack/react-query";
 import { billingApi } from "@/lib/api/entities";
 import { Button } from "@/components/ui/button";
@@ -56,7 +57,7 @@ export function SubscriptionGate({ children }: { children: React.ReactNode }) {
     <div className="relative flex flex-1 flex-col">
       <div className="bg-muted/50 border-b px-4 py-3 text-sm">
         <p className="text-muted-foreground">
-          Your BOD workspace subscription is not active. Open billing to pay and
+          Your {PLATFORM_DISPLAY_NAME} workspace subscription is not active. Open billing to pay and
           restore access to CRM, inventory, and billing tools.
         </p>
         <Button asChild className="mt-2 rounded-none" size="sm">

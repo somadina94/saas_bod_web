@@ -122,21 +122,16 @@ export default function DashboardHomePage() {
           </motion.div>
 
           <div className="grid gap-6 lg:grid-cols-5">
-            <Card className="border-border min-w-0 lg:col-span-3 rounded-none">
+            <Card className="border-border min-w-0 shrink-0 lg:col-span-3 rounded-none">
               <CardHeader>
                 <CardTitle className="text-base">Cash &amp; liability pulse</CardTitle>
                 <p className="text-muted-foreground text-xs">
                   Compare monthly sales, outstanding AR, and paid expenses.
                 </p>
               </CardHeader>
-              <CardContent className="h-72 min-h-72 min-w-0 pl-0">
-                <div className="h-full min-h-72 min-w-0">
-                  <ResponsiveContainer
-                    width="100%"
-                    height="100%"
-                    minWidth={0}
-                    minHeight={220}
-                  >
+              <CardContent className="min-w-0 pl-0">
+                <div className="h-[288px] w-full min-w-0">
+                  <ResponsiveContainer width="100%" height={288} minWidth={0} minHeight={220}>
                     <BarChart data={chartData} margin={{ left: 8, right: 8 }}>
                       <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
                       <XAxis dataKey="name" tick={{ fontSize: 11 }} />

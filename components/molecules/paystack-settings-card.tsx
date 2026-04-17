@@ -70,8 +70,14 @@ export function PaystackSettingsCard({
 
   async function testConnection() {
     try {
-      await companyApi.testPaystack();
-      toast.success("Paystack credentials are valid");
+      const result = await companyApi.testPaystack();
+      if (result.ok) {
+        toast.success("Paystack credentials are valid");
+      } else {
+        toast.error(
+          "Paystack rejected the saved secret key. Check the key in Paystack Dashboard, save it here, then test again.",
+        );
+      }
     } catch (e: unknown) {
       toast.error(e instanceof ApiError ? e.message : "Test failed");
     }
@@ -126,6 +132,10 @@ export function PaystackSettingsCard({
             Test connection
           </Button>
         </div>
+        <p className="text-muted-foreground text-xs">
+          The connection test uses the secret key already saved on the server—not what
+          is only typed in the field. Save a new key before testing it.
+        </p>
       </CardContent>
     </Card>
   );

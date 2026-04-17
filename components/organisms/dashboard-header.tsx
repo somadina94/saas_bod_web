@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { logoutRequest } from "@/lib/api/auth-client";
 import { clearAuth } from "@/lib/store/slices/authSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -81,6 +81,14 @@ export function DashboardHeader() {
                 aria-label="Account menu"
               >
                 <Avatar className="size-7 rounded-none">
+                  {user?.profileImageUrl ? (
+                    <AvatarImage
+                      key={user.profileImageUrl}
+                      src={user.profileImageUrl}
+                      alt=""
+                      className="rounded-none object-cover"
+                    />
+                  ) : null}
                   <AvatarFallback className="rounded-none bg-primary/15 text-primary text-xs font-medium">
                     {initials(user?.firstName, user?.lastName)}
                   </AvatarFallback>

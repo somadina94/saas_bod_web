@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 import { CloudArrowUpIcon } from "@phosphor-icons/react";
 import { toast } from "sonner";
 import { publicApiBase } from "@/lib/env";
+import { fetchCurrentUser } from "@/lib/api/auth-client";
 import { refreshSession } from "@/lib/api/refresh";
+import { setUser } from "@/lib/store/slices/authSlice";
+import { useAppDispatch } from "@/lib/store/hooks";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -74,6 +77,7 @@ async function postUpload(params: {
 }
 
 export default function UploadsPage() {
+  const dispatch = useAppDispatch();
   const [kind, setKind] = useState<(typeof kinds)[number]>("expense_receipt");
   const [file, setFile] = useState<File | null>(null);
   const [busy, setBusy] = useState(false);
@@ -107,6 +111,14 @@ export default function UploadsPage() {
       toast.success("Uploaded", {
         description: data?.url ? `URL: ${data.url}` : undefined,
       });
+      if (kind === "user_avatar") {
+        try {
+          const u = await fetchCurrentUser();
+          dispatch(setUser(u));
+        } catch {
+          /* header refreshes on next navigation / reload */
+        }
+      }
       setFile(null);
       setEntityId("");
     } catch (err: unknown) {

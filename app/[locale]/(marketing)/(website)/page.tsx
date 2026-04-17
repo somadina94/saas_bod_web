@@ -13,9 +13,14 @@ import {
 } from "@phosphor-icons/react";
 import { AppStoreBadges } from "@/components/marketing/app-store-badges";
 import { Button } from "@/components/ui/button";
+import { useAppSelector } from "@/lib/store/hooks";
 
 export default function MarketingHome() {
   const t = useTranslations("home");
+  const tc = useTranslations("common");
+  const user = useAppSelector((s) => s.auth.user);
+  const authCtaHref = user ? "/dashboard" : "/login";
+  const authCtaLabel = user ? tc("dashboard") : t("ctaSignIn");
 
   const cards = [
     {
@@ -74,7 +79,7 @@ export default function MarketingHome() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="rounded-none">
-              <Link href="/login">{t("ctaSignIn")}</Link>
+              <Link href={authCtaHref}>{authCtaLabel}</Link>
             </Button>
             <Button size="lg" variant="ghost" asChild className="rounded-none">
               <Link href="/features">{t("ctaFeatures")}</Link>

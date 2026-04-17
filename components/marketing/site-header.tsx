@@ -15,10 +15,14 @@ import {
 import { cn } from "@/lib/utils";
 import { PLATFORM_DISPLAY_NAME } from "@/lib/branding";
 import { LocaleSwitcher } from "@/components/i18n/locale-switcher";
+import { useAppSelector } from "@/lib/store/hooks";
 
 export function SiteHeader({ className }: { className?: string }) {
   const t = useTranslations("marketing.header");
   const tc = useTranslations("common");
+  const user = useAppSelector((s) => s.auth.user);
+  const authCtaHref = user ? "/dashboard" : "/login";
+  const authCtaLabel = user ? tc("dashboard") : t("signIn");
   const nav = [
     { href: "/features", label: t("features") },
     { href: "/how-it-works", label: t("howItWorks") },
@@ -69,7 +73,7 @@ export function SiteHeader({ className }: { className?: string }) {
             className="rounded-none text-[13px] hidden sm:inline-flex"
             asChild
           >
-            <Link href="/login">{t("signIn")}</Link>
+            <Link href={authCtaHref}>{authCtaLabel}</Link>
           </Button>
           <Button size="sm" className="rounded-none text-[13px]" asChild>
             <Link href="/setup">{t("createWorkspace")}</Link>
@@ -118,10 +122,10 @@ export function SiteHeader({ className }: { className?: string }) {
                 ))}
                 <SheetClose asChild>
                   <Link
-                    href="/login"
+                    href={authCtaHref}
                     className="hover:bg-muted rounded-none px-3 py-3 text-sm font-medium"
                   >
-                    {t("signIn")}
+                    {authCtaLabel}
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>

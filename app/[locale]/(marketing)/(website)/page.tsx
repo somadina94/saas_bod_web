@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
@@ -42,22 +43,37 @@ export default function MarketingHome() {
 
   return (
     <div className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.09]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 18% 22%, #1098ad 0, transparent 42%), radial-gradient(circle at 82% 8%, #c45c26 0, transparent 38%), radial-gradient(circle at 50% 100%, hsl(var(--primary)) 0, transparent 45%)",
-        }}
-        aria-hidden
-      />
+      <section className="relative min-h-[min(42vh,28rem)] border-b border-border/40">
+        <div className="pointer-events-none absolute inset-0">
+          <Image
+            src="/operations.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/68 via-background/48 to-background/84 dark:from-background/72 dark:via-background/52 dark:to-background/90"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.09] dark:opacity-[0.065]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 18% 22%, #1098ad 0, transparent 42%), radial-gradient(circle at 82% 8%, #c45c26 0, transparent 38%), radial-gradient(circle at 50% 100%, hsl(var(--primary)) 0, transparent 45%)",
+          }}
+          aria-hidden
+        />
 
-      <section className="relative mx-auto max-w-6xl px-4 pb-20 pt-12 md:px-8 md:pb-28 md:pt-16">
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="space-y-8"
-        >
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 md:px-8 md:pb-24 md:pt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-8"
+          >
           <p className="text-primary inline-flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wide uppercase">
             <LockIcon className="size-3.5 shrink-0" aria-hidden />
             <span>{t("badge1")}</span>
@@ -95,13 +111,16 @@ export default function MarketingHome() {
               {t("mobileHint")}
             </p>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
+      <section className="relative mx-auto max-w-6xl px-4 pb-20 pt-8 md:px-8 md:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.12, duration: 0.5 }}
-          className="border-border bg-card/70 mt-16 grid gap-6 rounded-none border p-8 backdrop-blur-md md:grid-cols-3 md:gap-8 md:p-10"
+          className="border-border bg-card/70 grid gap-6 rounded-none border p-8 backdrop-blur-md md:grid-cols-3 md:gap-8 md:p-10"
         >
           {cards.map((c, i) => (
             <div key={c.title} className="space-y-3">

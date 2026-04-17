@@ -86,7 +86,7 @@
       "lowStockProduct": "Product",
       "lowStockOnHand": "On hand",
       "lowStockReorder": "Reorder",
-      "lowStockAllOk": "All tracked SKUs are above reorder levels.",
+      "lowStockAllOk": "No products are currently at or below their reorder level.",
       "columns": {
         "type": "Type",
         "qty": "Qty",

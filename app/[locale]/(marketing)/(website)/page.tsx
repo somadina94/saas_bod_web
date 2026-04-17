@@ -17,10 +17,10 @@ import { useAppSelector } from "@/lib/store/hooks";
 
 export default function MarketingHome() {
   const t = useTranslations("home");
-  const tc = useTranslations("common");
+  const tf = useTranslations("marketing.footer");
   const user = useAppSelector((s) => s.auth.user);
   const authCtaHref = user ? "/dashboard" : "/login";
-  const authCtaLabel = user ? tc("dashboard") : t("ctaSignIn");
+  const authCtaLabel = user ? tf("dashboard") : t("ctaSignIn");
 
   const cards = [
     {
@@ -74,7 +74,7 @@ export default function MarketingHome() {
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button size="lg" asChild className="rounded-none gap-2 shadow-sm">
-              <Link href="/setup">
+              <Link href="/setup" className="inline-flex items-center gap-2">
                 {t("ctaStart")} <ArrowRightIcon className="size-4" aria-hidden />
               </Link>
             </Button>
@@ -132,7 +132,7 @@ export default function MarketingHome() {
             </p>
           </div>
           <Button variant="secondary" size="lg" asChild className="rounded-none shrink-0">
-            <Link href="/how-it-works">
+            <Link href="/how-it-works" className="inline-flex items-center gap-2">
               {t("ctaHowItWorks")} <ArrowRightIcon className="size-4" aria-hidden />
             </Link>
           </Button>

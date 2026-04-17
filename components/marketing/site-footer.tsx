@@ -31,7 +31,7 @@ export function SiteFooter({ className }: { className?: string }) {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="text-foreground inline-flex items-center gap-2 text-sm font-semibold">
-              <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-none shadow-sm">
+              <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-full shadow-sm">
                 <SparkleIcon className="size-4" weight="fill" aria-hidden />
               </span>
               {PLATFORM_DISPLAY_NAME}

@@ -37,6 +37,7 @@ export function ResourceListPage({
   columns,
   pageSize = 15,
   headerActions,
+  rowActions,
 }: {
   title: string;
   description?: string;
@@ -47,6 +48,8 @@ export function ResourceListPage({
   pageSize?: number;
   /** e.g. primary buttons shown next to the title */
   headerActions?: ReactNode;
+  /** When set, an Actions column is appended (e.g. row menus). */
+  rowActions?: (row: Record<string, unknown>) => ReactNode;
 }) {
   const [page, setPage] = useState(1);
 
@@ -99,6 +102,9 @@ export function ResourceListPage({
               {columns.map((c) => (
                 <TableHead key={c.id}>{c.header}</TableHead>
               ))}
+              {rowActions ? (
+                <TableHead className="w-[4rem] text-right">Actions</TableHead>
+              ) : null}
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -110,12 +116,17 @@ export function ResourceListPage({
                       <Skeleton className="h-4 w-full max-w-[12rem]" />
                     </TableCell>
                   ))}
+                  {rowActions ? (
+                    <TableCell>
+                      <Skeleton className="ml-auto h-8 w-8" />
+                    </TableCell>
+                  ) : null}
                 </TableRow>
               ))
             ) : rows.length === 0 ? (
               <TableRow>
                 <TableCell
-                  colSpan={columns.length}
+                  colSpan={columns.length + (rowActions ? 1 : 0)}
                   className="text-muted-foreground py-12 text-center text-sm"
                 >
                   No records found.
@@ -129,6 +140,9 @@ export function ResourceListPage({
                       {c.cell(row)}
                     </TableCell>
                   ))}
+                  {rowActions ? (
+                    <TableCell className="text-right">{rowActions(row)}</TableCell>
+                  ) : null}
                 </TableRow>
               ))
             )}

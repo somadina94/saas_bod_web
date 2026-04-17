@@ -2,20 +2,29 @@
 
 import { ResourceListPage } from "@/components/molecules/resource-list-page";
 import { InviteTeamMemberDialog } from "@/components/molecules/invite-team-member-dialog";
+import { TeamMemberRowActions } from "@/components/molecules/team-member-row-actions";
 import { useAppSelector } from "@/lib/store/hooks";
 
 export default function UsersPage() {
-  const canManage = useAppSelector(
-    (s) => s.auth.user?.isOwner || s.auth.user?.permissions?.canManageUsers,
+  const user = useAppSelector((s) => s.auth.user);
+  const canManage = Boolean(
+    user?.isOwner || user?.permissions?.canManageUsers,
   );
 
   return (
     <ResourceListPage
       title="Team"
-      description="Invite colleagues, assign roles, and manage access. Only people with user-management permission see invite actions."
+      description="Invite colleagues, assign roles, and manage access. Owners and people with user-management permission can invite teammates, change roles and status, or remove access."
       queryKey={["users"]}
       endpointPath="/users"
       headerActions={canManage ? <InviteTeamMemberDialog /> : null}
+      rowActions={
+        canManage && user?.id
+          ? (row) => (
+              <TeamMemberRowActions row={row} currentUserId={user.id} />
+            )
+          : undefined
+      }
       columns={[
         {
           id: "name",

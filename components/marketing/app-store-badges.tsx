@@ -1,6 +1,7 @@
 "use client";
 
 import { AppleLogoIcon, GooglePlayLogoIcon } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 function noopLink(e: React.MouseEvent<HTMLAnchorElement>) {
@@ -15,6 +16,7 @@ export function AppStoreBadges({
   /** `dark` matches typical store badges; `light` for light hero backgrounds. */
   variant?: "dark" | "light";
 }) {
+  const t = useTranslations("home");
   const base =
     variant === "dark"
       ? "border-border bg-foreground text-background hover:bg-foreground/90 border-2"
@@ -25,7 +27,7 @@ export function AppStoreBadges({
       <a
         href="#"
         onClick={noopLink}
-        aria-label="Download on the App Store (coming soon)"
+        aria-label={t("appStoreAria")}
         className={cn(
           "inline-flex min-w-[10rem] items-center gap-3 rounded-none px-4 py-2.5 text-left shadow-sm transition",
           base,
@@ -33,14 +35,14 @@ export function AppStoreBadges({
       >
         <AppleLogoIcon className="size-8 shrink-0" weight="fill" aria-hidden />
         <span className="flex flex-col leading-none">
-          <span className="text-[10px] font-medium opacity-90">Download on the</span>
-          <span className="text-sm font-semibold tracking-tight">App Store</span>
+          <span className="text-[10px] font-medium opacity-90">{t("appStoreOverline")}</span>
+          <span className="text-sm font-semibold tracking-tight">{t("appStoreLabel")}</span>
         </span>
       </a>
       <a
         href="#"
         onClick={noopLink}
-        aria-label="Get it on Google Play (coming soon)"
+        aria-label={t("playAria")}
         className={cn(
           "inline-flex min-w-[10rem] items-center gap-3 rounded-none px-4 py-2.5 text-left shadow-sm transition",
           base,
@@ -48,8 +50,8 @@ export function AppStoreBadges({
       >
         <GooglePlayLogoIcon className="size-8 shrink-0" weight="fill" aria-hidden />
         <span className="flex flex-col leading-none">
-          <span className="text-[10px] font-medium opacity-90">Get it on</span>
-          <span className="text-sm font-semibold tracking-tight">Google Play</span>
+          <span className="text-[10px] font-medium opacity-90">{t("playOverline")}</span>
+          <span className="text-sm font-semibold tracking-tight">{t("playLabel")}</span>
         </span>
       </a>
     </div>

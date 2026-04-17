@@ -115,7 +115,13 @@
     "card3Body": "Inviti, ruoli, autorizzazioni a livello di riga e una dashboard di cui i leader si fidano.",
     "ctaSectionKicker": "Guarda l'immagine completa",
     "ctaSectionBody": "Esplora i moduli, le autorizzazioni e il modo in cui il tuo spazio di lavoro passa dalla registrazione alla prima fattura.",
-    "ctaHowItWorks": "Come funziona"
+    "ctaHowItWorks": "Come funziona",
+    "appStoreOverline": "Scarica su",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Scarica su App Store (prossimamente)",
+    "playOverline": "Disponibile su",
+    "playLabel": "Google Play",
+    "playAria": "Disponibile su Google Play (prossimamente)"
   },
   "auth": {
     "layout": {

@@ -115,7 +115,13 @@
     "card3Body": "Einladungen, Rollen, zeilenweise Berechtigungen und ein Dashboard für Führungskräfte.",
     "ctaSectionKicker": "Das große Bild sehen",
     "ctaSectionBody": "Module, Berechtigungen und den Weg von der Registrierung zur ersten Rechnung nachvollziehen.",
-    "ctaHowItWorks": "So funktioniert’s"
+    "ctaHowItWorks": "So funktioniert’s",
+    "appStoreOverline": "Laden im",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Im App Store laden (demnächst)",
+    "playOverline": "Jetzt bei",
+    "playLabel": "Google Play",
+    "playAria": "Bei Google Play ansehen (demnächst)"
   },
   "auth": {
     "layout": {

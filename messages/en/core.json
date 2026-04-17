@@ -115,7 +115,13 @@
     "card3Body": "Invites, roles, row-level permissions, and a dashboard that leaders trust.",
     "ctaSectionKicker": "See the full picture",
     "ctaSectionBody": "Walk through modules, permissions, and how your workspace goes from signup to first invoice.",
-    "ctaHowItWorks": "How it works"
+    "ctaHowItWorks": "How it works",
+    "appStoreOverline": "Download on the",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Download on the App Store (coming soon)",
+    "playOverline": "Get it on",
+    "playLabel": "Google Play",
+    "playAria": "Get it on Google Play (coming soon)"
   },
   "auth": {
     "layout": {

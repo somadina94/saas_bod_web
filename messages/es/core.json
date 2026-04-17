@@ -115,7 +115,13 @@
     "card3Body": "Invitaciones, roles, permisos a nivel de fila y un panel en el que los líderes confían.",
     "ctaSectionKicker": "Ver la imagen completa",
     "ctaSectionBody": "Explore los módulos, los permisos y cómo va su espacio de trabajo desde el registro hasta la primera factura.",
-    "ctaHowItWorks": "como funciona"
+    "ctaHowItWorks": "como funciona",
+    "appStoreOverline": "Descargar en",
+    "appStoreLabel": "App Store",
+    "appStoreAria": "Descargar en App Store (próximamente)",
+    "playOverline": "Consíguelo en",
+    "playLabel": "Google Play",
+    "playAria": "Consíguelo en Google Play (próximamente)"
   },
   "auth": {
     "layout": {

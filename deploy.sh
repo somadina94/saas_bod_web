@@ -125,6 +125,17 @@ echo "🧹 Clearing all Docker build cache..."
 docker buildx prune -af
 docker builder prune -af
 
+# Use isolated buildx driver (BuildKit stays on; avoids Docker 29 host layer corruption)
+echo "🔧 Preparing buildx builder..."
+BUILDX_BUILDER="saasbod-buildx"
+docker buildx rm "${BUILDX_BUILDER}" 2>/dev/null || true
+docker buildx create --name "${BUILDX_BUILDER}" --driver docker-container --use
+docker buildx inspect --bootstrap
+
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+export BUILDKIT_MAX_PARALLELISM=1
+
 # Build and start the application
 echo "🔨 Building and starting the application..."
 echo "🔍 Verifying environment variables are available..."

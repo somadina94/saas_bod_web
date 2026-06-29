@@ -78,7 +78,6 @@ elif docker compose version &> /dev/null; then
 else
     echo "❌ Neither docker-compose nor docker compose found"
     echo "📥 Installing docker-compose..."
-    # Install standalone docker-compose
     sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     sudo chmod +x /usr/local/bin/docker-compose
     DOCKER_COMPOSE="docker-compose"
@@ -119,36 +118,19 @@ mkdir -p logs
 
 # Stop and remove existing containers and local images
 echo "🛑 Stopping existing containers..."
-$DOCKER_COMPOSE down --rmi all --remove-orphans || true
+$DOCKER_COMPOSE down --rmi local --remove-orphans
 
 # Remove ALL build cache (not just unused) to fix corrupted BuildKit layer refs
 echo "🧹 Clearing all Docker build cache..."
-docker buildx prune -af || true
-docker builder prune -af || true
-docker image prune -af || true
-docker system prune -af || true
+docker buildx prune -af
+docker builder prune -af
 
 # Build and start the application
 echo "🔨 Building and starting the application..."
 echo "🔍 Verifying environment variables are available..."
 echo "NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:0:20}..."
-
-# Use legacy builder — BuildKit on Docker 29 VPS corrupts parallel stages (/bin/sh missing)
-export DOCKER_BUILDKIT=0
-export COMPOSE_DOCKER_CLI_BUILD=0
-export CACHEBUST="cache-$(date +%s)"
-
-IMAGE="saasbod-web:latest"
-docker build --no-cache --pull \
-  --build-arg "CACHEBUST=${CACHEBUST}" \
-  --build-arg "NEXT_PUBLIC_API_BASE_URL=${NEXT_PUBLIC_API_BASE_URL}" \
-  --build-arg "BACKEND_INTERNAL_URL=${BACKEND_INTERNAL_URL:-}" \
-  --build-arg "NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-}" \
-  -t "${IMAGE}" \
-  -f Dockerfile \
-  .
-
-$DOCKER_COMPOSE up -d --no-build --force-recreate
+$DOCKER_COMPOSE build --no-cache --pull
+$DOCKER_COMPOSE up -d --force-recreate
 
 # Check if the container is running
 echo "📊 Checking container status..."

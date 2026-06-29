@@ -32,11 +32,7 @@ RUN echo "Build cache bust: ${CACHEBUST}" \
   && npm run build \
   && test -d /app/public \
   && test -d /app/.next/standalone \
-  && test -d /app/.next/static \
-  && mkdir -p /deploy/public /deploy/standalone /deploy/static \
-  && cp -a /app/public/. /deploy/public/ \
-  && cp -a /app/.next/standalone/. /deploy/standalone/ \
-  && cp -a /app/.next/static/. /deploy/static/
+  && test -d /app/.next/static
 
 # Production image, copy all the files and run next
 FROM base AS runner
@@ -46,18 +42,15 @@ ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Do all shell setup before any COPY --from=builder (avoids BuildKit layer bugs on Docker 29)
 RUN addgroup --system --gid 1001 nodejs \
-  && adduser --system --uid 1001 nextjs
+  && adduser --system --uid 1001 nextjs \
+  && mkdir -p .next \
+  && chown nextjs:nodejs .next
 
-COPY --from=builder /deploy/public ./public
-
-# Set the correct permission for prerender cache
-RUN mkdir .next && chown nextjs:nodejs .next
-
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=nextjs:nodejs /deploy/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /deploy/static ./.next/static
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Ensure SWC helper ESM files are present at runtime for Node CJS export resolution.
 COPY --from=builder --chown=nextjs:nodejs /app/node_modules/@swc/helpers ./node_modules/@swc/helpers
 

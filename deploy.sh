@@ -126,6 +126,7 @@ echo "🧹 Clearing all Docker build cache..."
 docker buildx prune -af || true
 docker builder prune -af || true
 docker image prune -af || true
+docker system prune -af || true
 
 # Build and start the application
 echo "🔨 Building and starting the application..."

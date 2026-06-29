@@ -1,8 +1,5 @@
-# Use the official Node.js runtime as the base image
-FROM node:24-alpine AS base
-
 # Install dependencies and build the application
-FROM base AS builder
+FROM node:24-alpine AS builder
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -35,14 +32,13 @@ RUN echo "Build cache bust: ${CACHEBUST}" \
   && test -d /app/.next/static
 
 # Production image, copy all the files and run next
-FROM base AS runner
+FROM node:24-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Do all shell setup before any COPY --from=builder (avoids BuildKit layer bugs on Docker 29)
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs \
   && mkdir -p .next \

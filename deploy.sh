@@ -133,8 +133,9 @@ echo "🔨 Building and starting the application..."
 echo "🔍 Verifying environment variables are available..."
 echo "NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:0:20}..."
 
-export COMPOSE_DOCKER_CLI_BUILD=1
-export DOCKER_BUILDKIT=1
+# Use legacy builder — BuildKit on Docker 29 VPS corrupts parallel stages (/bin/sh missing)
+export DOCKER_BUILDKIT=0
+export COMPOSE_DOCKER_CLI_BUILD=0
 export CACHEBUST="cache-$(date +%s)"
 
 IMAGE="saasbod-web:latest"

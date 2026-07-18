@@ -94,16 +94,24 @@ fi
 
 # Check for environment variables
 echo "🔍 Checking for environment variables..."
+load_env() {
+    # Skip blank lines and comments so `export` never sees `#`
+    set -a
+    # shellcheck disable=SC1091
+    source <(grep -E -v '^[[:space:]]*(#|$)' .env)
+    set +a
+}
+
 if [ -f ".env" ]; then
     echo "✅ .env file found"
     echo "📤 Exporting environment variables..."
-    export $(cat .env | xargs)
+    load_env
     echo "✅ Environment variables exported"
 elif [ -f ".env.local" ]; then
     echo "✅ .env.local file found, copying to .env..."
     cp .env.local .env
     echo "📤 Exporting environment variables..."
-    export $(cat .env | xargs)
+    load_env
     echo "✅ Environment variables exported"
 else
     echo "⚠️  No .env or .env.local file found"
@@ -120,27 +128,14 @@ mkdir -p logs
 echo "🛑 Stopping existing containers..."
 $DOCKER_COMPOSE down --rmi local --remove-orphans
 
-# Remove ALL build cache (not just unused) to fix corrupted BuildKit layer refs
-echo "🧹 Clearing all Docker build cache..."
-docker buildx prune -af
-docker builder prune -af
-
-# Use isolated buildx driver (BuildKit stays on; avoids Docker 29 host layer corruption)
-echo "🔧 Preparing buildx builder..."
-BUILDX_BUILDER="saasbod-buildx"
-docker buildx rm "${BUILDX_BUILDER}" 2>/dev/null || true
-docker buildx create --name "${BUILDX_BUILDER}" --driver docker-container --use
-docker buildx inspect --bootstrap
-
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
-export BUILDKIT_MAX_PARALLELISM=1
 
 # Build and start the application
 echo "🔨 Building and starting the application..."
 echo "🔍 Verifying environment variables are available..."
 echo "NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:0:20}..."
-$DOCKER_COMPOSE build --no-cache --pull
+$DOCKER_COMPOSE build --pull
 $DOCKER_COMPOSE up -d --force-recreate
 
 # Check if the container is running
